@@ -12,6 +12,7 @@ $lastUpdate = date("Y-m-d H:i:s", filemtime(__FILE__));
     <style>
         #logo img {
             max-width: 100%;
+            min-height: 50px;
             filter: drop-shadow(0 0 10px rgba(0,255,200,0.8));
             transform: scale(1);
             transition: 0.2s ease;
