@@ -10,9 +10,13 @@ $lastUpdate = date("Y-m-d H:i:s", filemtime(__FILE__));
     <meta name="generator" content="MS StudioCode 1.111.0 | Windows10(x64)/11" />
     <title>KamiKiCy SEED</title>
     <style>
+        #logo {
+            text-align: center;
+            padding: 10px 0;
+            min-height: 50px;
+        }
         #logo img {
             max-width: 100%;
-            min-height: 50px;
             filter: drop-shadow(0 0 10px rgba(0,255,200,0.8));
             transform: scale(1);
             transition: 0.2s ease;
@@ -20,8 +24,8 @@ $lastUpdate = date("Y-m-d H:i:s", filemtime(__FILE__));
             animation: fadeIn 0.6s ease forwards;
             will-change: opacity, transform;
         }
-        #logo img:hover {transform: scale(1.03);}
-        @keyframes fadeIn {to{opacity: 1;}}
+        #logo img:hover { transform: scale(1.03); }
+        @keyframes fadeIn { to { opacity: 1; } }
         body {
             font-family: 'Abadi','Aptos Display',Arial,'Arial Narrow','Calibri','Cambria','DangXian',Georgia,
             'Gothic','Malgun Gothic','Meiroy','SimSun',Times,'Universe','Verdana',sans-serif;
@@ -38,8 +42,8 @@ $lastUpdate = date("Y-m-d H:i:s", filemtime(__FILE__));
             text-align: center;
             background: rgba(242,242,242,.5);
         }
-        #title {font-size: 2.2rem; display: inline-block;}
-        #title:hover {animation: shake 0.3s ease;}
+        #title { font-size: 2.2rem; display: inline-block; }
+        #title:hover { animation: shake 0.3s ease; }
         @keyframes shake {
             0%, 100% { transform: translateX(0); }
             20% { transform: translateX(-2px); }
