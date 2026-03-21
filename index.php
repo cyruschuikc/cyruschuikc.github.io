@@ -1,17 +1,13 @@
 <?php
-    $author    = "cyruschuikc.github.io";
-    $generator = "MS StudioCode 1.111.0 | Windows10(x64)/11";
-    $version   = "prototype2";
-    $appLabel  = "MS StudioCode 1.111.0 | Windows10(x64)/11 | KamiKiCy`SEED`";
-    $lastUpdated = date("Y-m-d H:i:s", filemtime(__FILE__)) . " (HK+08:00)";
+$lastUpdate = date("Y-m-d H:i:s", filemtime(__FILE__));
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <meta name="author" content="<?php echo htmlspecialchars($author); ?>" />
-    <meta name="generator" content="<?php echo htmlspecialchars($generator); ?>" />
+    <meta name="author" content="cyruschuikc.github.io" />
+    <meta name="generator" content="MS StudioCode 1.111.0 | Windows10(x64)/11" />
     <title>KamiKiCy SEED</title>
     <style>
         #logo img {
@@ -24,7 +20,7 @@
             will-change: opacity, transform;
         }
         #logo img:hover {transform: scale(1.03);}
-        @keyframes fadeIn {to { opacity: 1; }}
+        @keyframes fadeIn {to{opacity: 1;}}
         body {
             font-family: 'Abadi','Aptos Display',Arial,'Arial Narrow','Calibri','Cambria','DangXian',Georgia,
             'Gothic','Malgun Gothic','Meiroy','SimSun',Times,'Universe','Verdana',sans-serif;
@@ -52,7 +48,10 @@
         }
         #slogan { font-size: 1.2rem; }
         #SDLabel { font-size: 1.3rem; }
-        .PageFloor, .AppliCode {box-shadow: 0 2px 6px rgba(0,0,0,.15); padding: 6px;}
+        .PageFloor, .AppliCode {
+            box-shadow: 0 2px 6px rgba(0,0,0,.15);
+            padding: 6px;
+        }
         #AT, #v, #lupdate {
             font-family: Arial, Georgia, Times, Verdana, sans-serif;
             font-size: 90%;
@@ -83,20 +82,20 @@
         <label id="SDLabel">Kamisato Kira✖️Cyrus—The•👷⚒️🧑‍🔧 & The•🫅🤹🦹‍♂️</label>
     </div>
     <div class="PageFloor" name="pfloor">
-        <label id="AT">✏️👤: CHUI KA CHUN [(cyruschuikc)/(Cyrus)/(Kamisato Kira)]</label>
-        <label id="v">Version: <?php echo htmlspecialchars($version); ?></label>
-        <label id="lupdate">Last Updated at: <?php echo htmlspecialchars($lastUpdated); ?></label>
+        <label id="AT">✏️👤: CHUI KA CHUN [(cyruschuikc)/(Cyrus)/(Kamisato Kira)]</label><br>
+        <label id="v">Version: prototype2</label><br>
+        <label id="lupdate">Last Updated at: <?= $lastUpdate ?> (HK+08:00)</label>
     </div>
     <footer>
         <div class="AppliCode" name="apicode">
-            <label id="gener"><?php echo htmlspecialchars($appLabel); ?></label>
+            <label id="gener">MS StudioCode 1.111.0 | Windows10(x64)/11 | KamiKiCy`SEED`</label>
         </div>
     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             function showLogo() {
                 const logo = document.createElement("img");
-                logo.src = "https://github.com/cyruschuikc/cyruschuikc.github.io/blob/main/fav.png";
+                logo.src = "https://cyruschuikc.github.io/fav.png";
                 logo.alt = "KamiKiCy SEED";
                 logo.style.cursor = "pointer";
                 logo.style.width = "37.5%";
@@ -106,16 +105,10 @@
             }
             const logoEL = showLogo();
             document.getElementById("logo").appendChild(logoEL);
-            function quickRefresh() {window.location.reload();}
+            function quickRefresh() { window.location.reload(); }
             function handleLogoOnclick() {
-                console.log(
-                    "detected Visitor action: onclick website logo\n" +
-                    "===>>>pre-to response: reload the website\n" +
-                    "ready to reload!! waiting for Visitor confirmation..."
-                );
                 const option = confirm("Do you want to reload the website?");
                 if (option) quickRefresh();
-                else console.log("detected Visitor action: cancel change\ncanceled change!!\ncontinue visiting!!");
             }
         });
     </script>
