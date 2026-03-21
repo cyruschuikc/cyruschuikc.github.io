@@ -96,7 +96,7 @@
         document.addEventListener("DOMContentLoaded", () => {
             function showLogo() {
                 const logo = document.createElement("img");
-                logo.src = "https://raw.githubusercontent.com/cyruschuikc/cyruschui.github.io/main/fav.png";
+                logo.src = "https://raw.githubusercontent.com/cyruschuikc/cyruschuikc.github.io/main/fav.png";
                 logo.alt = "KamiKiCy SEED";
                 logo.style.cursor = "pointer";
                 logo.style.width = "37.5%";
