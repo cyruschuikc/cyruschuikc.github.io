@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta name="author" content="<?php echo htmlspecialchars($author); ?>" />
     <meta name="generator" content="<?php echo htmlspecialchars($generator); ?>" />
@@ -96,7 +96,7 @@
         document.addEventListener("DOMContentLoaded", () => {
             function showLogo() {
                 const logo = document.createElement("img");
-                logo.src = "https://raw.githubusercontent.com/cyruschuikc/cyruschuikc.github.io/main/fav.png";
+                logo.src = "https://github.com/cyruschuikc/cyruschuikc.github.io/blob/main/fav.png";
                 logo.alt = "KamiKiCy SEED";
                 logo.style.cursor = "pointer";
                 logo.style.width = "37.5%";
