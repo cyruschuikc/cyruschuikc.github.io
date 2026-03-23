@@ -2,21 +2,7 @@
 ## 👤@cyruschuikc｜`ORCID✅️`<br/>©️cyruschuikc.github.io
 ### Notice Board
 #### Whats News⁉️
-<table>
-<caption text-align="center">News</caption>
-<tr>
-<th width=10%>Date</th>
-<th width=30%>Title</th>
-<th width=35%>Description</th>
-<th width=25%>Hash Tags</th>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</table>
+
 
 #### Events
 <table>
