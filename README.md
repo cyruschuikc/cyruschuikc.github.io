@@ -2,52 +2,15 @@
 ## 👤@cyruschuikc｜`ORCID✅️`<br/>©️cyruschuikc.github.io
 ### Notice Board
 #### Whats News⁉️
-
-<iframe src = "https://github.com/cyruschuikc/cyruschuikc.github.io/blob/main/events/News.md"></iframe>
-
+|Date|Title|Description|Hash Tags|
+|-|-|-|-|
 #### Events
-<table>
-<caption>Upcoming Events</caption>
-<tr>
-<th width=10%>Date</th>
-<th width=30%>Title</th>
-<th width=35%>Description</th>
-<th width=25%>Hash Tags</th>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</table>
-<table>
-<caption>In-Held Events</caption>
-<tr>
-<th width=10%>Date</th>
-<th width=30%>Title</th>
-<th width=35%>Description</th>
-<th width=25%>Hash Tags</th>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</table>
-<table>
-<caption>Maintenance</caption>
-<tr>
-<th width=10%>Date</th>
-<th width=30%>Title</th>
-<th width=40%>Description</th>
-<th width=20%>Hash Tags</th>
-</tr>
-<tr>
-<td>19-3-2026<br/>08:27(GMT+08:00) HK</td>
-<td>‼️2nd Maintenance Announcement‼️</td>
-<td>【〔Announcement〕Regarding the second maintenance】<br/>Know more <a href="https://github.com/cyruschuikc/cyruschui-KamisatoKira.github.io/blob/main/announDOC%2FMaintenance02_03192026_v1.pdf">Maintenance02_03192026_v1.pdf</a></td>
-<td>#Announce<br/>#Maintenance</td>
-</tr>
-</table>
+|Date|Upcoming|Description|Hash Tags|
+|-|-|-|-|
+
+|Date|In-Held|Description|Hash Tags|
+|-|-|-|-|
+
+#### Maintenance
+|Date|Title|Description|Hash Tags|
+|19/3/2026 08:27(HK+08:00)|‼️2nd Maintenance Announcement‼️|【〔Announcement〕Regarding the second maintenance】Know more <a href="https://github.com/cyruschuikc/cyruschui-KamisatoKira.github.io/blob/main/announDOC%2FMaintenance02_03192026_v1.pdf">Maintenance02_03192026_v1.pdf</a>|#Announce<br/>#Maintenance|
