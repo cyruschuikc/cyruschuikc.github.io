@@ -1,7 +1,7 @@
 # 🐱GitHub®️<br/>👤@cyruschuikc｜`ORCID✅️`<br/>©️cyruschuikc.github.io
 ## Notice Board
 ### Special Event
-> 23/3/2026 15:15(HK+08:00) ~ 25/3/2026 17:45(HK+08:00)<br/><a href="https://forms.office.com/r/Fa9R7jKgLZ">First version logo campaign questionnaire 第一版標誌設計活動問卷</a>
+> 23/3/2026 15:45(HK+08:00) ~ 25/3/2026 17:45(HK+08:00)<br/><a href="https://forms.office.com/r/Fa9R7jKgLZ">First version logo campaign questionnaire 第一版標誌設計活動問卷</a>
 ### Whats News⁉️
 |Date|Title|Description|Hash Tags|
 |-|-|-|-|
