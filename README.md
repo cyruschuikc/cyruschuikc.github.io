@@ -3,7 +3,7 @@
 ### Notice Board
 #### Whats News⁉️
 
-<iframe src = "events/news.html" width=100% height=300px></iframe>
+<iframe src = "https://github.com/cyruschuikc/cyruschuikc.github.io/blob/main/events/News.md"></iframe>
 
 #### Events
 <table>
