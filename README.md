@@ -3,7 +3,7 @@
 ### Notice Board
 #### Whats News⁉️
 
-<iframe src="events/news.html"></iframe>
+<iframe src = "events/news.html" width=100% height=300px></iframe>
 
 #### Events
 <table>
