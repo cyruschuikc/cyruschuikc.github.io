@@ -11,10 +11,10 @@
 <th width=25%>Hash Tags</th>
 </tr>
 <tr>
-<td>18/3/2026</td>
-<td>Pre-release logo design expectations 📝 is come</td>
-<td>The logo design expectations 📝 to private individual will earlier to pre-release tomorrow at the evening.<br/>(Estimate: 19-3-2026 19:30 (GMT+08:00) HK)</td>
-<td>#Pre-release<br/>#📝<br/>#first good News in the Year</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </table>
 
@@ -28,10 +28,10 @@
 <th width=25%>Hash Tags</th>
 </tr>
 <tr>
-<td>18/3/2026</td>
-<td>Pre-release logo design expectations 📝</td>
-<td>The logo design expectations 📝 will estimated earlier to pre-release at 19-3-2026 19:30 (GMT+08:00) HK</td>
-<td>#Pre-release<br/>#📝<br/>#upcome<br/>#first good events in the Year</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </table>
 <table>
