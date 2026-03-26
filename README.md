@@ -3,8 +3,6 @@
 ### Special Event
 > **First version logo campaign questionnaire 第一版標誌設計活動問卷** `Statistics...` `統計中……`
 
-<img width="1687" height="1687" alt="1000036632" src="https://github.com/user-attachments/assets/e2d5e111-818f-43fe-9117-e21d049c03f9" />
-
 ### Whats News⁉️
 |Date|Title|Description|Hash Tags|
 |-|-|-|-|
