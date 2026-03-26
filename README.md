@@ -12,6 +12,10 @@
 
 |Date|In-Held|Description|Hash Tags|
 |-|-|-|-|
+||||
+
+|Date|Ended|Description|Hash Tags|
+|-|-|-|-|
 |23/3/2026 14:50(HK+08:00)|First version logo campaign questionnaire<br/>(Limited time offer for 3 days starting today)|🎯🫵 valued 💁 is essential ➡️ my 👤🌐 1st official logo. If you ✔️ 🤲 a few moments to ✔️ this brief ❓️📋❓️.|`🔍🧐🔎`<br/>`📋📤`
 
 #### Maintenance
