@@ -22,8 +22,8 @@ $page_description = "'KamiKiCy SEED' -- A individual WebP personalized by Cyrus 
         id="site-logo"
         src="/fav.png"
         alt="KamiKiCy SEED 🌱"
-        width="50"
-        height="50">
+        width="100"
+        height="100">
       <span id="site-title">KamiKiCy SEED</span>
     </div>
 
