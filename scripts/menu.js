@@ -1,37 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const toggleButton = document.querySelector('.menu-toggle');
-	const nav = document.querySelector('#top-nav');
-	const homeLink = document.querySelector('#home-link');
+  const toggleButton = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('top-nav');
+  if (!toggleButton || !nav) {
+    console.warn('Menu toggle or nav not found');
+    return;
+  }
 
-	if (!toggleButton || !nav) return;
+  /** Toggle Menu */
+  function openMenu() {
+    nav.classList.add('active');
+    nav.style.height = nav.scrollHeight + 'px';
+    toggleButton.setAttribute('aria-expanded', 'true');
+  }
 
-	/* Toggle menu */
-	toggleButton.addEventListener('click', () => {
-		const isOpen = nav.classList.toggle('active');
-		toggleButton.setAttribute('aria-expanded', isOpen);
-	});
+  function closeMenu() {
+    nav.style.height = '0px';
+    nav.classList.remove('active');
+    toggleButton.setAttribute('aria-expanded', 'false');
+  }
 
-	/* Close menu on any nav click */
-	nav.querySelectorAll('a').forEach(link => {
-		link.addEventListener('click', () => {
-			nav.classList.remove('active');
-			toggleButton.setAttribute('aria-expanded', false);
-		});
-	});
+  function toggleMenu() {
+    const isOpen = nav.classList.contains('active');
+    isOpen ? closeMenu() : openMenu();
+  }
 
-	/* Home navigation */
-	if (homeLink) {
-		homeLink.addEventListener('click', (e) => {
-			e.preventDefault();
-			location.href = 'index.html';
-		});
-	}
+  /* onclick Menu btn */
+  toggleButton.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+    toggleMenu();
+  });
 
-	document.addEventListener('click', (e) => {
-		if (!nav.contains(e.target) && !toggleButton.contains(e.target)) {
-			nav.classList.remove('active');
-			toggleButton.setAttribute('aria-expanded', false);
-		}
-	});
+  /* onclick menu any item item link -> close up */
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
 
+  /* onclick other positions of the webP -> close up */
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && !toggleButton.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  /* window resize */
+  window.addEventListener('resize', () => {
+    if (nav.classList.contains('active')) {
+      nav.style.height = nav.scrollHeight + 'px';
+    }
+  });
 });
