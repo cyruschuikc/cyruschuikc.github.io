@@ -46,6 +46,19 @@ body {
   transform: translateY(-1px);
 }
 
+.nav {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.nav.open {
+  display: block;
+  max-height: 200px;
+}
+
+
 /* Title */
 h1 {
   margin-bottom: 16px;
