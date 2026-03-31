@@ -46,18 +46,27 @@ body {
   transform: translateY(-1px);
 }
 
+/* ===== Navigation ===== */
 .nav {
-  display: none;
-  max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  height: 0;
+  transition: height 0.3s ease;
 }
 
-.nav.open {
-  display: block;
-  max-height: 200px;
+.nav.active {
+  height: auto;
 }
 
+@media (min-width: 768px) {
+  .nav {
+    height: auto;
+    overflow: visible;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
 
 /* Title */
 h1 {
