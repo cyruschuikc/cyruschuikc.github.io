@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    background: rgba(0, 0, 0, 0.5) url("../images/backdrop.png") no-repeat center/cover;
+    min-height: 100vh;
+}
+
+.LHSnav, .RHSnav {
+    position: fixed;
+    top: 0;
+    width: 128px;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.LHSnav { left: 0; background-image: url("../images/LHSbackdrop.png"); }
+.RHSnav { right: 0; background-image: url("../images/RHSbackdrop.png"); }
+
+.content {
+    margin-left: 128px;
+    margin-right: 128px;
+    min-height: 100vh;
+    padding: 16px;
+}
+
+.siteheader {
+    padding: 20px;
+    text-align: center;
+    background: rgba(0,0,0,0.4) url("../images/topheadbackdrop.png") no-repeat center/cover;
+    background-blend-mode: multiply;
+}
+
+#sitetitle, #siteslogan {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 2px;
+    background-color: rgba(0, 0, 0, 0.12);
+    color: aliceblue;
+    border-radius: 4px;
+}
+
+.guide {
+    font-family: Impact, Arial, sans-serif;
+    text-align: center;
+    margin: 8px 0;
+    background-color: rgba(240, 248, 255, 0.3);
+    font-size: large;
+}
+.guide a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: blueviolet;
+    font-weight: bold;
+}
+.guide a:hover {
+    color: darkviolet;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .LHSnav, .RHSnav { display: none; }
+    .content { margin: 0; }
+}
