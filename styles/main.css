@@ -1,0 +1,63 @@
+body {
+    margin: 0; /* remove default spacing */
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url("../images/backdrop.png");
+    background-size: cover; /* make backdrop fill */
+    background-repeat: no-repeat;
+    min-height: 100vh; /* ensure body covers viewport */
+}
+
+.LHSnav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 128px;
+    height: 100vh;
+    background: url("../images/LHSbackdrop.png") no-repeat center/cover;
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: multiply;
+}
+
+.RHSnav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 128px;
+    height: 100vh;
+    background: url("../images/RHSbackdrop.png") no-repeat center/cover;
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: multiply;
+}
+
+.siteheader {
+    width: 100%;
+    height: auto;
+    background-image: url("../images/topheadbackdrop.png");
+    background-color: rgba(0,0,0,0); 
+    background-blend-mode: multiply;   /* blends image + overlay */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#sitetitle {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.12);
+    color: aliceblue;
+    margin: 2px;
+}
+
+#siteslogan {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.12);
+    color: aliceblue;
+    margin: 2px;
+}
+
+.guide {
+    font-family: Impact, Arial, sans-serif;
+    color: blueviolet;
+    text-align: center;
+    margin: 2px;
+    background-color: rgba(240, 248, 255, 0.3);
+    font-size: large;
+}
