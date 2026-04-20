@@ -1,3 +1,4 @@
-# Permits
-## Other Licenses
+# LICENSE
+## Permits
+### Other Licenses
 <a href="permits/CC BY-NC-ND 4.0 International License.md" download>Download CC BY-NC-ND 4.0 License (Markdown)</a>
