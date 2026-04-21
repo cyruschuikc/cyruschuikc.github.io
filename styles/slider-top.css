@@ -21,7 +21,7 @@
 }
 
 /* Buttons */
-.slider-top.slider-controls button {
+.slider-controls button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -34,9 +34,10 @@
   transition: background-color 0.3s ease;
   z-index: 10;
 }
-.slider button:hover,
-.slider button:focus {
+.slider-controls button:hover,
+.slider-controls button:focus {
   background-color: rgba(0,0,0,0.6);
 }
-.slider .prev { left: 10px; }
-.slider .next { right: 10px; }
+.slider-controls .prev { left: 10px; }
+.slider-controls .next { right: 10px; }
+
