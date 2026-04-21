@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--charter library setup as 'UTF-8'-->
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--Initialsalize the viewport width as the device width, the height as the device height, and the initial-scale default as 1.0-->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"/>
+    <!--websit brief information-->
     <meta name="author" content="[GitHub]cyruschuikc"/>
     <meta name="description" content="KamiKiCy — A Hong Kong personal blog by Cyrus (Kamisato Kira), sharing individuality, creativity, writing, design, and digital culture."/>
     <meta name="keywords" content="kamikicy, kamisato kira, cyrus chuika chun, hong kong blog, digital culture"/>
+    <!--website title-->
     <title>KamiKiCy — Personal Blog of Creativity & Digital Culture</title>
+    <!--stylesheets-->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/menu.css">
 </head>
 <body>
-    <nav class="LHSnav" aria-label="Left sidebar navigation"></nav>
+    <nav class="LHSnav" aria-label="Left sidebar navigation"></nav> <!--setup left hand side backdrop canva-->
+    <!--body contents-->
     <main class="content">
         <header class="siteheader">
             <h1 id="sitetitle">KamiKiCy</h1>
             <div id="siteslogan">
                 KamiKiCy — A Hong Kong personal blog of individuality, creativity, writing, design, and digital culture.
             </div>
-             <nav class="guide" aria-label="Main site navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="news.html">News</a></li>
-          <li>
-            <details class="dropdown-menu">
-              <summary id="dropdown-menu-tag"><a href="events.html">Events</a></summary>
-              <ul>
-                <li><a href="events.html">Triva for Travel &amp; Our Events</a></li>
-                <li><a href="registration.html">Join Event</a></li>
-              </ul>
-            </details>
-          </li>
-          <li><a href="campsite.html">Camping Site</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
+            <!--menu-->
+            <nav class="guide" aria-label="Main site navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li>
+                        <!--events menu-->
+                        <details class="dropdown-menu">
+                            <summary id="dropdown-menu-tag"><a href="events.html">Events</a></summary>
+                            <ul></ul>
+                        </details>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
         </header>
     </main>
-    <nav class="RHSnav" aria-label="Right sidebar navigation"></nav>
+    <nav class="RHSnav" aria-label="Right sidebar navigation"></nav> <!--setup right hand side backdrop canva-->
 </body>
 </html>
