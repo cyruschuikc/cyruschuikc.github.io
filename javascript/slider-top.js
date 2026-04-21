@@ -5,13 +5,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextBtn = document.querySelector(".slider-controls .next");
 
   let currentIndex = 0;
+  let autoSlideInterval;
 
   // Function to update slider position
   function updateSlider() {
     slider.style.transform = `translateX(-${currentIndex * 100}%)`;
   }
 
-  // Event listeners
+  // Function to start auto-slide
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateSlider();
+    }, 5000);
+  }
+
+  // Function to stop auto-slide
+  function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+  }
+
+  // Event listeners for buttons
   prevBtn.addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     updateSlider();
@@ -22,9 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
     updateSlider();
   });
 
-  // Auto-slide every 5 seconds
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateSlider();
-  }, 5000);
+  // Pause auto-slide on hover
+  const sliderTop = document.querySelector(".slider-top");
+  sliderTop.addEventListener("mouseenter", stopAutoSlide);
+  sliderTop.addEventListener("mouseleave", startAutoSlide);
+
+  // Start auto-slide initially
+  startAutoSlide();
 });
