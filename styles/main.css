@@ -1,3 +1,5 @@
+@import: url("menu.css");
+
 body {
     margin: 0;
     background: rgba(0, 0, 0, 0.5) url("../images/backdrop.png") no-repeat center/cover;
