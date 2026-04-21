@@ -1,5 +1,5 @@
-@import: url("menu.css");
-@import: url("slider.css");
+@import url("menu.css");
+@import url("slider.css");
 
 body {
     margin: 0;
