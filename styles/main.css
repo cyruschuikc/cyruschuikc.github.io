@@ -2,33 +2,69 @@
 @import url("slider-top.css");
 
 body {
-    margin: 0;
-    background: rgba(0, 0, 0, 0.5) url("../images/backdrop.png") no-repeat center/cover;
-    min-height: 100vh;
+  margin: 0;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.5) url("../images/backdrop.png") no-repeat center/cover;
 }
 
-.LHSnav, .RHSnav {
-    position: fixed;
-    top: 0;
-    width: 128px;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.5);
-    background-blend-mode: multiply;
-    background-size: cover;
-    background-repeat: no-repeat;
+.sidebar {
+  position: fixed;
+  top: 0;
+  width: 100vh;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.LHSnav { left: 0; background-image: url("../images/LHSbackdrop.png"); }
-.RHSnav { right: 0; background-image: url("../images/RHSbackdrop.png"); }
+
+.sidebar-left { left: 0; background-image: url("../images/LHSbackdrop.png"); }
+.sidebar-right { right: 0; background-image: url("../images/RHSbackdrop.png"); }
 
 .content {
-    margin-left: 128px;
-    margin-right: 128px;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  min-height: 100vh;
+  padding: 0.5rem;
+}
+
+.site-header {
+  padding: 0.5rem;
+  text-align: center;
+  background: rgba(240,248,255,0.5) url("../images/topheadbackdrop.png") no-repeat center/cover;
+  background-blend-mode: multiply;
+}
+
+.site-title, .site-slogan {
+  display: inline-block;
+  padding: 0.25rem 0.25rem;
+  margin: 1px;
+  background-color: rgba(0, 0, 0, 0.12);
+  color: aliceblue;
+  border-radius: 4px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 800px) {
+  .sidebar {
+    width: 2rem;
+  }
+  .content {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .site-title, .site-slogan {
+    font-size: 1rem;
+    padding: 2px 0.25rem;
+  }
+}
+    margin-right: 4rem;
     min-height: 100vh;
-    padding: 16px;
+    padding: 0.5rem;
 }
 
 .siteheader {
-    padding: 20px;
+    padding: 0.5rem;
     text-align: center;
     background: rgba(0,0,0,0.4) url("../images/topheadbackdrop.png") no-repeat center/cover;
     background-blend-mode: multiply;
@@ -36,9 +72,9 @@ body {
 
 #sitetitle, #siteslogan {
     display: inline-block;
-    padding: 8px 12px;
-    margin: 2px;
-    background-color: rgba(0, 0, 0, 0.12);
+    padding: 0.25rem 0.25rem;
+    margin: 1px;
+    background-color: rgba(240, 248, 255, 0.5);
     color: aliceblue;
     border-radius: 4px;
 }
