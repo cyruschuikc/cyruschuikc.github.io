@@ -1,43 +1,82 @@
+/* Main navigation guide */
 .guide {
-    text-align: center;
-    margin: 12px 0;
-    background-color: rgba(240, 248, 255, 0.3);
-    font-size: large;
-    padding: 10px;
+  text-align: center;
+  margin: 0.25rem 0rem;
+  background-color: rgba(240, 248, 255, 0.3);
+  font-size: large;
+  padding: 0.25rem;
 }
 
 .guide ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .guide a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
+
 .guide a:hover,
 .guide a:focus {
-    color: blueviolet;
-    text-decoration: underline;
+  color: blueviolet;
+  text-decoration: underline;
 }
 
+/* Dropdown menu */
 .dropdown-menu {
-    font-size: large;
-}
-#dropdown-menu-tag {
-    color: #000;
-}
-.dropdown-menu.active {
-    display: block;
+  font-size: large;
 }
 
+.dropdown-menu-tag {
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 5px 0;
+}
+
+.dropdown-menu ul li {
+  margin: 5px 0;
+}
+
+.dropdown-menu ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.dropdown-menu ul li a:hover,
+.dropdown-menu ul li a:focus {
+  color: blueviolet;
+  text-decoration: underline;
+}
+
+/* Active dropdown state */
+.dropdown-menu.active {
+  display: block;
+}
+
+/* Responsive adjustments */
 @media (max-width: 1024px) {
-    .LHSnav, .RHSnav { display: none; }
-    .content { margin: 0; }
+  .sidebar-left,
+  .sidebar-right {
+    display: none;
+  }
+  .content {
+    margin: 0;
+  }
+  .guide ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
