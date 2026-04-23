@@ -13,7 +13,7 @@
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 0.5rem;
 }
 
 .guide a {
@@ -43,11 +43,11 @@
 .dropdown-menu ul {
   list-style: none;
   margin: 0;
-  padding: 5px 0;
+  padding: 2px 0;
 }
 
 .dropdown-menu ul li {
-  margin: 5px 0;
+  margin: 2px 0;
 }
 
 .dropdown-menu ul li a {
@@ -77,6 +77,6 @@
   }
   .guide ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 0.25rem;
   }
 }
