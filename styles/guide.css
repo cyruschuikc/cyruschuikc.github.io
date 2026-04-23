@@ -1,0 +1,43 @@
+.guide {
+    text-align: center;
+    margin: 12px 0;
+    background-color: rgba(240, 248, 255, 0.3);
+    font-size: large;
+    padding: 10px;
+}
+
+.guide ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.guide a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.guide a:hover,
+.guide a:focus {
+    color: blueviolet;
+    text-decoration: underline;
+}
+
+.dropdown-menu {
+    font-size: large;
+}
+#dropdown-menu-tag {
+    color: #000;
+}
+.dropdown-menu.active {
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .LHSnav, .RHSnav { display: none; }
+    .content { margin: 0; }
+}
