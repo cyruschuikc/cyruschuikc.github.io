@@ -4,26 +4,30 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="[GitHub]cyruschuikc"/>
-  <meta name="description" content="KamiKiCy — A Hong Kong blog by Cyrus (Kamisato Kira), sharing creativity, individuality, and digital culture."/>
+  <meta name="description" content="KamiKiCy — A Hong Kong blog by Cyrus (Kamisato Kira), sharing creativity, individuality, writing, design, and digital culture."/>
   <meta name="keywords" content="kamikicy, kamisato kira, cyrus chuika chun, hong kong blog, digital culture"/>
   <title>KamiKiCy — Personal Blog of Creativity & Digital Culture</title>
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <nav class="sidebar sidebar-left" aria-label="Left sidebar navigation"></nav>
-  
+  <!-- Left sidebar -->
+  <nav class="sidebar sidebar-left" aria-label="Left sidebar navigation">
+    <ul>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="archives.html">Archives</a></li>
+    </ul>
+  </nav>
   <main class="content">
     <header class="site-header">
       <h1 class="site-title">KamiKiCy</h1>
-      <div class="site-slogan">
+      <p class="site-slogan">
         KamiKiCy — A Hong Kong personal blog of individuality, creativity, writing, design, and digital culture.
-      </div>
+      </p>
     </header>
-
-    <!-- pop-up menu guide -->
+    <!-- Main navigation -->
     <nav class="guide" aria-label="Main site navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="news.html">News</a></li>
         <li>
           <details class="dropdown-menu">
@@ -38,23 +42,36 @@
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
-
-    <!-- top slider -->
-    <section class="slider">
+    <!-- Top slider -->
+    <section class="slider" aria-label="Featured blog images">
       <div class="slider-track">
-        <img src="images/TopSlides1.png" alt="KamiKiCy blog banner" class="active" />
-        <img src="images/TopSlides2.png" alt="KamiKiCy blog creativity showcase" />
-        <img src="images/TopSlides3.png" alt="KamiKiCy new style comeback" />
+        <img src="images/TopSlides1.png" alt="KamiKiCy blog banner" class="active" aria-current="true"/>
+        <img src="images/TopSlides2.png" alt="KamiKiCy creativity showcase"/>
+        <img src="images/TopSlides3.png" alt="KamiKiCy new style comeback"/>
       </div>
       <div class="slider-controls" aria-label="Image slider controls">
-        <button class="slider-prev" aria-label="Previous image">&larr;</button>
-        <button class="slider-next" aria-label="Next image">&rarr;</button>
+        <button class="slider-prev" aria-label="Previous image">
+          &larr;<span class="visually-hidden">Previous</span>
+        </button>
+        <button class="slider-next" aria-label="Next image">
+          &rarr;<span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Optional dot indicators -->
+      <div class="slider-indicators" aria-label="Slide indicators">
+        <button aria-label="Slide 1" aria-current="true"></button>
+        <button aria-label="Slide 2"></button>
+        <button aria-label="Slide 3"></button>
       </div>
     </section>
   </main>
-
-  <nav class="sidebar sidebar-right" aria-label="Right sidebar navigation"></nav>
-  
+  <!-- Right sidebar -->
+  <nav class="sidebar sidebar-right" aria-label="Right sidebar navigation">
+    <ul>
+      <li><a href="social.html">Social Links</a></li>
+      <li><a href="subscribe.html">Subscribe</a></li>
+    </ul>
+  </nav>
   <script src="javascript/slider-top.js" defer></script>
 </body>
 </html>
