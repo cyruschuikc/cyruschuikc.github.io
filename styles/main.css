@@ -1,3 +1,4 @@
+/* Import component styles */
 @import url("guide.css");
 @import url("slider-top.css");
 
@@ -11,7 +12,7 @@ body {
   position: fixed;
   top: 0;
   width: 100vh;
-  height: 100vh;
+  height: 128px;
   background-color: rgba(0,0,0,0.5);
   background-blend-mode: multiply;
   background-size: cover;
@@ -22,59 +23,42 @@ body {
 .sidebar-right { right: 0; background-image: url("../images/RHSbackdrop.png"); }
 
 .content {
-  margin-left: 4rem;
-  margin-right: 4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   min-height: 100vh;
-  padding: 0.5rem;
+  padding: 0.25rem;
 }
 
 .site-header {
-  padding: 0.5rem;
+  padding: 0.25rem;
   text-align: center;
   background: rgba(240,248,255,0.5) url("../images/topheadbackdrop.png") no-repeat center/cover;
   background-blend-mode: multiply;
 }
 
-.site-title, .site-slogan {
+.site-title,
+.site-slogan {
   display: inline-block;
   padding: 0.25rem 0.25rem;
   margin: 1px;
   background-color: rgba(0, 0, 0, 0.12);
   color: aliceblue;
-  border-radius: 4px;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  border-radius: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
+/* Responsive adjustments */
 @media (max-width: 800px) {
   .sidebar {
     width: 2rem;
   }
   .content {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
-  .site-title, .site-slogan {
+  .site-title,
+  .site-slogan {
     font-size: 1rem;
-    padding: 2px 0.25rem;
+    padding: 1px 0.25rem;
   }
-}
-    margin-right: 4rem;
-    min-height: 100vh;
-    padding: 0.5rem;
-}
-
-.siteheader {
-    padding: 0.5rem;
-    text-align: center;
-    background: rgba(0,0,0,0.4) url("../images/topheadbackdrop.png") no-repeat center/cover;
-    background-blend-mode: multiply;
-}
-
-#sitetitle, #siteslogan {
-    display: inline-block;
-    padding: 0.25rem 0.25rem;
-    margin: 1px;
-    background-color: rgba(240, 248, 255, 0.5);
-    color: aliceblue;
-    border-radius: 4px;
 }
