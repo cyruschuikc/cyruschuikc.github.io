@@ -1,15 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const slider = document.querySelector(".slider-top-images");
-  const images = document.querySelectorAll(".slider-top-images img");
-  const prevBtn = document.querySelector(".slider-controls .prev");
-  const nextBtn = document.querySelector(".slider-controls .next");
+  const sliderTrack = document.querySelector(".slider-track");
+  const images = document.querySelectorAll(".slider-track img");
+  const prevBtn = document.querySelector(".slider-prev");
+  const nextBtn = document.querySelector(".slider-next");
+  const indicators = document.querySelectorAll(".slider-indicators button");
 
   let currentIndex = 0;
   let autoSlideInterval;
 
   // Function to update slider position
   function updateSlider() {
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+    updateIndicators();
+  }
+
+  // Function to update dot indicators
+  function updateIndicators() {
+    if (!indicators.length) return;
+    indicators.forEach((dot, i) => {
+      if (i === currentIndex) {
+        dot.setAttribute("aria-current", "true");
+      } else {
+        dot.removeAttribute("aria-current");
+      }
+    });
   }
 
   // Function to start auto-slide
@@ -36,10 +50,18 @@ document.addEventListener("DOMContentLoaded", () => {
     updateSlider();
   });
 
+  // Event listeners for indicators
+  indicators.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      currentIndex = i;
+      updateSlider();
+    });
+  });
+
   // Pause auto-slide on hover
-  const sliderTop = document.querySelector(".slider-top");
-  sliderTop.addEventListener("mouseenter", stopAutoSlide);
-  sliderTop.addEventListener("mouseleave", startAutoSlide);
+  const slider = document.querySelector(".slider");
+  slider.addEventListener("mouseenter", stopAutoSlide);
+  slider.addEventListener("mouseleave", startAutoSlide);
 
   // Start auto-slide initially
   startAutoSlide();
