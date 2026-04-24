@@ -48,7 +48,7 @@ body {
 .introduction {
   padding: 0.25rem 0.25rem;
   margin: 0;
-  background-color: rgba(240, 248, 250, 0.3);
+  background-color: rgba(240, 248, 255, 0.3);
   color: #000;
   text-align: center;
 }
