@@ -8,24 +8,12 @@ body {
   background: rgba(0, 0, 0, 0.5) url("../images/backdrop.png") no-repeat center/cover;
 }
 
-/* Sidebars */
-.sidebar {
-  position: fixed;
-  top: 0;
-  width: 100vh;
-  height: 128px;
-  background-color: rgba(0,0,0,0.5);
-  background-blend-mode: multiply;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.sidebar-left { 
+.LHSnav { 
   left: 0; 
   background-image: url("../images/LHSbackdrop.png"); 
 }
 
-.sidebar-right { 
+.RHSnav { 
   right: 0; 
   background-image: url("../images/RHSbackdrop.png"); 
 }
@@ -59,7 +47,7 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 800px) {
-  .sidebar {
+  .LHSnav, .RHSnav {
     width: 2rem;
   }
   .content {
