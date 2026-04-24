@@ -1,19 +1,23 @@
+/* Slider container */
 .slider {
   position: relative;
   width: 100%;
-  height: 300px; /* scales with viewport */
-  max-height: 500px; /* prevents it from being too tall */
+  height: 18.75rem;
+  max-height: 31.25rem;
   overflow: hidden;
-  margin: 10px auto;
+  margin: 0.25rem auto;
   background-color: rgba(0, 255, 255, 0.5);
 }
 
+/* Track holds all images side by side */
 .slider-track {
   display: flex;
   width: 100%;
   height: 100%;
+  transition: transform 0.8s ease; /* smooth warping sliding */
 }
 
+/* Images inside slider */
 .slider-track img {
   flex-shrink: 0;
   width: 100%;
@@ -21,6 +25,7 @@
   object-fit: cover;
 }
 
+/* Navigation buttons */
 .slider-controls button {
   position: absolute;
   top: 50%;
@@ -29,7 +34,7 @@
   border: none;
   color: white;
   font-size: 200%;
-  padding: 4px 8px;
+  padding: 2px 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   z-index: 10;
@@ -37,18 +42,59 @@
 
 .slider-controls button:hover,
 .slider-controls button:focus {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.5);
 }
 
-.slider-prev { left: 10px; }
-.slider-next { right: 10px; }
+/* Positioning for prev/next buttons */
+.slider-prev { left: 0.25rem; }
+.slider-next { right: 0.25rem; }
 
+/* Optional dot indicators */
+.slider-indicators {
+  position: absolute;
+  bottom: 0.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.25rem;
+}
+
+.slider-indicators button {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider-indicators button[aria-current="true"] {
+  background-color: blueviolet;
+}
+
+.slider-indicators button:hover,
+.slider-indicators button:focus {
+  background-color: rgba(255,255,255,0.85);
+}
+
+/* Responsive adjustments */
 @media (max-width: 1024px) {
   .slider {
-    height: 512px;
+    height: 32rem;
   }
   .slider-controls button {
     font-size: 150%;
-    padding: 4px 8px;
+    padding: 2px 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider {
+    height: 250px; /* smaller for mobile */
+  }
+  .slider-controls button {
+    font-size: 120%;
+    padding: 2px 6px;
   }
 }
