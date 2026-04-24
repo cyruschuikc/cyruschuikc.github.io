@@ -45,6 +45,14 @@ body {
   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
+.introduction {
+  padding: 0.25rem 0.25rem;
+  margin: 0;
+  background-color: rgba(240, 248, 250, 0.3);
+  color: #000;
+  text-align: center;
+}
+
 /* Responsive adjustments */
 @media (max-width: 800px) {
   .LHSnav, .RHSnav {
