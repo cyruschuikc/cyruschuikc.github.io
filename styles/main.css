@@ -8,6 +8,7 @@ body {
   background: rgba(0, 0, 0, 0.5) url("../images/backdrop.png") no-repeat center/cover;
 }
 
+/* Sidebars */
 .sidebar {
   position: fixed;
   top: 0;
@@ -19,9 +20,17 @@ body {
   background-repeat: no-repeat;
 }
 
-.sidebar-left { left: 0; background-image: url("../images/LHSbackdrop.png"); }
-.sidebar-right { right: 0; background-image: url("../images/RHSbackdrop.png"); }
+.sidebar-left { 
+  left: 0; 
+  background-image: url("../images/LHSbackdrop.png"); 
+}
 
+.sidebar-right { 
+  right: 0; 
+  background-image: url("../images/RHSbackdrop.png"); 
+}
+
+/* Main content */
 .content {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -29,6 +38,7 @@ body {
   padding: 0.25rem;
 }
 
+/* Site header */
 .site-header {
   padding: 0.25rem;
   text-align: center;
