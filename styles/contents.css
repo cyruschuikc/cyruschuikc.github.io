@@ -6,9 +6,16 @@ body {
   background: rgba(0, 0, 0, 0.5) url("../favs/background.jpeg") no-repeat center/cover;
 }
 
-#rightSidebar {
+#leftSidebar {
   margin: 0;
   padding: 1px 1px;
   left:0;
-  background-image: url("..favs/");
+  background-image: url("..favs/LHSsidebar.png");
+}
+
+#rightSidebar {
+  margin: 0;
+  padding: 1px 1px;
+  right:0;
+  background-image: url("..favs/RHSsidebar.png");
 }
