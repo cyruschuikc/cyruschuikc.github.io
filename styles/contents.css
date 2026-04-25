@@ -3,5 +3,5 @@ body {
   padding: 1px 1px;
   min-height: 100vh;
   max-height: 110vh;
-  background: rgba(0, 0, 0, 0.5) url("../favs/") no-repeat center/cover;
+  background: rgba(0, 0, 0, 0.5) url("../favs/background") no-repeat center/cover;
 }
