@@ -5,3 +5,10 @@ body {
   max-height: 110vh;
   background: rgba(0, 0, 0, 0.5) url("../favs/background.jpeg") no-repeat center/cover;
 }
+
+#rightSidebar {
+  margin: 0;
+  padding: 1px 1px;
+  left:0;
+  background-image: url("..favs/");
+}
