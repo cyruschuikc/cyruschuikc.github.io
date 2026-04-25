@@ -1,28 +1,30 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const slider = document.querySelector(".sliderImages");
-  const images = document.querySelectorAll(".sliderImages img");
-  const prevBtn = document.querySelector(".prev");
-  const nextBtn = document.querySelector(".next");
+const track = document.querySelector('.slider-track');
+const slides = document.querySelectorAll('.slider-track > *');
+let index = 0;
+let timer = null;
 
-  let currentIndex = 0;
+function showSlide(n) {
+  index = (n + slides.length) % slides.length;
+  track.style.transform = `translateX(-${index * 100}%)`;
+  resetAutoPlay();
+}
 
-  function updateSlider() {
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+function resetAutoPlay() {
+  clearTimeout(timer);
+  const currentSlide = slides[index];
+
+  if (currentSlide.tagName.toLowerCase() === 'video') {
+    // video：capture end pay event
+    currentSlide.addEventListener('ended', () => {
+      showSlide(index + 1);
+    }, { once: true });
+  } else {
+    // image：stay 5 seconds then move to next
+    timer = setTimeout(() => {
+      showSlide(index + 1);
+    }, 5000);
   }
+}
 
-  prevBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    updateSlider();
-  });
-
-  nextBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateSlider();
-  });
-
-  // auto pay (5 sec/slide)
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateSlider();
-  }, 5000);
-});
+// initialize
+resetAutoPlay();
