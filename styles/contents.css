@@ -1,4 +1,3 @@
-// initialize
 body {
   margin: 0;
   padding: 1px 1px;
@@ -7,7 +6,7 @@ body {
   background: rgba(0, 0, 0, 0.5) url("../favs/background.jpeg") no-repeat center/cover;
 }
 
-// website header styles
+
 .site-header {
   padding: 0.25rem;
   text-align: center;
@@ -15,13 +14,14 @@ body {
   background-blend-mode: multiply;
 }
 
-// sidebar styles
+
 #leftSidebar {
   margin: 0;
   padding: 1px 1px;
   left:0;
   background-image: url("..favs/LHSsidebar.png");
 }
+
 #rightSidebar {
   margin: 0;
   padding: 1px 1px;
