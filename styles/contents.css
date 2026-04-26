@@ -28,5 +28,8 @@ body {
 }
 
 @media (max-width:1024) {
-
+  #leftSidebar, #rightSidebar {
+    max-width: 20px;
+    height: 100vh;
+  }
 }
