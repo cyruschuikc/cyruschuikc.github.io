@@ -27,7 +27,7 @@ body {
   background-image: url("..favs/RHSsidebar.png");
 }
 
-@media (max-width:1024) {
+@media (max-width:864px) {
   #leftSidebar, #rightSidebar {
     max-width: 20px;
     height: 100vh;
