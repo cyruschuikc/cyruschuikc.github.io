@@ -7,3 +7,11 @@ navb.addEventListener("click", function () {
     navb.innerText = "💠🟰";
   }
 });
+
+// control guide visible
+const heading = document.querySelector('.guide-heading');
+const menu = document.querySelector('.guide ul');
+
+heading.addEventListener('click', () => {
+  menu.classList.toggle('show');
+});
