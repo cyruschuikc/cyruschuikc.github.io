@@ -1,4 +1,4 @@
-/* ===guide major styles=== */
+/* === Guide major styles === */
 .top-nav {
   font-family: "Trebuchet MS", "Verdana", "Helvetica", "Arial", sans-serif;
   font-size: larger;
@@ -15,45 +15,41 @@
   cursor: pointer;
 }
 
+/* Mobile version: collapsed by default */
 .navMain {
   margin: 0;
   padding: 0;
-  display: none;
+  display: block;
   justify-content: center;
   gap: 0.5rem;
-  max-height: 0;
+  max-height: 0; /* collapsed */
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease; /* smooth animation */
 }
 
-.navMain.show {
-  display: block;
-  max-height: 256px;
-}
+/* Expanded state */
+.navMain.show { max-height: 256px; }
 
-.navMain li {
-  padding: 0.25rem 0.5rem;
-}
+.navMain li { padding: 0.25rem 0.5rem; }
 
 .navMain li a {
   text-decoration: none;
   color: #333;
 }
 
-.navMain li a:hover {
-  background-color: rgba(0,0,0,0.05);
-}
+.navMain li a:hover { background-color: rgba(0,0,0,0.05); }
 
+/* Desktop version: always expanded and horizontal */
 @media (min-width: 768px) {
   .navMain {
-    max-height: none !important;
-    display: flex !important;
+    max-height: none !important; /* no collapse */
+    display: flex !important; /* horizontal layout */
     flex-direction: row;
     justify-content: center;
   }
-}
+} /*======*/
 
-/* ===guide headings styles=== */
+/* === Guide headings styles === */
 .guide-heading {
   font-weight: bold;
   color: #00bfff;
@@ -61,4 +57,4 @@
   background-color: rgba(0,0,0,0.1);
   text-transform: uppercase;
   cursor: pointer;
-}
+} /*======*/
