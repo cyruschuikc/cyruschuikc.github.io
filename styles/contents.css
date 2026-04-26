@@ -10,7 +10,7 @@ body {
   height: 360px;
   padding: 0.25rem;
   text-align: center;
-  background: rgba(0,0,0,0.85) url("../favs/siteheaderBG.jpeg") no-repeat center/cover;
+  background: rgba(0,0,0,0.7) url("../favs/siteheaderBG.jpeg") no-repeat center/cover;
   background-blend-mode: multiply;
 }
 
@@ -32,8 +32,8 @@ body {
   .site-header {
     text-align: center;
     width: 100%;
-    height: 8rem;
-    background-color: rgba(240, 248, 250, 0.5);
+    height: 16rem;
+    background-color: rgba(0, 0, 0, 0.85);
   }
 
   #leftSidebar, #rightSidebar {
