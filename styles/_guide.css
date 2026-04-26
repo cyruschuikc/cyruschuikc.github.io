@@ -1,5 +1,5 @@
 // ===guide major styles===
-.guide {
+.top-nav {
   font-family: "Trebuchent MS", "Verdana", "Helvetica", "Arial", sans-serif;
   font-size: larger;
   text-align: center;
@@ -11,30 +11,43 @@
   overflow: hidden;
 }
 
-.guide ul {
+.top-nav button {
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.navMain {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: inline;
+  display: flex;
   justify-content: center;
-  transition: max-height 0.3s ease;
   gap: 0.5rem;
+
+  / Closing effect /
   max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
-.guide ul.show {
-  max-height: 16rem;
+.navMain.show {
+  max-height: 200px;
 }
 
-.guide li a {
-  display: block;
-  padding: 2px 0.25rem;
+.navMain li {
+  padding: 0.25rem 0.5rem;
+}
+
+.navMain li a {
   text-decoration: none;
   color: #333;
 }
 
-.guide li a:hover {
+.navMain li a:hover {
   background-color: rgba(0,0,0,0.05);
+}(0,0,0,0.05);
 }
 
 // ===guide headings styles===
