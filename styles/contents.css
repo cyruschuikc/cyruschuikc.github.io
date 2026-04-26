@@ -15,17 +15,23 @@ body {
 }
 
 #leftSidebar {
+  position: fixed;
   margin: 0;
   padding: 1px 1px;
+  height: 100vh;
+  width: 8rem;
   left:0;
-  background-image: url("..favs/LHSsidebar.png");
+  background-image: url("../favs/LHSsidebar.png");
 }
 
 #rightSidebar {
+  position: fixed;
   margin: 0;
   padding: 1px 1px;
+  height: 100vh;
+  width; 8rem;
   right:0;
-  background-image: url("..favs/RHSsidebar.png");
+  background-image: url("../favs/RHSsidebar.png");
 }
 
 @media (max-width:864px) {
@@ -38,7 +44,7 @@ body {
   }
 
   #leftSidebar, #rightSidebar {
-    max-width: 20px;
+    width: 4rem;
     height: 100vh;
   }
 }
