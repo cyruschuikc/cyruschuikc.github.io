@@ -8,7 +8,7 @@ body {
 
 .site-header {
   padding: 0.25rem;
-  text-align: center;
+  text-align: left;
   background: rgba(240,248,255,0.5) url("../images/topheadbackdrop.png") no-repeat center/cover;
   background-blend-mode: multiply;
 }
