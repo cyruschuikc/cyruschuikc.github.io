@@ -8,10 +8,7 @@ navb.addEventListener("click", function () {
   }
 });
 
-// control guide visible
-const heading = document.querySelector('.guide-heading');
-const menu = document.querySelector('.guide ul');
-
-heading.addEventListener('click', () => {
+function ToggleNavigation() {
+  const menu = document.querySelector('.navMain');
   menu.classList.toggle('show');
-});
+}
