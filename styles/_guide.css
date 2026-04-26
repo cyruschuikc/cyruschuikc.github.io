@@ -39,13 +39,29 @@
 
 .navMain li a:hover { background-color: rgba(0,0,0,0.05); }
 
-/* Desktop version: always expanded and horizontal */
-@media (min-width: 768px) {
+/* === Mobile version: always expanded and horizontal === */
+@media (max-width: 768px) {
   .navMain {
-    max-height: none !important; /* no collapse */
-    display: flex !important; /* horizontal layout */
+    max-height: none /* no collapse */
+    display: flex; /* horizontal layout */
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .top-nav button { margin-right: auto; }
+} /*======*/
+
+/* === Desktop: hide button and keep menu horizontal === */
+@media (min-width: 768px) {
+  .top-nav button { display: none; } 
+  /* no toggle button on desktop */
+
+  .navMain {
+    display: flex;
     flex-direction: row;
     justify-content: center;
+    max-height: none;
   }
 } /*======*/
 
