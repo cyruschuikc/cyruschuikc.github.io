@@ -7,7 +7,7 @@ body {
 }
 
 .site-header {
-  min-height: 360px;
+  height: 360px;
   padding: 0.25rem;
   text-align: center;
   background: rgba(240,248,255,0.85) url("../favs/siteheaderBG.jpeg") no-repeat center/cover;
@@ -32,7 +32,7 @@ body {
   .site-header {
     text-align: center;
     width: 100%;
-    min-height: 16rem;
+    height: 16rem;
     background-color: rgba(240, 248, 250, 0.5);
   }
 
