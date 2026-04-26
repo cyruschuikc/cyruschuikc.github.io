@@ -44,12 +44,13 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  display: none;              /* hidden initially */
-  flex-direction: column;     /* vertical layout on mobile */
+  display: none; /* hidden initially */
+  flex-direction: column; /* vertical layout on mobile */
   gap: 0.5rem;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
+  background-color: rgba(240, 248, 250, 0.5);
 }
 
 .navMain.show {
@@ -70,9 +71,9 @@
 @media (min-width: 768px) {
   .navMain {
     display: flex !important;
-    flex-direction: row;
-    justify-content: center;
+    text-align: center;
     max-height: none !important;
+    background-color: rgba(240, 248, 250, 0.3);
   }
   .top-nav button {display: none;}
   /* hide toggle button on desktop */
