@@ -14,15 +14,12 @@
 .top-nav button {
   font-size: 1.2rem;
   cursor: pointer;
-  background: none;
-  border: none;
 }
 
 .navMain {
-  list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: block;
   justify-content: center;
   gap: 0.5rem;
 
@@ -33,7 +30,7 @@
 }
 
 .navMain.show {
-  max-height: 200px;
+  max-height: 256px;
 }
 
 .navMain li {
@@ -48,6 +45,14 @@
 .navMain li a:hover {
   background-color: rgba(0,0,0,0.05);
 }(0,0,0,0.05);
+}//
+
+
+@media (min-width: 768px) {
+  .navMain {
+    max-height: none !important;
+    display: flex !important;
+  }
 }
 
 // ===guide headings styles===
@@ -58,4 +63,4 @@
   background-color: rgba(0,0,0,0.1);
   text-transform: uppercase;
   cursor: pointer;
-}
+}//
