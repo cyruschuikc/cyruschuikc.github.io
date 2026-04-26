@@ -18,7 +18,7 @@
 .navMain {
   margin: 0;
   padding: 0;
-  display: block;
+  display: none;
   justify-content: center;
   gap: 0.5rem;
   max-height: 0;
@@ -27,6 +27,7 @@
 }
 
 .navMain.show {
+  display: block;
   max-height: 256px;
 }
 
