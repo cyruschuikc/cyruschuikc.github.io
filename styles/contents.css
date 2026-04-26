@@ -25,6 +25,13 @@ body {
   background: url("../favs/LHSsidebar.png") no-repeat center/cover;
 }
 
+.site-title {
+  font-family: "Orbitron", "Roboto Display", "Raleway", "Montserrat", "Arial", sans-serif;
+  background-color: rgba(240,248,250,0.5);
+  text-align: center;
+  color: #fff;
+}
+
 /* Right Sidebar */
 #rightSidebar {
   position: fixed;
