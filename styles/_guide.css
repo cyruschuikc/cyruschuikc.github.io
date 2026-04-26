@@ -1,11 +1,10 @@
-// ===guide major styles===
+/* ===guide major styles=== */
 .top-nav {
-  font-family: "Trebuchent MS", "Verdana", "Helvetica", "Arial", sans-serif;
+  font-family: "Trebuchet MS", "Verdana", "Helvetica", "Arial", sans-serif;
   font-size: larger;
   text-align: center;
   margin: 0 0.25rem;
   background-color: rgba(240, 248, 255, 0.3);
-  font-size: large;
   padding: 2px 4px;
   display: block;
   overflow: hidden;
@@ -22,8 +21,6 @@
   display: block;
   justify-content: center;
   gap: 0.5rem;
-
-  / Closing effect /
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
@@ -44,18 +41,18 @@
 
 .navMain li a:hover {
   background-color: rgba(0,0,0,0.05);
-}(0,0,0,0.05);
-}//
-
+}
 
 @media (min-width: 768px) {
   .navMain {
     max-height: none !important;
     display: flex !important;
+    flex-direction: row;
+    justify-content: center;
   }
 }
 
-// ===guide headings styles===
+/* ===guide headings styles=== */
 .guide-heading {
   font-weight: bold;
   color: #00bfff;
@@ -63,4 +60,4 @@
   background-color: rgba(0,0,0,0.1);
   text-transform: uppercase;
   cursor: pointer;
-}//
+}
