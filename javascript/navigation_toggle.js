@@ -10,5 +10,15 @@ navb.addEventListener("click", function () {
 
 function ToggleNavigation() {
   const menu = document.querySelector('.navMain');
-  menu.classList.toggle('show');
+  if (!menu.classList.contains('show')) {
+    menu.style.display = 'block';
+    setTimeout(() => {
+      menu.classList.add('show');
+    }, 10);
+  } else {
+    menu.classList.remove('show'); 
+    setTimeout(() => {
+      menu.style.display = 'none'; 
+    }, 300);
+  }
 }
