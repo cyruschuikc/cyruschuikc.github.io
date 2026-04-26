@@ -10,7 +10,7 @@ body {
   height: 360px;
   padding: 0.25rem;
   text-align: center;
-  background: rgba(240,248,255,0.85) url("../favs/siteheaderBG.jpeg") no-repeat center/cover;
+  background: rgba(0,0,0,0.85) url("../favs/siteheaderBG.jpeg") no-repeat center/cover;
   background-blend-mode: multiply;
 }
 
