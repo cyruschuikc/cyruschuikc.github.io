@@ -26,3 +26,7 @@ body {
   right:0;
   background-image: url("..favs/RHSsidebar.png");
 }
+
+@media (max-width:1024) {
+
+}
