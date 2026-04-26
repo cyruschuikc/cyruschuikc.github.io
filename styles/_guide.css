@@ -53,22 +53,18 @@
 }
 
 .navMain.show {
-  display: flex;              /* show when toggled */
-  max-height: 256px;          /* expand smoothly */
+  display: flex; /* show when toggled */
+  max-height: 256px; /* expand smoothly */
 }
 
-.navMain li {
-  padding: 0.25rem 0.5rem;
-}
+.navMain li { padding: 0.25rem 0.5rem; }
 
 .navMain li a {
   text-decoration: none;
   color: #333;
 }
 
-.navMain li a:hover {
-  background-color: rgba(0,0,0,0.05);
-}
+.navMain li a:hover { background-color: rgba(0,0,0,0.05); }
 
 /* Desktop: always expanded horizontally */
 @media (min-width: 768px) {
@@ -78,9 +74,8 @@
     justify-content: center;
     max-height: none !important;
   }
-  .top-nav button {
-    display: none; /* hide toggle button on desktop */
-  }
+  .top-nav button {display: none;}
+  /* hide toggle button on desktop */
 }
 
 /* === Guide headings styles === */
