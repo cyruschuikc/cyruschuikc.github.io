@@ -1,0 +1,19 @@
+.guide-heading {
+  font-weight: bold;
+  color: #00bfff;
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(0,0,0,0.1);
+  text-transform: uppercase;
+  cursor: default;
+}
+
+.guide li a {
+  display: block;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.guide li a:hover {
+  background-color: rgba(0,0,0,0.05);
+}
