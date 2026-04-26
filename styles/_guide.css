@@ -39,31 +39,49 @@
 
 .navMain li a:hover { background-color: rgba(0,0,0,0.05); }
 
-/* === Mobile version: always expanded and horizontal === */
-@media (max-width: 768px) {
-  .navMain {
-    max-height: none /* no collapse */
-    display: flex; /* horizontal layout */
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-  }
+/* Mobile: collapsed by default */
+.navMain {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;              /* hidden initially */
+  flex-direction: column;     /* vertical layout on mobile */
+  gap: 0.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
 
-  .top-nav button { margin-right: auto; }
-} /*======*/
+.navMain.show {
+  display: flex;              /* show when toggled */
+  max-height: 256px;          /* expand smoothly */
+}
 
-/* === Desktop: hide button and keep menu horizontal === */
+.navMain li {
+  padding: 0.25rem 0.5rem;
+}
+
+.navMain li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.navMain li a:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+/* Desktop: always expanded horizontally */
 @media (min-width: 768px) {
-  .top-nav button { display: none; } 
-  /* no toggle button on desktop */
-
   .navMain {
-    display: flex;
+    display: flex !important;
     flex-direction: row;
     justify-content: center;
-    max-height: none;
+    max-height: none !important;
   }
-} /*======*/
+  .top-nav button {
+    display: none; /* hide toggle button on desktop */
+  }
+}
 
 /* === Guide headings styles === */
 .guide-heading {
