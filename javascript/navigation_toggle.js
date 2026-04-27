@@ -5,17 +5,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!navButton || !guideNav) return;
 
-  const defaultIcon = "💠🟰";
-  const closeIcon = "✖️";
+  const ICON_OPEN = "✖️";
+  const ICON_CLOSED = "💠🟰";
 
-  const toggleMenu = () => {
-    const isOpen = guideNav.classList.toggle("open");
-
-    navButton.textContent = isOpen ? closeIcon : defaultIcon;
-
+  const updateUI = (isOpen) => {
+    navButton.textContent = isOpen ? ICON_OPEN : ICON_CLOSED;
     navButton.setAttribute("aria-expanded", isOpen);
     guideNav.setAttribute("aria-hidden", !isOpen);
   };
 
-  navButton.addEventListener("click", toggleMenu);
+  navButton.addEventListener("click", () => {
+    const isOpen = guideNav.classList.toggle("open");
+    updateUI(isOpen);
+  });
+
+  updateUI(false);
 });
