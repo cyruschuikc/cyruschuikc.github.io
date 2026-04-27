@@ -8,7 +8,6 @@ navButton {
 }
 
 navButton:hover,
-
 navButton:focus {
   transform: scale(1);
 }
@@ -100,10 +99,17 @@ navButton:focus {
 
 / ===== Responsive ===== /
 @media (max-width: 1024px) {
-  .guide {display: none;}
-  .guide.active {display:block;}
-  .guide ul {
-    flex-direction: column;
-    gap: 0.25rem;
+  .guide {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
+
+  .guide.open {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 }
