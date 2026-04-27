@@ -15,9 +15,10 @@
   cursor: pointer;
 }
 
-/* Desktop version: collapsed by default */
+/* Mobile version: collapsed by default */
 .navMain {
   background-color: rgba(240, 248, 255, 0.3);
+  backdrop-filter: blur(2px);
   margin: 0;
   padding: 0;
   display: block;
@@ -75,6 +76,7 @@
     text-align: center;
     max-height: none !important;
     background-color: rgba(240, 248, 250, 0.3);
+    backdrop-filter: blur(4px);
   }
   .top-nav button {display: none;}
   /* hide toggle button on desktop */
