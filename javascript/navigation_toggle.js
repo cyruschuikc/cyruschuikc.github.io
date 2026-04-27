@@ -1,24 +1,21 @@
 const navb = document.getElementById("navButton");
+const menu = document.querySelector(".navMain");
 
-navb.addEventListener("click", function () {
-  if (navb.innerText === "💠🟰") {
-    navb.innerText = "✖️";
-  } else {
-    navb.innerText = "💠🟰";
-  }
+navb.addEventListener("click", () => {
+  navb.innerText = navb.innerText === "💠🟰" ? "✖️" : "💠🟰";
+  ToggleNavigation();
 });
 
 function ToggleNavigation() {
-  const menu = document.querySelector('.navMain');
-  if (!menu.classList.contains('show')) {
-    menu.style.display = 'flex';   // first make it visible
+  if (!menu.classList.contains("show")) {
+    menu.style.display = "flex";
     setTimeout(() => {
-      menu.classList.add('show');  // then expand
+      menu.classList.add("show");
     }, 10);
   } else {
-    menu.classList.remove('show'); // collapse
+    menu.classList.remove("show");
     setTimeout(() => {
-      menu.style.display = 'none'; // hide after animation
-    }, 300); // wait for transition to finish
+      menu.style.display = "none";
+    }, 300);
   }
 }
