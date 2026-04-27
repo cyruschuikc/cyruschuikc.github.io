@@ -1,21 +1,21 @@
 // navigation_toggle.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const navButton = document.getElementById("navButton");
   const guideNav = document.querySelector(".guide");
 
-  if (navButton && guideNav) {
-    navButton.addEventListener("click", () => {
-      // Toggle button text
-      navButton.innerText = navButton.innerText === "💠🟰" ? "✖️" : "💠🟰";
+  if (!navButton || !guideNav) return;
 
-      // Toggle nav visibility
-      guideNav.classList.toggle("open");
+  const defaultIcon = "💠🟰";
+  const closeIcon = "✖️";
 
-      // Accessibility attributes
-      const expanded = guideNav.classList.contains("open");
-      navButton.setAttribute("aria-expanded", expanded);
-      guideNav.setAttribute("aria-hidden", !expanded);
-    });
-  }
+  const toggleMenu = () => {
+    const isOpen = guideNav.classList.toggle("open");
+
+    navButton.textContent = isOpen ? closeIcon : defaultIcon;
+
+    navButton.setAttribute("aria-expanded", isOpen);
+    guideNav.setAttribute("aria-hidden", !isOpen);
+  };
+
+  navButton.addEventListener("click", toggleMenu);
 });
