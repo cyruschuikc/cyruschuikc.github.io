@@ -1,61 +1,38 @@
-/ Navigation menu /
+/* ===Navigation menu=== */
+/* Hide menu by default on mobile */
 .guide {
-  display: none; / hidden by default on mobile /
-  background: rgba(255, 255, 255, 0.9);
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+/* Show when open */
+.guide.open {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
   backdrop-filter: blur(8px);
-  padding: 0.5rem;
-  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  padding: 10px;
 }
 
-.guide ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.guide li {
-  margin: 0.3rem 0;
-}
-
-.guide a,
-.guide summary {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.guide a:hover,
-.guide summary:hover {
-  color: #0078d7;
-  text-decoration: underline;
-}
-
-/ Dropdown menu styling /
-.dropdown-menu div {
-  padding-left: 1rem;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/ Desktop view: show menu horizontally /
+/* Desktop: always visible */
 @media (min-width: 768px) {
-
-navButton {
-    display: none; / hide toggle button /
+  #navButton {
+    display: none;
   }
-
   .guide {
     display: block !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
-
   .guide ul {
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
-  }
-
-  .guide li {
+    list-style: none;
     margin: 0;
+    padding: 0;
   }
 }
