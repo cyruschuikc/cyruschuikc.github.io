@@ -1,12 +1,13 @@
-/* === Guide major styles === */
+/* === Top navigation bar === */
 .top-nav {
   font-family: "Trebuchet MS", "Verdana", "Helvetica", "Arial", sans-serif;
-  font-size: larger;
+  font-size: large;
   text-align: center;
-  margin: 0 0.25rem;
+  margin: 12px 0;
   background-color: rgba(240, 248, 255, 0.3);
   backdrop-filter: blur(4px);
-  padding: 2px 4px;
+  -webkit-backdrop-filter: blur(4px); /* for mobile Safari/Chrome */
+  padding: 10px;
   display: block;
   overflow: hidden;
 }
@@ -16,20 +17,21 @@
   cursor: pointer;
 }
 
-/* Menu collapsed by default (mobile) */
+/* === Main navigation menu === */
 .navMain {
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
-  display: none;
+  display: none; /* hidden initially on mobile */
   flex-direction: column;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 20px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
   background-color: rgba(240, 248, 255, 0.3);
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px); 
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .navMain.show {
@@ -37,33 +39,42 @@
   max-height: 256px;
 }
 
-.navMain li { padding: 0.25rem 0.5rem; }
+.navMain li {
+  padding: 0.25rem 0.5rem;
+}
 
 .navMain li a {
   text-decoration: none;
-  color: #333;
+  color: #000;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.navMain li a:hover { background-color: rgba(0,0,0,0.05); }
+.navMain li a:hover,
+.navMain li a:focus {
+  color: blueviolet;
+  text-decoration: underline;
+}
 
-/* Desktop: always expanded horizontally */
+/* === Dropdown menu (if needed) === */
+.dropdown-menu {
+  font-size: large;
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+/* === Responsive adjustments === */
 @media (min-width: 768px) {
   .top-nav button { display: none; }
   .navMain {
     display: flex !important;
+    flex-direction: row;
     text-align: center;
     max-height: none !important;
     background-color: rgba(240, 248, 255, 0.3);
     backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
   }
-}
-
-/* === Guide headings styles === */
-.guide-heading {
-  font-weight: bold;
-  color: #00bfff;
-  padding: 0.25rem 0.5rem;
-  background-color: rgba(0,0,0,0.1);
-  text-transform: uppercase;
-  cursor: pointer;
 }
