@@ -1,14 +1,42 @@
-/* Main navigation guide */
+/ ===== Toggle Button ===== /
+navButton {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+navButton:hover,
+
+navButton:focus {
+  transform: scale(1);
+}
+//
+
+/ ===== Main Navigation ===== /
 .guide {
   text-align: center;
-  margin: 0.25rem 0rem;
+  margin: 0.25rem 0;
   background-color: rgba(240, 248, 255, 0.3);
   font-size: large;
-  padding: 0.25rem;
+  padding: 0 0.25rem;
+  border-radius: 0.5rem;
+  backdrop-filter: blur(0.5rem);
+
+  / collapsed by default /
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.5s ease;
+}
+
+.guide.open {
+  max-height: 1024px; / enough to fit all items /
+  opacity: 1;
 }
 
 .guide ul {
-  list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
@@ -28,22 +56,31 @@
   color: blueviolet;
   text-decoration: underline;
 }
+//
 
-/* Dropdown menu */
+/ ===== Dropdown Menu ===== /
 .dropdown-menu {
   font-size: large;
+  position: relative;
 }
 
-.dropdown-menu-tag {
-  color: #000;
+.dropdown-menu summary {
   cursor: pointer;
   font-weight: bold;
+  list-style: none;
 }
 
 .dropdown-menu ul {
   list-style: none;
   margin: 0;
-  padding: 2px 0;
+  padding: 4px 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.dropdown-menu.active ul {
+  max-height: 300px; / adjust as needed /
 }
 
 .dropdown-menu ul li {
@@ -61,20 +98,8 @@
   text-decoration: underline;
 }
 
-/* Active dropdown state */
-.dropdown-menu.active {
-  display: block;
-}
-
-/* Responsive adjustments */
+/ ===== Responsive ===== /
 @media (max-width: 1024px) {
-  .sidebar-left,
-  .sidebar-right {
-    display: none;
-  }
-  .content {
-    margin: 0;
-  }
   .guide ul {
     flex-direction: column;
     gap: 0.25rem;
