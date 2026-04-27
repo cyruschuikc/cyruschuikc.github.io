@@ -1,27 +1,38 @@
-// navigation_toggle.js
+// javascript/navigation_toggle.js
 document.addEventListener("DOMContentLoaded", () => {
   const navButton = document.getElementById("navButton");
-  const guideNav = document.querySelector(".guide");
+  const guide = document.getElementById("guide");
 
-  if (!navButton || !guideNav) return;
+  if (!navButton || !guide) return;
 
-  // Define icons
+  // define icon
   const ICON_OPEN = "✖️";
   const ICON_CLOSED = "💠🟰";
 
-  // Update UI state
+  // update UI status
   const updateUI = (isOpen) => {
     navButton.textContent = isOpen ? ICON_OPEN : ICON_CLOSED;
-    navButton.setAttribute("aria-expanded", isOpen);
-    guideNav.setAttribute("aria-hidden", !isOpen);
+    navButton.setAttribute("aria-expanded", String(isOpen));
+    guide.setAttribute("aria-expanded", String(isOpen));
   };
 
-  // Toggle on click
-  navButton.addEventListener("click", () => {
-    const isOpen = guideNav.classList.toggle("open");
+  // switch status
+  const toggleNav = () => {
+    const isOpen = guide.classList.toggle("open");
     updateUI(isOpen);
+  };
+
+  // click to switch 
+  navButton.addEventListener("click", toggleNav);
+
+  // keyboard control support (Enter / Space)
+  navButton.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggleNav();
+    }
   });
 
-  // Initialize closed
+  // initialize
   updateUI(false);
 });
