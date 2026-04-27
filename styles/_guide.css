@@ -15,8 +15,9 @@
   cursor: pointer;
 }
 
-/* Mobile version: collapsed by default */
+/* Desktop version: collapsed by default */
 .navMain {
+  background-color: rgba(240, 248, 255, 0.3);
   margin: 0;
   padding: 0;
   display: block;
