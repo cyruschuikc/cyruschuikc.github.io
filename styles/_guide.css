@@ -5,6 +5,7 @@
   text-align: center;
   margin: 0 0.25rem;
   background-color: rgba(240, 248, 255, 0.3);
+  backdrop-filter: blur(4px);
   padding: 2px 4px;
   display: block;
   overflow: hidden;
@@ -15,49 +16,24 @@
   cursor: pointer;
 }
 
-/* Mobile version: collapsed by default */
-.navMain {
-  background-color: rgba(240, 248, 255, 0.3);
-  backdrop-filter: blur(2px);
-  margin: 0;
-  padding: 0;
-  display: block;
-  justify-content: center;
-  gap: 0.5rem;
-  max-height: 0; /* collapsed */
-  overflow: hidden;
-  transition: max-height 0.3s ease; /* smooth animation */
-}
-
-/* Expanded state */
-.navMain.show { max-height: 256px; }
-
-.navMain li { padding: 0.25rem 0.5rem; }
-
-.navMain li a {
-  text-decoration: none;
-  color: #333;
-}
-
-.navMain li a:hover { background-color: rgba(0,0,0,0.05); }
-
 /* Mobile: collapsed by default */
 .navMain {
   margin: 0;
   padding: 0;
   list-style: none;
   display: none; /* hidden initially */
-  flex-direction: column; /* vertical layout on mobile */
+  flex-direction: column;
   gap: 0.5rem;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  background-color: rgba(240, 248, 250, 0.5);
+  background-color: rgba(240, 248, 255, 0.3);
+  backdrop-filter: blur(4px);
 }
 
 .navMain.show {
-  display: flex; /* show when toggled */
-  max-height: 256px; /* expand smoothly */
+  display: flex;
+  max-height: 256px;
 }
 
 .navMain li { padding: 0.25rem 0.5rem; }
@@ -75,11 +51,10 @@
     display: flex !important;
     text-align: center;
     max-height: none !important;
-    background-color: rgba(240, 248, 250, 0.3);
-    backdrop-filter: blur(4px);
+    background-color: rgba(240, 248, 255, 0.3);
+    backdrop-filter: blur(6px);
   }
-  .top-nav button {display: none;}
-  /* hide toggle button on desktop */
+  .top-nav button { display: none; }
 }
 
 /* === Guide headings styles === */
@@ -90,4 +65,4 @@
   background-color: rgba(0,0,0,0.1);
   text-transform: uppercase;
   cursor: pointer;
-} /*======*/
+}
