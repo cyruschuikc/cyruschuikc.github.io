@@ -1,0 +1,69 @@
+/* Slider container */
+.slider {
+  position: relative;
+  width: 100%;
+  max-height: 32rem;
+  overflow: hidden;
+  margin: 0 auto;
+  background: rgba(0, 255, 255, 0.3);
+  border-radius: 0.5rem;
+}
+
+/* Track that holds slides */
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+/* Each slide (video or image) */
+.slider-track > * {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Video styling */
+.slider-track video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+}
+
+/* Navigation buttons */
+.slider-prev,
+.slider-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.3);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 2px 4px;
+  cursor: pointer;
+  transition: background 0.5s ease;
+  z-index: 10;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.slider-prev { left: 0; }
+.slider-next { right: 0; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .slider {
+    max-height: 32rem;
+  }
+  .slider-prev,
+  .slider-next {
+    font-size: 20px;
+    padding: 2px 4px;
+  }
+}
