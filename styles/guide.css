@@ -1,114 +1,61 @@
-/ ===== Toggle Button ===== /
-.navButton {
-  background: transparent;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.navButton:hover,
-.navButton:focus {
-  transform: scale(1);
-}
-//
-
-/ ===== Main Navigation ===== /
+/ Navigation menu /
 .guide {
-  text-align: center;
-  margin: 0.25rem 0;
-  background-color: rgba(240, 248, 255, 0.3);
-  font-size: large;
-  padding: 0 0.25rem;
-  border-radius: 0.5rem;
-  backdrop-filter: blur(0.5rem);
-
-  / collapsed by default /
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.3s ease, opacity 0.5s ease;
-}
-
-.guide.open {
-  max-height: 1024px; / enough to fit all items /
-  opacity: 1;
+  display: none; / hidden by default on mobile /
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem;
+  border-radius: 6px;
 }
 
 .guide ul {
+  list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
 }
 
-.guide a {
+.guide li {
+  margin: 0.3rem 0;
+}
+
+.guide a,
+.guide summary {
   text-decoration: none;
-  color: #000;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .guide a:hover,
-.guide a:focus {
-  color: blueviolet;
-  text-decoration: underline;
-}
-//
-
-/ ===== Dropdown Menu ===== /
-.dropdown-menu {
-  font-size: large;
-  position: relative;
-}
-
-.dropdown-menu summary {
-  cursor: pointer;
-  font-weight: bold;
-  list-style: none;
-}
-
-.dropdown-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 4px 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-
-.dropdown-menu.active ul {
-  max-height: 300px; / adjust as needed /
-}
-
-.dropdown-menu ul li {
-  margin: 2px 0;
-}
-
-.dropdown-menu ul li a {
-  color: #000;
-  text-decoration: none;
-}
-
-.dropdown-menu ul li a:hover,
-.dropdown-menu ul li a:focus {
-  color: blueviolet;
+.guide summary:hover {
+  color: #0078d7;
   text-decoration: underline;
 }
 
-/ ===== Responsive ===== /
-@media (max-width: 1024px) {
-  .guide {
-    display: none;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+/ Dropdown menu styling /
+.dropdown-menu div {
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/ Desktop view: show menu horizontally /
+@media (min-width: 768px) {
+
+navButton {
+    display: none; / hide toggle button /
   }
 
-  .guide.open {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
+  .guide {
+    display: block !important;
+  }
+
+  .guide ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .guide li {
+    margin: 0;
   }
 }
