@@ -4,9 +4,9 @@
   font-size: large;
   text-align: center;
   margin: 12px 0;
-  background-color: rgba(240, 248, 255, 0.3);
+  background-color: rgba(240, 248, 255, 0.3); 
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px); /* for mobile Safari/Chrome */
+  -webkit-backdrop-filter: blur(4px);
   padding: 10px;
   display: block;
   overflow: hidden;
@@ -22,7 +22,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  display: none; /* hidden initially on mobile */
+  display: none; 
   flex-direction: column;
   justify-content: center;
   gap: 20px;
@@ -56,16 +56,7 @@
   text-decoration: underline;
 }
 
-/* === Dropdown menu (if needed) === */
-.dropdown-menu {
-  font-size: large;
-}
-
-.dropdown-menu.active {
-  display: block;
-}
-
-/* === Responsive adjustments === */
+/* === Desktop: always expanded horizontally === */
 @media (min-width: 768px) {
   .top-nav button { display: none; }
   .navMain {
@@ -74,7 +65,17 @@
     text-align: center;
     max-height: none !important;
     background-color: rgba(240, 248, 255, 0.3);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px); 
     -webkit-backdrop-filter: blur(6px);
   }
+}
+
+/* === Guide heading === */
+.guide-heading {
+  font-weight: bold;
+  color: #00bfff;
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(0,0,0,0.1);
+  text-transform: uppercase;
+  cursor: pointer;
 }
