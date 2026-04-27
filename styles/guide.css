@@ -1,5 +1,5 @@
 / ===== Toggle Button ===== /
-navButton {
+.navButton {
   background: transparent;
   border: none;
   font-size: 2rem;
@@ -7,8 +7,8 @@ navButton {
   transition: transform 0.3s ease;
 }
 
-navButton:hover,
-navButton:focus {
+.navButton:hover,
+.navButton:focus {
   transform: scale(1);
 }
 //
