@@ -4,7 +4,14 @@
   border-radius: 0.5rem;
   padding: 2px 4px;
   max-width: 100%;
+  max-height: 0;
+  overflow: hidden;
   transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.guide.open {
+  max-height: 600px;
+  opacity: 1;
 }
 
 .guide ul {
