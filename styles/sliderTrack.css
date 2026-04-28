@@ -53,12 +53,13 @@
   background: rgba(0,0,0,0.7);
 }
 
-.slider-prev { left: 0; }
-.slider-next { right: 0; }
+.slider-prev { left: 10; }
+.slider-next { right: 10; }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .slider {
+    width: auto;
     max-height: 32rem;
   }
   .slider-prev,
