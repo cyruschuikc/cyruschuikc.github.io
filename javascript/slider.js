@@ -14,12 +14,14 @@ function resetAutoPlay() {
   const currentSlide = slides[index];
 
   if (currentSlide.tagName.toLowerCase() === 'video') {
-    // video：capture end pay event
+    // make sure video in pay
+    currentSlide.play().catch(err => console.log("Autoplay blocked:", err));
+    // jump next if finished pay video
     currentSlide.addEventListener('ended', () => {
       showSlide(index + 1);
     }, { once: true });
   } else {
-    // image：stay 5 seconds then move to next
+    // image Stay 5sec then move to next
     timer = setTimeout(() => {
       showSlide(index + 1);
     }, 5000);
