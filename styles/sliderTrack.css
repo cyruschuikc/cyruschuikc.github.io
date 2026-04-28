@@ -1,7 +1,6 @@
 /* Slider container */
 .slider {
   position: relative;
-  width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   margin: 0 auto;
@@ -52,16 +51,25 @@
 
 .slider-prev { left: 10px; }
 .slider-next { right: 10px; }
+.slider-dots {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50vh;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.25rem;
+  z-index: 40;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .slider {
-    width: auto;
-    aspect-ratio: 16 / 9;
+    background: rgba(240, 248, 250, 0.12);
+    border-radius: 0.25rem;
   }
   .slider-prev,
   .slider-next {
-    font-size: 20px;
+    font-size: 2rem;
     padding: 2px 4px;
   }
 }
