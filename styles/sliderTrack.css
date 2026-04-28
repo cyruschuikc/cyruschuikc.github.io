@@ -11,6 +11,7 @@
 /* Track that holds slides */
 .slider-track {
   display: flex;
+  position: relative;
   width: 100%;
   height: 100%;
   flex-wrap: nowrap;
@@ -41,7 +42,7 @@
   padding: 2px 4px;
   cursor: pointer;
   transition: background 0.5s ease;
-  z-index: 50;
+  z-index: 100;
 }
 
 .slider-prev:hover,
@@ -51,14 +52,20 @@
 
 .slider-prev { left: 10px; }
 .slider-next { right: 10px; }
+
 .slider-dots {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  border: none;
   position: absolute;
   bottom: 0.5rem;
-  left: 50vh;
+  left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 0.25rem;
-  z-index: 40;
+  z-index: 90;
+  cursor: pointer;
 }
 
 /* Responsive adjustments */
