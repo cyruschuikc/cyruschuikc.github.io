@@ -74,19 +74,26 @@
 
   <!--site body-->
   <main class="contents">
-    <section class="slider" aria-label="Featured blog images">
-      <div class="slider-track">
-        <video autoplay muted playsinline width="640" height="360">
-          <source src="slidesTracks/slidesShowA1a1.mp4" type="video/mp4">
-        </video>
-        <button class="slider-prev" aria-label="Previous image">
-          &larr;<span class="visually-hidden">Previous</span>
-        </button>
-        <button class="slider-next" aria-label="Next image">
-          &rarr;<span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section>
+   <section class="slider" aria-label="Featured blog images">
+  <div class="slider-track">
+    <video autoplay muted playsinline width="640" height="360">
+      <source src="slidesTracks/slidesShowA1a1.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- control button -->
+  <div class="slider-controls">
+    <button class="slider-prev" aria-label="Previous image">&larr;</button>
+    <button class="slider-next" aria-label="Next image">&rarr;</button>
+  </div>
+
+  <!-- dot indicators -->
+  <div class="slider-dots">
+    <button class="active" aria-label="Slide 1"></button>
+    <button aria-label="Slide 2"></button>
+    <button aria-label="Slide 3"></button>
+  </div>
+</section>
     <section class="introduction" id="intro">
       <h2>Welcome to KamiKiCy <br> (my personal blog website)</h2>
       <hr>
