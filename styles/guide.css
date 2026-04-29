@@ -11,7 +11,8 @@
   left: 0;
   right: 0;
   transition: max-height 0.3s ease, opacity 0.3s ease;
-  z-index:20;
+  opacity: 0; /* ensure hidden state is invisible */
+  z-index: 20;
 }
 
 .guide.open {
@@ -28,9 +29,11 @@
   gap: 1rem;
 }
 
-.guide li { position: relative; }
+.guide li {
+  position: relative;
+}
 
-.guide a, 
+.guide a,
 .guide summary {
   font-family: "Segoe UI", "Noto Sans", sans-serif;
   font-size: larger;
@@ -48,9 +51,10 @@
   background: rgba(0, 102, 204, 0.3);
 }
 
-.dropdown-menu { position: relative; }
+/* Dropdown menu */
+.dropdown-menu {position: relative;}
 
-.dropdown-menu summary { list-style: none; }
+.dropdown-menu summary {list-style: none;}
 
 .dropdown-menu div {
   position: absolute;
@@ -60,14 +64,15 @@
   backdrop-filter: blur(6px);
   border: 1px solid #ddd;
   border-radius: 4px;
-  padding: 2px 4px;
+  padding: 4px 6px;
   min-width: 128px;
   display: none;
-  z-index: 10;
+  z-index: 30; /* slightly higher than guide */
 }
 
-.dropdown-menu[open] div { display: block; }
+.dropdown-menu[open] div {display: block;}
 
+/* Navigation button */
 #navButton {
   position: fixed;
   top: 0.5rem;
@@ -78,10 +83,10 @@
   cursor: pointer;
   margin: 0.5rem;
   transition: transform 0.2s ease;
-  z-index:999;
+  z-index: 999;
 }
 
-#navButton:hover { transform: scale(1.1); }
+#navButton:hover {transform: scale(1.1);}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -89,11 +94,13 @@
     flex-direction: column;
     gap: 0.5rem;
   }
+
   .guide {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
   }
+
   .guide[aria-expanded="true"] {
     max-height: 500px;
     opacity: 1;
