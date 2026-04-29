@@ -1,38 +1,58 @@
-// javascript/navigation_toggle.js
-document.addEventListener("DOMContentLoaded", () => {
-  const navButton = document.getElementById("navButton");
-  const guide = document.getElementById("guide");
+const track = document.querySelector('.slider-track');
+const slides = document.querySelectorAll('.slider-track > *');
+const prevBtn = document.querySelector('.slider-prev');
+const nextBtn = document.querySelector('.slider-next');
+const dots = document.querySelectorAll('.slider-dots button');
 
-  if (!navButton || !guide) return;
+let index = 0;
+let timer = null;
 
-  // define icon
-  const ICON_OPEN = "✖️";
-  const ICON_CLOSED = "💠🟰";
+function showSlide(n) {
+  index = (n + slides.length) % slides.length;
+  track.style.transform = `translateX(-${index * 100}%)`;
 
-  // update UI status
-  const updateUI = (isOpen) => {
-    navButton.textContent = isOpen ? ICON_OPEN : ICON_CLOSED;
-    navButton.setAttribute("aria-expanded", String(isOpen));
-    guide.setAttribute("aria-expanded", String(isOpen));
-  };
-
-  // switch status
-  const toggleNav = () => {
-    const isOpen = guide.classList.toggle("open");
-    updateUI(isOpen);
-  };
-
-  // click to switch 
-  navButton.addEventListener("click", toggleNav);
-
-  // keyboard control support (Enter / Space)
-  navButton.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      toggleNav();
-    }
+  // update dots status
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
   });
 
-  // initialize
-  updateUI(false);
+  resetAutoPlay();
+}
+
+function resetAutoPlay() {
+  clearTimeout(timer);
+  const currentSlide = slides[index];
+
+  if (currentSlide.tagName.toLowerCase() === 'video') {
+    // make sure video can pay
+    currentSlide.play().catch(err => console.log("Autoplay blocked:", err));
+    // next after finished pay
+    currentSlide.addEventListener('ended', () => {
+      showSlide(index + 1);
+    }, { once: true });
+  } else {
+    // image: hold 5secs then next
+    timer = setTimeout(() => {
+      showSlide(index + 1);
+    }, 5000);
+  }
+}
+
+// manual control
+prevBtn.addEventListener('click', () => {
+  showSlide(index - 1);
 });
+
+nextBtn.addEventListener('click', () => {
+  showSlide(index + 1);
+});
+
+// dots onclick event
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    showSlide(i);
+  });
+});
+
+// initialize
+resetAutoPlay();
