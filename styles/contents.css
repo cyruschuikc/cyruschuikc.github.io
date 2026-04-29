@@ -9,7 +9,7 @@ body {
 .site-header {
   font-size:large;
   position: relative;
-  height: 20rem;
+  height: 16rem;
   padding: 0.25rem;
   text-align: center;
   background: rgba(240, 248, 250, 0.7) url("../favs/siteheaderBG.jpeg") no-repeat center/cover;
