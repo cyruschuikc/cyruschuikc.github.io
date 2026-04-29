@@ -1,5 +1,6 @@
 /* Slider container */
 .slider {
+  max-width: 960px;
   position: relative;
   aspect-ratio: 16 / 9;
   overflow: hidden;
