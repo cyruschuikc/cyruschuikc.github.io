@@ -1,58 +1,20 @@
-const track = document.querySelector('.slider-track');
-const slides = document.querySelectorAll('.slider-track > *');
-const prevBtn = document.querySelector('.slider-prev');
-const nextBtn = document.querySelector('.slider-next');
-const dots = document.querySelectorAll('.slider-dots button');
+// navigation_toggle.js
+document.addEventListener("DOMContentLoaded", () => {
+  const navButton = document.getElementById("navButton");
+  const guide = document.getElementById("guide");
 
-let index = 0;
-let timer = null;
+  if (navButton && guide) {
+    navButton.addEventListener("click", () => {
+      const expanded = navButton.getAttribute("aria-expanded") === "true";
 
-function showSlide(n) {
-  index = (n + slides.length) % slides.length;
-  track.style.transform = `translateX(-${index * 100}%)`;
+      // switch aria-expanded
+      navButton.setAttribute("aria-expanded", String(!expanded));
 
-  // update dots status
-  dots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === index);
-  });
+      // change button text
+      navButton.textContent = expanded ? "💠🟰" : "✖️";
 
-  resetAutoPlay();
-}
-
-function resetAutoPlay() {
-  clearTimeout(timer);
-  const currentSlide = slides[index];
-
-  if (currentSlide.tagName.toLowerCase() === 'video') {
-    // make sure video can pay
-    currentSlide.play().catch(err => console.log("Autoplay blocked:", err));
-    // next after finished pay
-    currentSlide.addEventListener('ended', () => {
-      showSlide(index + 1);
-    }, { once: true });
-  } else {
-    // image: hold 5secs then next
-    timer = setTimeout(() => {
-      showSlide(index + 1);
-    }, 5000);
+      // change guide visible
+      guide.classList.toggle("open", !expanded);
+    });
   }
-}
-
-// manual control
-prevBtn.addEventListener('click', () => {
-  showSlide(index - 1);
 });
-
-nextBtn.addEventListener('click', () => {
-  showSlide(index + 1);
-});
-
-// dots onclick event
-dots.forEach((dot, i) => {
-  dot.addEventListener('click', () => {
-    showSlide(i);
-  });
-});
-
-// initialize
-resetAutoPlay();
