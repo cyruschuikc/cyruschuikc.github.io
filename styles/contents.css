@@ -7,6 +7,7 @@ body {
 
 /* Header */
 .site-header {
+  font-size:large;
   position: relative;
   height: 20rem;
   padding: 0.25rem;
@@ -72,7 +73,8 @@ main {
 }
 
 .introduction p {
-  text-align: center; /* fixed from justify-content */
+  font-size: 20px;
+  text-align: center;
 }
 
 /* Responsive adjustments */
