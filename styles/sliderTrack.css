@@ -7,7 +7,7 @@
   margin: 0 auto;
   background: rgba(0, 255, 255, 0.3);
   border-radius: 0.5rem;
-  z-index: 1; /* make sure slider Priority is  higher than sidebar */
+  z-index: 1; /* ensure slider is above sidebars */
 }
 
 /* Track that holds slides */
@@ -27,7 +27,8 @@
   flex-shrink: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover; /* better fill than contain */
+  border-radius: 0.5rem;
 }
 
 /* Navigation buttons */
@@ -40,11 +41,11 @@
   border: none;
   color: #fff;
   font-size: 2rem;
-  padding: 2px 4px;
+  padding: 0.25rem 0.5rem;
   cursor: pointer;
-  transition: background 0.5s ease;
-  z-index: 200; /* make sure on top of all slide */
-  pointer-events: auto; /* make sure can onclick */
+  transition: background 0.3s ease;
+  z-index: 200; /* above slides */
+  pointer-events: auto;
 }
 
 .slider-prev:hover,
@@ -63,16 +64,17 @@
   transform: translateX(-50%);
   display: flex;
   gap: 0.25rem;
-  z-index: 150; /* higher than slide，but lower than button */
+  z-index: 150; /* above slides, below buttons */
 }
 
 .slider-dots button {
-  height: 0.5rem;
-  width: 0.5rem;
+  height: 0.75rem;
+  width: 0.75rem;
   border-radius: 50%;
   border: none;
   background: rgba(255,255,255,0.6);
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .slider-dots button.active {
@@ -85,9 +87,15 @@
     background: rgba(240, 248, 250, 0.12);
     border-radius: 0.25rem;
   }
+
   .slider-prev,
   .slider-next {
-    font-size: 2rem;
-    padding: 2px 4px;
+    font-size: 1.5rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .slider-dots button {
+    height: 0.5rem;
+    width: 0.5rem;
   }
 }
