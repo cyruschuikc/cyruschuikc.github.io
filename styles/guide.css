@@ -11,7 +11,7 @@
   left: 0;
   right: 0;
   transition: max-height 0.3s ease, opacity 0.3s ease;
-  opacity: 0; /* ensure hidden state is invisible */
+  opacity: 0; /* hidden by default */
   z-index: 20;
 }
 
@@ -29,9 +29,7 @@
   gap: 1rem;
 }
 
-.guide li {
-  position: relative;
-}
+.guide li { position: relative; }
 
 .guide a,
 .guide summary {
@@ -52,9 +50,8 @@
 }
 
 /* Dropdown menu */
-.dropdown-menu {position: relative;}
-
-.dropdown-menu summary {list-style: none;}
+.dropdown-menu { position: relative; }
+.dropdown-menu summary { list-style: none; }
 
 .dropdown-menu div {
   position: absolute;
@@ -67,10 +64,9 @@
   padding: 4px 6px;
   min-width: 128px;
   display: none;
-  z-index: 30; /* slightly higher than guide */
+  z-index: 30;
 }
-
-.dropdown-menu[open] div {display: block;}
+.dropdown-menu[open] div { display: block; }
 
 /* Navigation button */
 #navButton {
@@ -85,10 +81,9 @@
   transition: transform 0.2s ease;
   z-index: 999;
 }
+#navButton:hover { transform: scale(1.1); }
 
-#navButton:hover {transform: scale(1.1);}
-
-/* Responsive */
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .guide ul {
     flex-direction: column;
@@ -104,5 +99,27 @@
   .guide[aria-expanded="true"] {
     max-height: 500px;
     opacity: 1;
+  }
+}
+
+/* Desktop Responsive */
+@media (min-width: 769px) {
+  .guide {
+    position: relative;
+    max-height: none;
+    opacity: 1;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+  }
+
+  .guide ul {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  #navButton {
+    display: none; /* hide toggle button on desktop */
   }
 }
