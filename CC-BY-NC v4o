@@ -1,0 +1,76 @@
+# Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+
+## Legal title
+Creative Commons Attribution-NonCommercial 4.0 International Public License
+
+## Short summary (human-readable)
+You are free to:
+- **Share** — copy and redistribute the material in any medium or format.
+- **Adapt** — remix, transform, and build upon the material.
+
+Under the following terms:
+- **Attribution (BY):** You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+- **NonCommercial (NC):** You may not use the material for commercial purposes.
+
+No additional restrictions — you may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+## Full license text
+The full legal code is available at:
+https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+## How to attribute (recommended attribution snippet)
+When someone reuses your work, require them to include an attribution like the example below.
+
+**Attribution template (fill in the brackets):**
+
+- **Title:** [Title of the work]  
+- **Author:** [Your name or handle]  
+- **Source:** [URL to the original work]  
+- **License:** CC BY-NC 4.0 — https://creativecommons.org/licenses/by-nc/4.0/
+
+**One-line example to include near the work or in a footer:**
+
+> “[Title]” by [Author] is licensed under CC BY-NC 4.0 — https://creativecommons.org/licenses/by-nc/4.0/
+
+## Examples of allowed and prohibited uses
+- **Allowed (with attribution, non-commercial):**
+  - Sharing an article on a personal blog with proper credit.
+  - Using an image in a classroom presentation (no commercial charge).
+  - Remixing code snippets for learning and sharing on a non-commercial site.
+
+- **Prohibited (without additional permission):**
+  - Selling the work or including it in a product for sale.
+  - Using the work in paid advertising or in a commercial website that charges for access.
+  - Applying DRM or other technical restrictions that prevent others from exercising the license rights.
+
+## Applying this license to your repository
+1. Place this `LICENSE.md` file at the **root** of your repository.  
+2. In your `README.md`, add a short notice, for example:
+
+   > This repository’s content (text, images, and other creative works) is licensed under the Creative Commons Attribution‑NonCommercial 4.0 International (CC BY‑NC 4.0). See LICENSE.md for details.
+
+3. For individual files you want to mark explicitly, add a header comment or footer with the attribution snippet and a link to the license.
+
+## Dual licensing (code vs content)
+If your repo contains **source code** and **creative content** (articles, images), consider **dual licensing**:
+- **Code**: use a permissive software license (e.g., **MIT** or **Apache 2.0**) — put `LICENSE-code.md` or a clear section in `LICENSE.md`.
+- **Content**: use **CC BY-NC 4.0** for blog posts, images, and other creative works.
+
+Example README note:
+
+> Code in `/src` is licensed under the MIT License (see LICENSE-code.md). Content in `/content` and images are licensed under CC BY‑NC 4.0 (see LICENSE.md).
+
+## If someone wants commercial use
+Commercial use is **not** allowed under CC BY‑NC 4.0. Provide contact instructions so people can request permission:
+
+> For commercial licensing or other permissions, contact: [your email or contact page URL].
+
+## Practical tips
+- **Be explicit**: mark which parts of the repo the CC BY‑NC 4.0 applies to (all files, only `/content`, etc.).
+- **Attribution placement**: put attribution where users will see it (page footer, image caption, file header).
+- **Keep provenance**: include author name, source URL, and license link so downstream users can comply easily.
+- **Consider exceptions**: if you want to allow some commercial uses, state that explicitly and offer a contact method for licensing.
+
+---
+
+**Official reference and full legal text:** https://creativecommons.org/licenses/by-nc/4.0/
