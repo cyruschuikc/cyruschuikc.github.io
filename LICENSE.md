@@ -63,6 +63,7 @@ When someone reuses your work, require them to include an attribution like the e
 > - **Author:** *[Your name or handle]  
 > - **Source:** *[URL to the original work]  
 > - **License:** *CC BY-NC 4.0 — https://creativecommons.org/licenses/by-nc/4.0/
+
 Note:
 > - *: Nessasary attribution fields
 **One-line example to include near the work or in a footer:**
