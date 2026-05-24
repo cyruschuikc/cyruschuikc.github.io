@@ -4,10 +4,25 @@ Author:  cyruschuikc
 Source:  https://github.com/cyruschuikc/cyruschuikc.github.io/edit/main/Scripts/JS/test
 License:  CC BY-NC 4.0 — https://creativecommons.org/licenses/by-nc/4.0/
 **/
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange=()=>{xhttp.readyState==4&&xhttp.status==200?xhttp.responseText:xhttp.responseText};
-xhttp.open("GET", "Scripts/text/welstatementMAIN.txt", true);
-xhttp.send();
+function readXML() {
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+xmlhttp.readyState == 4 && xmlhttp.status == 200 ? displayXMLcontents(xmlhttp) : alert("ERROR!!!");
+};
+xmlhttp.open("GET", "books.xml", true);
+xmlhttp.send();
+}
+function displayXMLcontents(xml){
+  var x, i, xmlDoc, txt;
+  xmlDoc = xml.responseXML; // parse response as text/xml stream && returns a Document tree
+  txt = "";
+  x = xmlDoc.getElementByTagName("h1");
+  for (i = 0; i < x.length; i++){
+    txt += x[i].childNodes[0].nodeValue + "<br>"
+  }
+  txt += "<hr>"
+  alert(txt);
+}
 
 function $(fimg1){return document.getElementById("fimg1")};
 function $$(fimg2){return document.getElementById("fimg2")};
