@@ -1,0 +1,35 @@
+/**
+Title:  copyrights.xml
+Author:  cyruschuikc
+Source:  https://github.com/cyruschuikc/cyruschuikc.github.io/edit/main/copyrights
+License:  CC BY-NC 4.0 — https://creativecommons.org/licenses/by-nc/4.0/
+**/
+
+<?xml version="1.0" encoding="UTF-8"?>
+<copyrights_catalog>
+  <copyright catagory="creation">
+    <title lang="en">File Creation</title>
+    <file>copyrights.xml</file>
+    <src>https://github.com/cyruschuikc/cyruschuikc.github.io/edit/main/copyrights.xml</src>
+    <creator>cyruschuikc</creator>
+    <createdate>24th-May,2026</createdate>
+    <license>MIT & CC BY-NC v4.0</license>
+  </copyright>
+  <copyright catagory="direction">
+    <title lang="en">Ownership</title>
+    <director>cyruschuikc</contributor>
+    <assigndate>24th-May,2026</assigndate>
+    <license>MIT & CC BY-NC v4.0</license>
+  </copyright>
+  <copyright catagory="editor">
+    <title lang="en">Author(s)</title>
+    <author>cyruschuikc</author>
+    <assigndate>24th-May,2026</assigndate>
+    <license>MIT & CC BY-NC v4.0</license>
+  </copyright>
+  <copyright catagory="contribution">
+    <title lang="en">Contributors</title>
+    <contributor>cyruschuikc</contributor>
+    <joindate>24th-May,2026</joindate>
+  </copyright>
+</copyrights_catalog>
