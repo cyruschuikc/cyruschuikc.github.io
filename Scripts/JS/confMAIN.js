@@ -9,9 +9,3 @@ document.charset = "UTF-8";  //charter set
 document.title = "#@CCKCs.NET Blog io HK"; //MyWebSite title
 const favTitle = document.title;
 window.onload = () => {console.log("Welcome to '" + document.title + "' !!!");};
-
-var rights = '{"root": "cyruschuikc", "startat": "2026"+"-"+"May"+"-"+"25", "right": "supervisory", "endat": "-"+"-"+"-"}';
-// var obj = JSON.parse(rights);
-document.getElementById("right").innerHTML =
-  "&copy;" + favTitle + rights.start + " ~ " + rights.endat + "<br>" +
-  "All copyrights of the whole website is belongs to " + rights.root + ", " + rights.start + " ~ " + rights.endat;
