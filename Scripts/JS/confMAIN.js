@@ -35,7 +35,8 @@ for (i = 0; i < rights.length; i++){
 };
 var txtRight = "All copyrights is belongs to ";
 for (i = 0; i < args.length; i++){
-  if(args[i]!='"' && args[i]!="{" && args!="}" && args[i]!=" " && args[i]!="," && args[i]!=":")
+  if(args[i]=="cyruschuikc"||args[i]=="2026-May-25"||args[i]=="---")
     txtRight += args[i] + " ";
-}
+};
+txtRight += "\n";
 document.getElementById("right").innerHTML = txtRight;
