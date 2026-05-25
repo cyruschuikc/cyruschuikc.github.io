@@ -15,23 +15,21 @@ var args = new Array();
 var tmp = "";
 var count = 0;
 for (i = 0; i < rights.length; i++){
-  if(rights[i]!=" "){
-    if(rights[i]!="\""){
-      args[count] = tmp;
-      tmp = "";
-      count++;
-    }
-    else{
-      if(rights[i]=="\"")  
-        tmp += rights[i];
-      else {
-        tmp += rights[i];
-      }
-    }
-  }
-  else{
+  if(rights[i]=="\"")
+    tmp += rights[i];
+  else if(rights[i]=="{"||rights[i]=="}"||rights[i]==":"||rights[i]==","){
     args[count] = tmp;
-    tmp = "";
     count++;
+    tmp = rights[i];
+    args[count] = tmp;
+    count++;
+    tmp = "";
   }
-}
+  else if(rights[i]==" "){
+    args[count] = tmp;
+    count++;
+    tmp = "";
+  }
+  else
+    tmp += rights[i];
+};
