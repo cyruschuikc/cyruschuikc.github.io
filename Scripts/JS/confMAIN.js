@@ -13,8 +13,6 @@ window.onerror = () => {console.log("Err.#404(NOT FOUND): Fail to access " + doc
 
 var rights = '{"root": "cyruschuikc", "startat": "2026"+"-"+"May"+"-"+"25", "right": "supervisory", "endat": "-"+"-"+"-"}';
 var objR = JSON.parse(rights);
-function $(bottom){
+document.getElementById("right").innerHTML =
   "&copy;" + favTitle + objR.start + " ~ " + objR.endat + "<br>" +
   "All copyrights of the whole website is belongs to " + onjR.root + ", " + objR.start + " ~ " + objR.endat;
-};
-$.innerHTML = $;
