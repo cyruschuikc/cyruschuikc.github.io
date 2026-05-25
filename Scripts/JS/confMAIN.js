@@ -12,8 +12,9 @@ window.onload = () => {console.log("Welcome to '" + document.title + "' !!!");}
 window.onerror = () => {console.log("Err.#404(NOT FOUND): Fail to access " + document.location + "\nSrouces cannot found // the domain/URL is changed // page is not exist");}
 
 var rights = '{"root": "cyruschuikc", "startat": "2026"+"-"+"May"+"-"+"25", "right": "supervisory", "endat": "-"+"-"+"-"}';
-function $(right){
-  "&copy;" + favTitle + rights.start + " ~ " + rights.endat + "<br>" +
-  "All copyrights of the whole website is belongs to " + rights.root + ", " + rights.start + " ~ " + rights.endat;
-}
+var objR = JSON.parse(rights);
+function $(bottom){
+  "&copy;" + favTitle + objR.start + " ~ " + objR.endat + "<br>" +
+  "All copyrights of the whole website is belongs to " + onjR.root + ", " + objR.start + " ~ " + objR.endat;
+};
 $.innerHTML = $;
