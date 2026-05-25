@@ -25,10 +25,13 @@ for (i = 0; i < rights.length; i++){
       if(rights[i]=="\"")  
         tmp += rights[i];
       else {
-        args[count] = tmp;
-        tmp = "";
-        count++;
+        tmp += rights[i];
       }
     }
+  }
+  else{
+    args[count] = tmp;
+    tmp = "";
+    count++;
   }
 }
