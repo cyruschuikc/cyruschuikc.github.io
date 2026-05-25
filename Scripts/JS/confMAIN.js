@@ -11,7 +11,7 @@ const favTitle = document.title;
 window.onload = () => {console.log("Welcome to '" + document.title + "' !!!");};
 
 var rights = '{"root": "cyruschuikc", "startat": "2026"+"-"+"May"+"-"+"25", "right": "supervisory", "endat": "-"+"-"+"-"}';
-var objR = JSON.parse(rights);
+var obj = JSON.parse(rights);
 document.getElementById("right").innerHTML =
-  "&copy;" + favTitle + objR.start + " ~ " + objR.endat + "<br>" +
-  "All copyrights of the whole website is belongs to " + onjR.root + ", " + objR.start + " ~ " + objR.endat;
+  "&copy;" + favTitle + obj.start + " ~ " + obj.endat + "<br>" +
+  "All copyrights of the whole website is belongs to " + onj.root + ", " + obj.start + " ~ " + obj.endat;
