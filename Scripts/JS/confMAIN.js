@@ -16,13 +16,13 @@ var tmp = "";
 var count = 0;
 for (i = 0; i < rights.length; i++){
   if(rights[i]!=" "){
-    if(rights[i]!="""){
+    if(rights[i]!="\""){
       args[count] = tmp;
       tmp = "";
       count++;
     }
     else{
-      if(rights[i]==""")  
+      if(rights[i]=="\"")  
         tmp += rights[i];
       else {
         args[count] = tmp;
