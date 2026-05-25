@@ -26,6 +26,13 @@
 
   <!--Import scripts (with Object Oriented-based Scripts Oriented Techniques)-->
   <script src="Scripts/JS/confMAIN.js"></script>
+  <script>
+    var rights = '{"root": "cyruschuikc", "startat": "2026"+"-"+"May"+"-"+"25", "right": "supervisory", "endat": "-"+"-"+"-"}';
+    var objR = JSON.parse(rights);
+    document.getElementById("right").innerHTML =
+      "&copy;" + favTitle + objR.start + " ~ " + objR.endat + "<br>" +
+      "All copyrights of the whole website is belongs to " + onjR.root + ", " + objR.start + " ~ " + objR.endat;
+  </script>
   <script src="Scripts/JS/test.js"></script>
   <!---->
   
