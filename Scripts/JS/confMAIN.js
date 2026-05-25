@@ -15,5 +15,15 @@ var obj = JSON.parse(rights);
 document.getElementById("right").innerHTML = 
   "&copy;" + "All copyrights belongs to " + obj.root + " | " + obj.startat + obj.parameter + obj.endat + "<br>";
 
+var menuTXT = '{"*root": [' + 
+  '{"tagTXT": "*", "name": "root page", "URL": "https://cyrus.github.io/", "domain": "cyrus.github.io", "protocol": "HTTPS"},' + 
+  '{"tagTXT": "Home", "name": "home page", "URL": "https://cyrus.github.io/index.html", "domain": "cyrus.github.io/index.html", "protocol": "HTTPS"}' + 
+  '], "other": ['+
+  '{"tagTXT": "?", "name": "coming soon...", "URL": "https://github.com/cyruschuikc/", "domain": "github.com/cyruschuikc", "protocol": "HTTPS"}]}';
+var menuscript = JSON.parse(menuTXT);
+var menutable = "<table border=\"1\">
+  <tr><th>menuscript["*root"][0].tagTXT</th></tr>
+  </table>";
+
 var contribution = '{"founder": [{"name": "cyruschuikc", "AssignAt": "25th, May, 2026"}]}';
-var obj2 = JSON.parse(contribution);
+var obj3 = JSON.parse(contribution);
