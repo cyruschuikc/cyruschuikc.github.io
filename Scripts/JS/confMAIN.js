@@ -40,3 +40,4 @@ for (i = 0; i < args.length; i++){
   if(i==args.length)
     txtRight += "\n";
 }
+document.getElementById("right").innerHTML = txtRight;
