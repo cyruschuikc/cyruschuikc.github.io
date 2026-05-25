@@ -15,9 +15,7 @@ var args = new Array();
 var tmp = "";
 var count = 0;
 for (i = 0; i < rights.length; i++){
-  if(rights[i]=="\"")
-    tmp += rights[i];
-  else if(rights[i]=="{"||rights[i]=="}"||rights[i]==":"||rights[i]==","){
+  if(rights[i]=="{"||rights[i]=="}"||rights[i]==":"||rights[i]==","){
     args[count] = tmp;
     count++;
     tmp = rights[i];
@@ -31,7 +29,13 @@ for (i = 0; i < rights.length; i++){
     tmp = "";
   }
   else
-    tmp += rights[i];
+    if(rights[i]=='"'){
+      args[count] = tmp;
+      count++;
+      tmp = "";
+    }
+  else
+      tmp += rights[i];
 };
 var txtRight = "All copyrights is belongs to ";
 for (i = 0; i < args.length; i++){
