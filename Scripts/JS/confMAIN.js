@@ -21,7 +21,7 @@ var menuTXT = '{"*root": [' +
   '], "other": ['+
   '{"tagTXT": "?", "name": "coming soon...", "URL": "https://github.com/cyruschuikc/", "domain": "github.com/cyruschuikc", "protocol": "HTTPS"}]}';
 var menuscript = JSON.parse(menuTXT);
-var menutable = "<table border='1'><tr><th><a href='" + menuscript["*root"][0].URL + "'>" + menuscript["*root"][0].tagTXT + "</a></th><th><a href='" + menuscript["*root"][1].URL + "'>" + menuscript["*root"][1].tagTXT + "</a></th><th>" + menuscript["other"][0].tagTXT+ "</th>" +"</tr></table>";
+var menutable = "<table border='1'><tr><th><a href='" + menuscript["*root"][0].URL + "'>" + menuscript["*root"][0].tagTXT + "</a></th><th><a href='" + menuscript["*root"][1].URL + "'>" + menuscript["*root"][1].tagTXT + "</a></th><th> " + menuscript["other"][0].tagTXT + menuscript["other"][0].tagTXT + menuscript["other"][0].tagTXT + " (" + menuscript["other"][0].name + ") " + "</th>" +"</tr></table>";
 document.getElementById("menu").innerHTML = menutable;
 
 var contribution = '{"founder": [{"name": "cyruschuikc", "AssignAt": "25th, May, 2026"}]}';
