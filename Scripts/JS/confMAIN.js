@@ -16,7 +16,7 @@ document.getElementById("right").innerHTML =
   "&copy;" + "All copyrights belongs to " + obj.root + " | " + obj.startat + obj.parameter + obj.endat + "<br>";
 
 var menuTXT = '{"*root": [' + 
-  '{"tagTXT": "*", "name": "root page", "URL": "https://cyrus.github.io/", "domain": "cyrus.github.io", "protocol": "HTTPS"},' + 
+  '{"tagTXT": "*", "name": "root page", "URL": "https://cyruschuikc.github.io/", "domain": "cyruschuikc.github.io", "protocol": "HTTPS"},' + 
   '{"tagTXT": "Home", "name": "home page", "URL": "https://cyrus.github.io/index.html", "domain": "cyrus.github.io/index.html", "protocol": "HTTPS"}' + 
   '], "other": ['+
   '{"tagTXT": "?", "name": "coming soon...", "URL": "https://github.com/cyruschuikc/", "domain": "github.com/cyruschuikc", "protocol": "HTTPS"}]}';
