@@ -38,3 +38,5 @@ for (i=c3; i<hrefs.length; c3++)
 
 for (i=c4; i<msgs.length; c4++)
   msgs[i] = menuobj["~"].content[i];
+
+var hints = [new Array(), new Array()];
