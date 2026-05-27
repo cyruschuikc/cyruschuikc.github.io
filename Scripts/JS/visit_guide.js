@@ -18,8 +18,23 @@ var menutags = new Array(menuobj["*$*"].length + menuobj["~"].length);
 var hrefs = new Array(menutags.length -1);
 var msgs = new Array(menuobj["~"].length);
 
+var c1 = 0; //counter1 ...
+var c2 = 0; //counter2 ...
+var c3 = 0; //counter3 ...
+var c4 = 0; //counter4 ...
 
-/**
-var menutable = "<table border='1'><tr><th><a href='" + menuscript["*root"][0].URL + "'>" + menuscript["*root"][0].tagTXT + "</a></th><th><a href='" + menuscript["*root"][1].URL + "'>" + menuscript["*root"][1].tagTXT + "</a></th><th> " + menuscript["other"][0].tagTXT + menuscript["other"][0].tagTXT + menuscript["other"][0].tagTXT + " (" + menuscript["other"][0].name + ") " + "</th>" +"</tr></table>";
-document.getElementById("menu").innerHTML = menutable;
-**/
+for (i=c1; i<menutags.length; c1++){
+  if(c1>=2){
+    menutags[i] = menuobj["~"].lbltxt[c2];
+    c2++;
+  }
+  else
+    menutags[i] = menuobj["*$*"].atxt[i];
+}
+c1 -= c2;
+
+for (i=c3; i<hrefs.length; c3++)
+  hrefs[i] = menuobj["*$*"].asrc[i];
+
+for (i=c4; i<msgs.length; c4++)
+  msgs[i] = menuobj["~"].content[i];
