@@ -14,6 +14,11 @@ var menuscript =
 
 var menuobj = JSON.parse(menuscript);
 
+var menutags = new Array(menuobj["*$*"].length + menuobj["~"].length);
+var hrefs = new Array(menutags.length -1);
+var msgs = new Array(menuobj["~"].length);
+
+
 /**
 var menutable = "<table border='1'><tr><th><a href='" + menuscript["*root"][0].URL + "'>" + menuscript["*root"][0].tagTXT + "</a></th><th><a href='" + menuscript["*root"][1].URL + "'>" + menuscript["*root"][1].tagTXT + "</a></th><th> " + menuscript["other"][0].tagTXT + menuscript["other"][0].tagTXT + menuscript["other"][0].tagTXT + " (" + menuscript["other"][0].name + ") " + "</th>" +"</tr></table>";
 document.getElementById("menu").innerHTML = menutable;
