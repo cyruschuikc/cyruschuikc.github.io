@@ -40,7 +40,6 @@ for (i=c4; i<msgs.length; c4++)
   msgs[i] = menuobj["~"].content[i];
 
 var hints = [new Array(), new Array()];
-
 for (i=0; i<hrefs.length; i++)
   hints[0][i] = hrefs[i];
 for (i=0; i<msgs.length; i++)
