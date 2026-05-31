@@ -9,6 +9,8 @@ document.charset = "UTF-8";  //charter set
 document.title = "#@CCKCs.NET Blog io HK"; //MyWebSite title
 const favTitle = document.title;
 document.getElementById("thTitle").innerHTML = favTitle;
+document.getElementById("").innerHTML = "";
+document.getElementById("").innerHTML = "";
 window.onload = () => {console.log("Welcome to '" + document.title + "' !!!");};
 
 var rights = '{"root": "cyruschuikc", "startat": "2026-May-25", "right": "supervisory", "parameter": " ~ ", "endat": "---"}';
