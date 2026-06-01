@@ -19,14 +19,31 @@ var obj = JSON.parse(rights);
 document.getElementById("right").innerHTML = 
   "&copy;" + "All copyrights belongs to " + obj.root + " | " + obj.startat + obj.parameter + obj.endat + "<br>";
 
-var menuTXT = '{"*root": [' + 
-  '{"tagTXT": "*", "name": "root page", "URL": "https://cyruschuikc.github.io/", "domain": "cyruschuikc.github.io", "protocol": "HTTPS"},' + 
-  '{"tagTXT": "Home", "name": "home page", "URL": "https://cyruschuikc.github.io/index.html", "domain": "cyruschuikc.github.io/index.html", "protocol": "HTTPS"}' + 
-  '], "other": ['+
-  '{"tagTXT": "?", "name": "coming soon...", "URL": "https://github.com/cyruschuikc/", "domain": "github.com/cyruschuikc", "protocol": "HTTPS"}]}';
-var menuscript = JSON.parse(menuTXT);
-var menutable = "<table border='1'><tr><th><a href='" + menuscript["*root"][0].URL + "'>" + menuscript["*root"][0].tagTXT + "</a></th><th><a href='" + menuscript["*root"][1].URL + "'>" + menuscript["*root"][1].tagTXT + "</a></th><th> " + menuscript["other"][0].tagTXT + menuscript["other"][0].tagTXT + menuscript["other"][0].tagTXT + " (" + menuscript["other"][0].name + ") " + "</th>" +"</tr></table>";
-document.getElementById("menu").innerHTML = menutable;
+function readMenuXML(url) {
+  fetch(url)
+    .then(response => response.text())
+    .then(str => {
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(str, "application/xml");
+      const atxt = xmlDoc.getElementsByTagName("tagtxt");
+      const asrc = xmlDoc.getElementsByTagName("href");
+      var menuobj = new Array();
+      for (let i = 0; i < atxt.length; i++) {
+        const text = atxt[i].textContent;
+        const link = asrc[i].textContent;
+        menuobj.push(`<th><a href="${link}">${text}</a></th>`);
+      }
+      var menutxt = "<tr>";
+      for (let i = 0; i < menuobj.length; i++) {
+        menutxt += menuobj[i];
+      }
+      menutxt += "</tr>";
+      document.getElementById("menu").innerHTML = `<table border="1">${menutxt}</table>`;
+    })
+    .catch(err => console.error("read XML failed:", err));
+}
+
+readMenuXML("visitguide.xml");
 
 var contribution = '{"founder": [{"name": "cyruschuikc", "AssignAt": "25th, May, 2026"}]}';
 var obj3 = JSON.parse(contribution);
