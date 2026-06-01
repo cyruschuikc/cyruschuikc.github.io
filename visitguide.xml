@@ -14,6 +14,34 @@
     <domain>cyrus.github.io/</domain>
     <priority>u=0,i</priority>
     <bin>0</bin>
+
+    <tagtxt lang="en">Welcome</tagtxt>
+    <href>https://cyrus.github.io/index.html#welstate-title</href>
+    <protocol>HTTPS</protocol>
+    <domain>cyrus.github.io/index.html#</domain>
+    <priority>u=0,i</priority>
+    <bin>0</bin>
+
+    <tagtxt lang="en">###</tagtxt>
+    <href>https://cyrus.github.io/index.html#</href>
+    <protocol>HTTPS</protocol>
+    <domain>cyrus.github.io/index.html</domain>
+    <priority>u=0,i</priority>
+    <bin>0</bin>
+
+    <tagtxt lang="en">#####</tagtxt>
+    <href>https://cyrus.github.io/index.html#</href>
+    <protocol>HTTPS</protocol>
+    <domain>cyrus.github.io/index.html</domain>
+    <priority>u=0,i</priority>
+    <bin>0</bin>
+
+    <tagtxt lang="en">???</tagtxt>
+    <href>https://cyrus.github.io/index.html#</href>
+    <protocol>HTTPS</protocol>
+    <domain>cyrus.github.io/index.html</domain>
+    <priority>u=0,i</priority>
+    <bin>0</bin>
     
   </menu>
 </menu_catagory>
