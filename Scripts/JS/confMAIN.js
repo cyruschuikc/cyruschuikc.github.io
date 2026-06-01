@@ -9,7 +9,7 @@ document.charset = "UTF-8";  //charter set
 document.title = "#@CCKCs.NET Blog io HK"; //MyWebSite title
 const favTitle = document.title;
 document.getElementById("thTitle").innerHTML = favTitle;
-document.getElementById("").innerHTML = "";
+document.getElementById("welstate-title").innerHTML = "Welcome to visit " + favTitle + "<br>!!!";
 document.getElementById("").innerHTML = "";
 window.onload = () => {console.log("Welcome to '" + document.title + "' !!!");};
 
