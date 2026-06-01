@@ -10,7 +10,7 @@ document.title = "#@CCKCs.NET Blog io HK"; //MyWebSite title
 const favTitle = document.title;
 document.getElementById("thTitle").innerHTML = favTitle;
 document.getElementById("welstate-title").innerHTML = "Welcome to visit " + favTitle + "<br>!!!";
-document.getElementById("").innerHTML = "";
+documnt.getElementById("webname").innerHTML = "'"+favTitle+"'";
 window.onload = () => {console.log("Welcome to '" + document.title + "' !!!");};
 
 var rights = '{"root": "cyruschuikc", "startat": "2026-May-25", "right": "supervisory", "parameter": " ~ ", "endat": "---"}';
