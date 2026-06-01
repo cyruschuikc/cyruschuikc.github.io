@@ -10,7 +10,8 @@ document.title = "#@CCKCs.NET Blog io HK"; //MyWebSite title
 const favTitle = document.title;
 document.getElementById("thTitle").innerHTML = favTitle;
 document.getElementById("welstate-title").innerHTML = "Welcome to visit " + favTitle + "<br>!!!";
-documnt.getElementById("webname").innerHTML = "'"+favTitle+"'";
+documnt.getElementById("welstate-content").innerHTML = "'"+favTitle+"' is a individualise creativetie web site page act a blog to write down a life, future carer, intrest, etc. Of a person who dedicated to engaging in IT industry to be a vocational programmer, a software engineer and developer. <br> <br> Also the 'Past', 'Cureent', and the 'Unkownable Wishing Future' ... (--to be continue--)";
+
 window.onload = () => {console.log("Welcome to '" + document.title + "' !!!");};
 
 var rights = '{"root": "cyruschuikc", "startat": "2026-May-25", "right": "supervisory", "parameter": " ~ ", "endat": "---"}';
