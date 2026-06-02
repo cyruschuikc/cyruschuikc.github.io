@@ -33,7 +33,9 @@ function readMenuXML(url) {
       for (let i = 0; i < atxt.length; i++) {
         const text = atxt[i].textContent;
         const link = asrc[i].textContent;
-        menuobj.push(`<th><a href="${link}">${text}</a></th>`);
+        if (){
+          menuobj.push(`<th><a href="${link}">${text}</a></th>`);
+        }
       }
       const menutxt = `<tr>${menuobj.join("")}</tr>`;
       document.getElementById("menu").innerHTML = `<table border="1">${menutxt}</table>`;
