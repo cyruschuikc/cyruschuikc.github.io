@@ -41,7 +41,7 @@ function readMenuXML(url) {
           menuobj.push(`<th><a href="${link}" onclick="${event}">${text}</a></th>`);
         }
       }
-      const menutxt = `<tr>${menuobj.join("")}</tr>`;
+      const menutxt = "<tr>"+menuobj+"</tr>";
       document.getElementById("menu").innerHTML = `<table border="1">${menutxt}</table>`;
     })
     .catch(err => console.error("read XML failed:", err));
