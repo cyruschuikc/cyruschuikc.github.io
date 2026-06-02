@@ -23,25 +23,16 @@
     <bin>0</bin>
 
     <tagtxt lang="en">###</tagtxt>
-    <href>https://cyruschuikc.github.io/index.html#</href>
-    <protocol>HTTPS</protocol>
-    <domain>cyruschuikc.github.io/index.html</domain>
     <priority>u=0,i</priority>
     <bin>0</bin>
     <onclick>The new section will coming releases soon! ...</onclick>
 
     <tagtxt lang="en">#####</tagtxt>
-    <href>https://cyruschuikc.github.io/index.html#</href>
-    <protocol>HTTPS</protocol>
-    <domain>cyruschuikc.github.io/index.html</domain>
     <priority>u=0,i</priority>
     <bin>0</bin>
     <onclick>A new section will be adding in the next update!</onclick>
 
     <tagtxt lang="en">???</tagtxt>
-    <href>https://cyruschuikc.github.io/index.html#</href>
-    <protocol>HTTPS</protocol>
-    <domain>cyruschuikc.github.io/index.html</domain>
     <priority>u=0,i</priority>
     <bin>0</bin>
     <onclick>The more section(s) will be add in the future UI/UX or update(s)!<br>Please stay tuned!</onclick>
