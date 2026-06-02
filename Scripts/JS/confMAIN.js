@@ -8,6 +8,8 @@ License:  CC BY-NC 4.0 — https://creativecommons.org/licenses/by-nc/4.0/
 document.title = "#@CCKCs.NET Blog io HK"; //MyWebSite title
 const favTitle = document.title;
 document.getElementById("thTitle").innerHTML = favTitle;
+const absTitle_ = document.title;
+document.getElementById("absTitle").innerHTML = "The•Blog";
 document.getElementById("welstate-title").innerHTML = "Welcome to visit " + favTitle + "<br>!!!";
 document.getElementById("welstate-content").innerHTML = "'" + favTitle + "' is a individualise creativetie web site page act a blog to write down a life, future carer, intrest, etc. Of a person who dedicated to engaging in IT industry to be a vocational programmer, a software engineer and developer. <br><br> Also the 'Past', 'Cureent', and the 'Unkownable Wishing Future' ... (--to be continue--)";
 
