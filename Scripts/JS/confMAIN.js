@@ -19,6 +19,7 @@ var obj = JSON.parse(rights);
 document.getElementById("right").innerHTML = 
   "&copy;" + "All copyrights belongs to " + obj.root + " | " + obj.startat + obj.parameter + obj.endat + "<br>";
 
+// function of read visitguide.xml
 function readMenuXML(url) {
   fetch(url)
     .then(response => response.text())
@@ -41,9 +42,20 @@ function readMenuXML(url) {
       document.getElementById("menu").innerHTML = `<table border="1">${menutxt}</table>`;
     })
     .catch(err => console.error("read XML failed:", err));
-}
+} readMenuXML("visitguide.xml");
+//
 
-readMenuXML("visitguide.xml");
+// function to read abstract.xml
+function readAbstractXML(url) {
+  fetch(url)
+    .then(response => response.text())
+    .then(str => {
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(str, "application/xml");
+      })
+    .catch(err => console.error("read XML failed:", err));
+} readMenuXML("Resources/xml/abstract.xml");
+//
 
 var contribution = '{"founder": [{"name": "cyruschuikc", "AssignAt": "25th, May, 2026"}]}';
 var obj3 = JSON.parse(contribution);
