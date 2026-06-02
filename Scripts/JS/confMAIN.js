@@ -29,6 +29,7 @@ function readMenuXML(url) {
       const xmlDoc = parser.parseFromString(str, "application/xml");
       const atxt = xmlDoc.getElementsByTagName("tagtxt");
       const asrc = xmlDoc.getElementsByTagName("href");
+      const aevent = xmlDoc.getElementsByTagName("onclick");
       let menuobj = [];
       for (let i = 0; i < atxt.length; i++) {
         const text = atxt[i].textContent;
@@ -37,7 +38,7 @@ function readMenuXML(url) {
           menuobj.push(`<th><a href="${link}">${text}</a></th>`);
         }
         else{
-          const event = onclick[i-3].textContent;
+          const event = aevent[i-3].textContent;
           menuobj.push(`<th><a href="${link}" onclick="${event}">${text}</a></th>`);
         }
       }
