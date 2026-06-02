@@ -33,24 +33,23 @@ function readMenuXML(url) {
       for (let i = 0; i < atxt.length; i++) {
         const text = atxt[i].textContent;
         const link = asrc[i].textContent;
-        menuobj.push(
-          `<th><a href="${link}">${text}</a></th>`
-        );
-        if(i>2){
-          const event = aevent[i-3].textContent;
+
+        if (i > 2) {
+          const event = aevent[i].textContent;
           menuobj.push(
-          `<th><button onclick="alert(${event})">${text}</button></th>`
-        );
+            `<th><button onclick="alert('${event}')">${text}</button></th>`
+          );
+        } else {
+          menuobj.push(
+            `<th><a href="${link}">${text}</a></th>`
+          );
         }
       }
-      document.getElementById("menu").innerHTML = `<table border="1"><tr>${menuobj.join("")}</tr></table>`;
+      document.getElementById("menu").innerHTML =
+        `<table border="1"><tr>${menuobj.join("")}</tr></table>`;
     })
-    .catch(err => {
-      console.error("read XML failed:", err);
-      document.getElementById("menu").textContent = "Menu loading failed.";
-    });
-}
-readMenuXML("visitguide.xml");
+    .catch(err => console.error("read XML failed:", err));
+}  readMenuXML("visitguide.xml");
 
 // XML abstract reader
 function readAbstractXML(url) {
