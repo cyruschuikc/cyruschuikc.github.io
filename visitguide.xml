@@ -28,6 +28,7 @@
     <domain>cyruschuikc.github.io/index.html</domain>
     <priority>u=0,i</priority>
     <bin>0</bin>
+    <onclick>alert("The new section will coming releases soon! ...");</onclick>
 
     <tagtxt lang="en">#####</tagtxt>
     <href>https://cyruschuikc.github.io/index.html#</href>
@@ -35,6 +36,7 @@
     <domain>cyruschuikc.github.io/index.html</domain>
     <priority>u=0,i</priority>
     <bin>0</bin>
+    <onclick>alert("A new section will be adding in the next update!");</onclick>
 
     <tagtxt lang="en">???</tagtxt>
     <href>https://cyruschuikc.github.io/index.html#</href>
@@ -42,6 +44,7 @@
     <domain>cyruschuikc.github.io/index.html</domain>
     <priority>u=0,i</priority>
     <bin>0</bin>
+    <onclick>alert("coming soon ...");</onclick>
     
   </menu>
 </menu_catagory>
