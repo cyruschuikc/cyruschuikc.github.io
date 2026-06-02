@@ -56,9 +56,11 @@ function readAbstractXML(url) {
       const tvContent = xmlDoc.getElementsByTagName("content");
       var abstractobj = new Array();
       for (let i = 0; i < tvID.length; i++) {
-        const text = tvID[i].textContent;
-        abstract.push(`<p id='${text}'</p>`);
+        const pTXTid = tvID[i].textContent;
+        const pTXT = tvContent[i].textContent ;
+        abstract.push(`<p id='${pTXTid}'>${pTXT}</p>`);
       }
+      document.getElementById("abstract").innerHTML = `${abstract}`;
     })
     .catch(err => console.error("read XML failed:", err));
 } readAbstractXML("Resources/xml/abstract.xml");
