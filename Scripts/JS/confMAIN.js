@@ -33,10 +33,15 @@ function readMenuXML(url) {
       for (let i = 0; i < atxt.length; i++) {
         const text = atxt[i].textContent;
         const link = asrc[i].textContent;
-        const event = aevent[i]?.textContent;
         menuobj.push(
-          `<th><button ${event ? `onclick="${event}"` : ""}>${text}</button></th>`
+          `<th><a href="${link}">${text}</a></th>`
         );
+        if(i>2){
+          const event = aevent[i-3].textContent;
+          menuobj.push(
+          `<th><button onclick="alert(${event})">${text}</button></th>`
+        );
+        }
       }
       document.getElementById("menu").innerHTML = `<table border="1"><tr>${menuobj.join("")}</tr></table>`;
     })
