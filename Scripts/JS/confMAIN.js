@@ -60,7 +60,7 @@ function readAbstractXML(url) {
         const pTXT = tvContent[i].textContent ;
         abstract.push(`<p id='${pTXTid}'>${pTXT}</p>`);
       }
-      document.getElementById("abstract").innerHTML = `${abstract}`;
+      document.getElementById("abstract").innerHTML = abstractobj.join("");
     })
     .catch(err => console.error("read XML failed:", err));
 } readAbstractXML("Resources/xml/abstract.xml");
