@@ -9,9 +9,9 @@
     <bin>0</bin>
     
     <tagtxt lang="en">Home</tagtxt>
-    <href>https://cyruschuikc.github.io/index.html</href>
+    <href>https://cyruschuikc.github.io/index.html#absTitle</href>
     <protocol>HTTPS</protocol>
-    <domain>cyruschuikc.github.io/</domain>
+    <domain>cyruschuikc.github.io/index.html#</domain>
     <priority>u=0,i</priority>
     <bin>0</bin>
 
