@@ -52,9 +52,11 @@ function readAbstractXML(url) {
     .then(str => {
       const parser = new DOMParser();
       const xmlDoc = parser.parseFromString(str, "application/xml");
-      })
+      const tvID = xmlDoc.getElementsByTagName("id");
+      const tvContent = xmlDoc.getElementsByTagName("content");
+    })
     .catch(err => console.error("read XML failed:", err));
-} readMenuXML("Resources/xml/abstract.xml");
+} readAbstractXML("Resources/xml/abstract.xml");
 //
 
 var contribution = '{"founder": [{"name": "cyruschuikc", "AssignAt": "25th, May, 2026"}]}';
