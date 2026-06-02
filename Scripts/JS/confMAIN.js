@@ -54,6 +54,11 @@ function readAbstractXML(url) {
       const xmlDoc = parser.parseFromString(str, "application/xml");
       const tvID = xmlDoc.getElementsByTagName("id");
       const tvContent = xmlDoc.getElementsByTagName("content");
+      var abstractobj = new Array();
+      for (let i = 0; i < tvID.length; i++) {
+        const text = tvID[i].textContent;
+        abstract.push(`<p id='${text}'</p>`);
+      }
     })
     .catch(err => console.error("read XML failed:", err));
 } readAbstractXML("Resources/xml/abstract.xml");
