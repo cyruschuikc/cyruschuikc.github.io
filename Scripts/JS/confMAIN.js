@@ -35,7 +35,7 @@ function readMenuXML(url) {
         const link = asrc[i].textContent;
         const event = aevent[i]?.textContent;
         menuobj.push(
-          `<th><a href="${link}" ${event ? `onclick="${event}"` : ""}>${text}</a></th>`
+          `<th><button ${event ? `onclick="${event}"` : ""}>${text}</button></th>`
         );
       }
       document.getElementById("menu").innerHTML = `<table border="1"><tr>${menuobj.join("")}</tr></table>`;
