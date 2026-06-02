@@ -4,12 +4,12 @@
     <tagtxt lang="en">*</tagtxt>
     <href>https://cyruschuikc.github.io/</href>
     <protocol>HTTPS</protocol>
-    <domain>cyrus.github.io</domain>
+    <domain>cyruschuikc.github.io</domain>
     <priority>u=0,i</priority>
     <bin>0</bin>
     
     <tagtxt lang="en">Home</tagtxt>
-    <href>https://cyrus.github.io/index.html</href>
+    <href>https://cyruschuikc.github.io/index.html</href>
     <protocol>HTTPS</protocol>
     <domain>cyruschuikc.github.io/</domain>
     <priority>u=0,i</priority>
@@ -18,7 +18,7 @@
     <tagtxt lang="en">Welcome</tagtxt>
     <href>https://cyruschuikc.github.io/index.html#welstate-title</href>
     <protocol>HTTPS</protocol>
-    <domain>cyrus.github.io/index.html#</domain>
+    <domain>cyruschuikc.github.io/index.html#</domain>
     <priority>u=0,i</priority>
     <bin>0</bin>
 
@@ -32,7 +32,7 @@
     <tagtxt lang="en">#####</tagtxt>
     <href>https://cyruschuikc.github.io/index.html#</href>
     <protocol>HTTPS</protocol>
-    <domain>cyrus.github.io/index.html</domain>
+    <domain>cyruschuikc.github.io/index.html</domain>
     <priority>u=0,i</priority>
     <bin>0</bin>
 
