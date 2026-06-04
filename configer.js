@@ -25,6 +25,17 @@ function readXML(url){
       document.querySelector("meta[name='author']"). setAttribute("content", xmlDoc.getElementsByTagName("author")[0].textContent);
     document.querySelector("meta[name='copyright']"). setAttribute("content", xmlDoc.getElementsByTagName("copyright")[0].textContent);
     }
+    const logoUrl = xmlDoc.querySelector('image[name="logo"]').textContent.trim();
+    const logoAlt = xmlDoc.querySelector('image_alt[name="logo"]').textContent.trim();
+    let logoImg = document.querySelector("#site-logo");
+        if (!logoImg) {
+          logoImg = document.createElement("img");
+          logoImg.id = "site-logo";
+          document.body.prepend(logoImg);
+        }
+        logoImg.src = logoUrl;
+        logoImg.alt = logoAlt;
+      }
   })
 } 
 
