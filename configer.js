@@ -14,7 +14,7 @@ function readXML(url){
       const vText =  xmlDoc.getElementsByTagName("string");
       const title = vText[0].textContent;
       document.title = title;
-      document.getElementById("web_name").innerHTML = "#@CCKCs.NET Blog io HK";
+      document.getElementById("web_name").innerHTML  = title;
       const fav = xmlDoc.getElementsByTagName("image")[0].textContent;
       let link = document.querySelector("link[rel~='icon']");
       if(!link){
