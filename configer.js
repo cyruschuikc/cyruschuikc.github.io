@@ -14,9 +14,9 @@ function readXML(url){
       const vText =  xmlDoc.getElementsByTagName("string");
       const title = vText[0].textContent;
       document.title = title;
-      document.querySelector("meta[name='description]"). setAtribute("content", vText[1]. textContent);
-      document.querySelector("meta[name='author']"). setAtribute("content", xmlDoc.getElementsByTagName("author")[0]. textContent);
-    document.querySelector("meta[name='copyright']"). setAtribute("content", xmlDoc.getElementsByTagName("copyright")[0]. textContent);
+      document.querySelector("meta[name='description']"). setAtribute("content", vText[1].textContent);
+      document.querySelector("meta[name='author']"). setAttribute("content", xmlDoc.getElementsByTagName("author")[0].textContent);
+    document.querySelector("meta[name='copyright']"). setAtribute("content", xmlDoc.getElementsByTagName("copyright")[0].textContent);
     }
   })
 } 
