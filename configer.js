@@ -13,6 +13,13 @@ function readXML(url){
     if(url=="Resources/xml/strings.xml"){
       const vText =  xmlDoc.getElementsByTagName("string");
       const title = vText[0].textContent;
+      const fav = xmlDoc.getElementsByTagName("image")[0].textContent;
+      let link = document.querySelector("link[rel~='icon']");
+      if(!link){
+        link = document.createElement("link");
+        link.rel = "icon";
+        document.appendChild(link);
+      } link.href = fav;
       document.title = title;
       document.querySelector("meta[name='description']"). setAtribute("content", vText[1].textContent);
       document.querySelector("meta[name='author']"). setAttribute("content", xmlDoc.getElementsByTagName("author")[0].textContent);
