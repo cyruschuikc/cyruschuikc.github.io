@@ -13,6 +13,7 @@ function readXML(url){
     if(url=="Resources/xml/strings.xml"){
       const vText =  xmlDoc.getElementsByTagName("string");
       const title = vText[0].textContent;
+      document.title = title;
       const fav = xmlDoc.getElementsByTagName("image")[0].textContent;
       let link = document.querySelector("link[rel~='icon']");
       if(!link){
@@ -20,7 +21,6 @@ function readXML(url){
         link.rel = "icon";
         document.head.appendChild(link);
       } link.href = fav;
-      document.title = title;
       document.querySelector("meta[name='description']"). setAttribute("content", vText[1].textContent);
       document.querySelector("meta[name='author']"). setAttribute("content", xmlDoc.getElementsByTagName("author")[0].textContent);
     document.querySelector("meta[name='copyright']"). setAttribute("content", xmlDoc.getElementsByTagName("copyright")[0].textContent);
