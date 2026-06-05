@@ -51,13 +51,13 @@ function readXML(url){
     // logo
     const logoNode = xmlDoc.querySelector('image[name="logo"]');
     const logoAltNode = xmlDoc.querySelector('image_alt[name="logo"]');
-    const logoOnclickNode = xmlDoc.querySelector('image_onclick[name="logo"]')
+    const logoOnclickNode = xmlDoc.querySelector('image_onclick[name="logo"]');
     if(logoNode && logoAltNode && logoOnclickNode){
       let logoImg = document.querySelector("#site-logo");
       if (!logoImg) {
         logoImg = document.createElement("img");
         logoImg.id = "site-logo";
-        logoImg.onclick = logoOnclickNode[0];
+        logoImg.onclick = logoOnclickNode;
         document.body.prepend(logoImg);
       }
       logoImg.src = logoNode.textContent.trim();
