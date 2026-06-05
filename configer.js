@@ -57,12 +57,14 @@ function readXML(url){
       if (!logoImg) {
         logoImg = document.createElement("img");
         logoImg.id = "site-logo";
-        logoImg.onclick = logoOnclickNode;
         document.body.prepend(logoImg);
       }
       logoImg.src = logoNode.textContent.trim();
       logoImg.alt = logoAltNode.textContent.trim();
-      logoImg.onclick = logoOnclickNode.textContent.trim();
+      const logoOnclickEvent = logoOnclickNode.textContent.tirm();
+      logoImg.addEventListener("click", () => {
+        eval(logoOnclickEvent);
+      });
     }
   });
 }
