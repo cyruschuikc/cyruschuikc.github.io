@@ -51,28 +51,18 @@ function readXML(url){
     // logo
 const logoNode = xmlDoc.querySelector('image[name="logo"]');
 const logoAltNode = xmlDoc.querySelector('image_alt[name="logo"]');
-const logoOnclickNode = xmlDoc.querySelector('image_onclick[name="logo"]');
 
-if (logoNode && logoAltNode && logoOnclickNode) {
+if (logoNode && logoAltNode) {
   let logoImg = document.querySelector("#site-logo");
   if (!logoImg) {
     logoImg = document.createElement("img");
     logoImg.id = "site-logo";
+    logoImg.onclick = () => {window.location.reload();}
     document.body.prepend(logoImg);
   }
 
   logoImg.src = logoNode.textContent.trim();
   logoImg.alt = logoAltNode.textContent.trim();
-
-  // Extract the onclick code from XML
-  const onclickCode = logoOnclickNode.textContent.trim();
-
-  // Bind with addEventListener
-  logoImg.addEventListener("click", () => {
-  if (typeof window[onclickCode] === "function") {
-    window[onclickCode]();  // call the function safely
-  }
-});
 }
   });
 }
