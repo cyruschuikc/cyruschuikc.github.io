@@ -15,7 +15,6 @@ function readXML(url) {
   })
   // catch error
   .catch(error => {
-    // error response
-    console.error("Error reading XML strings:", error);
+    console.error("Error reading XML strings:", error); // error response
   });
 }
