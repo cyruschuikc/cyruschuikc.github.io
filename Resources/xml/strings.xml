@@ -4,6 +4,9 @@
   <author name="director">cyruschuikc[cyruschuikc-kamisatokira@outlook.com]</author>
   <copyright lang="en">&copy;All copyrights belongs to cyruschuikc(kamisato.kira) 2026 ~ -</copyright>
   <image name="icon" id="fav">Resources/fav/imgFav_standard.png</image>
+  <image_alt name="icon">favicon</image_alt>
+  <image_onclick name="icon" />
   <image name="logo">Resources/fav/imgFav_standard(revise).png</image>
   <image_alt name="logo">CCKCs.NET Blog io HK</image_alt>
+  <image_onclick name="logo">window.location.reload();</image_onclick>
 </resource>
