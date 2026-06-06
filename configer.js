@@ -5,7 +5,7 @@ Source: https://github.com/cyruschuikc/main/configer.js
 License: *CC BY-NC 4.0 — https://creativecommons.org/licenses/by-nc/4.0/
 **/
 
-function readXMLBrowser(url) {
+function readXML(url) {
     fetch(url)
         .then(response => response.text())
         .then(xmlString => {
@@ -13,4 +13,4 @@ function readXMLBrowser(url) {
             const xmlDoc = parser.parseFromString(xmlString, "text/xml"); // Parse the string into an XML DOM Document
         })
         .catch(error => console.error("Error reading XML:", error)); //catch error
-}
+};
