@@ -6,11 +6,16 @@ License: *CC BY-NC 4.0 — https://creativecommons.org/licenses/by-nc/4.0/
 **/
 
 function readXML(url) {
-    fetch(url)
-        .then(response => response.text())
-        .then(xmlString => {
-            const parser = new DOMParser(); // Initialize the DOMParser
-            const xmlDoc = parser.parseFromString(xmlString, "text/xml"); // Parse the string into an XML DOM Document
-        })
-        .catch(error => console.error("Error reading XML:", error)); //catch error
-};
+  // Initialize the readXML function 
+  fetch(url)
+    .then(response => response.text())
+    .then(xmlString => {
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlString, "application/xml");
+  })
+  // catch error
+  .catch(error => {
+    // error response
+    console.error("Error reading XML strings:", error);
+  });
+}
