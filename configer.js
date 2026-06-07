@@ -20,6 +20,7 @@ function readXML(url) {
         strs.push(strn[i].textContent. trim());
       }
       document.title = strs[0];
+      document.getElementById("web-name").innerHTML = strs[0];
     };
 
   })
