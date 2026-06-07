@@ -12,6 +12,11 @@ function readXML(url) {
     .then(xmlString => {
       const parser = new DOMParser();
       const xmlDoc = parser.parseFromString(xmlString, "application/xml");
+
+    if(url==="Resources/xml/strings.xml"){
+
+    };
+
   })
   // catch error
   .catch(error => {
