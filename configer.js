@@ -14,7 +14,11 @@ function readXML(url) {
       const xmlDoc = parser.parseFromString(xmlString, "application/xml");
 
     if(url==="Resources/xml/strings.xml"){
-
+      const strn = xmlDoc.getElementsByTagName("string");
+      const strs = new Array();
+      for(let i=0; i<strn.length; i++){
+        strs.push(strn[i].textContent. trim());
+      }
     };
 
   })
