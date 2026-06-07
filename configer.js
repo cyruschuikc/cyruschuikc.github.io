@@ -19,6 +19,7 @@ function readXML(url) {
       for(let i=0; i<strn.length; i++){
         strs.push(strn[i].textContent. trim());
       }
+      document.title = strs[0];
     };
 
   })
