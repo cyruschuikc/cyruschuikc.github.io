@@ -46,7 +46,7 @@ function readXML(url) {
       };
       const mAuthor = document.querySelector("meta[name='author']");
       mAuthor.setAttribute("content", author);
-      const mCPR = document.querySelector("meta[name='copyright]");
+      const mCPR = document.querySelector("meta[name='copyright']");
       mCPR.setAttribute("content", cprTXT);
 
       const fav = document.querySelector("link[rel='icon']");
