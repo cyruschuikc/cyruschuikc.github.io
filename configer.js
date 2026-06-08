@@ -48,6 +48,12 @@ function readXML(url) {
       mAuthor.setAttribute("content", author);
       const mCPR = document.querySelector("meta[name='copyright]");
       mCPR.setAttribute("content", cprTXT);
+
+      const imgFigure = [
+        [
+          {}
+        ]
+      ];
       }
   })
   // catch error
