@@ -90,7 +90,7 @@ function readXML(url) {
           if (imgas.length > 0) fav_.setAttribute("alt", imgas[0]);
           if (imgocs.length > 0) fav_.setAttribute("onclick", imgocs[0]);
         }
-        document.body.appendChild(fav_);
+        document.getElementById("site-logo").appendChild(fav_);
       }
     })
     // catch error
