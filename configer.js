@@ -53,6 +53,12 @@ function readXML(url) {
       fav.setAttribute("type", "image/png");
       fav.setAttribute("href", imgs[0]);
 
+      const fav_ = document.querySelector("img[id='site-logo']");
+      fav_.setAttribute("id", "favimg");
+      fav_.setAttribute("name", "favlogo");
+      fav_.setAttribute("alt", imgas[0]);
+      fav_.setAttribute("onclick", imgocs[0]);
+
     }
   })
   // catch error
