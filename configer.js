@@ -15,15 +15,21 @@ function readXML(url) {
 
     if(url==="Resources/xml/strings.xml"){
       const strn = xmlDoc.getElementsByTagName("string");
+      const atrn = xmlDoc.getElementsByTagName("author");
       const strs = new Array();
+      const author = atrn[0].textContent.trim();
       for(let i=0; i<strn.length; i++){
         strs.push(strn[i].textContent. trim());
       }
       document.title = strs[0];
       document.getElementById("web_name").innerHTML = strs[0];
-      document.setAttribute("meta[name='description]", strs[1]);
-    };
-
+      const mDesc = document.querySelector("meta[name='description']");
+      if(mDesc){
+        mDesc.setAttribute("content",  strs[1]);
+      };
+      const mAuthor = document.querySelector("meta[name='author']");
+      mAuthor.setAttribute("content", author);
+      }
   })
   // catch error
   .catch(error => {
