@@ -30,3 +30,5 @@ function readXML(url) {
     console.error("Error reading XML strings:", error); // error response
   });
 }
+
+readXML("Resources/xml/strings.xml");
