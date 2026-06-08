@@ -56,6 +56,7 @@ function readXML(url) {
       const fav_ = document.querySelector("img[id='site-logo']");
       fav_.setAttribute("id", "favimg");
       fav_.setAttribute("name", "favlogo");
+      fav_.setAttribute("src", imgs[0]);
       fav_.setAttribute("alt", imgas[0]);
       fav_.setAttribute("onclick", imgocs[0]);
 
