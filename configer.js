@@ -49,12 +49,11 @@ function readXML(url) {
       const mCPR = document.querySelector("meta[name='copyright]");
       mCPR.setAttribute("content", cprTXT);
 
-      const imgFigure = [
-        [
-          {}
-        ]
-      ];
-      }
+      const fav = document.querySelector("link[rel='icon']");
+      fav.setAttribute("type", "image/png");
+      fav.setAttribute("href", imgs[0]);
+
+    }
   })
   // catch error
   .catch(error => {
