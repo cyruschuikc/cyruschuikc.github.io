@@ -17,12 +17,27 @@ function readXML(url) {
       const strn = xmlDoc.getElementsByTagName("string");
       const atrn = xmlDoc.getElementsByTagName("author");
       const cprn = xmlDoc.getElementsByTagName("copyright");
+      const imgn = xmlDoc.getElementsByTagName("image");
+      const imgan = xmlDoc.getElementsByTagName("image_alt");
+      const imgocn = xmlDoc.getElementsByTagName("image_onclick");
       const strs = new Array();
       const author = atrn[0].textContent.trim();
       const cprTXT = cprn[0].textContent.trim();
+      const imgs = new Array();
+      const imgas = new Array();
+      const imgocs = new Array();
       for(let i=0; i<strn.length; i++){
         strs.push(strn[i].textContent. trim());
       }
+      for(let i=0; i<imgn.length; i++){
+        imgs.push(imgn[i].textContent. trim());
+      }
+      for(let i=0; i<imgan.length; i++){
+        imgas.push(imgan[i].textContent.trim());
+      }
+      for(let i=0; i<imgocn.length; i++){
+      imgocs.push(imgocn[i].textContent. trim());
+}
       document.title = strs[0];
       document.getElementById("web_name").innerHTML = strs[0];
       const mDesc = document.querySelector("meta[name='description']");
