@@ -16,8 +16,10 @@ function readXML(url) {
     if(url==="Resources/xml/strings.xml"){
       const strn = xmlDoc.getElementsByTagName("string");
       const atrn = xmlDoc.getElementsByTagName("author");
+      const cprn = xmlDoc.getElementsByTagName("copyright");
       const strs = new Array();
       const author = atrn[0].textContent.trim();
+      const cprTXT = cprn[0].textContent.trim();
       for(let i=0; i<strn.length; i++){
         strs.push(strn[i].textContent. trim());
       }
@@ -29,6 +31,8 @@ function readXML(url) {
       };
       const mAuthor = document.querySelector("meta[name='author']");
       mAuthor.setAttribute("content", author);
+      const mCPR = document.querySelector("meta[name='copyright]");
+      mCPR.setAttribute("content", cprTXT);
       }
   })
   // catch error
