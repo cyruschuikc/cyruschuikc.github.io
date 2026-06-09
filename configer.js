@@ -54,11 +54,12 @@ function readXML(url) {
         if (!fav) {
           fav = document.createElement("link");
           fav.rel = "icon";
+          fav.type = "image/png";
           document.head.appendChild(fav);
-        }
-        if (imgs.length > 0) {
-          fav.setAttribute("href", imgs[0]);
-        }
+       }
+       if (imgs.length > 0) {
+         fav.href = imgs[0];
+       }
 
         // set logo img
         const logo = document.querySelector("img[id='site-logo']");
