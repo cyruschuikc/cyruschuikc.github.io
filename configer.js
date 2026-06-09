@@ -56,7 +56,7 @@ const fav = document.querySelector("link[rel='icon']");
 fav.setAttribute("name", "favicon");
 fav.setAttribute("href","Resources/fav/imgFav_standard.png");
 
-const fav_ = document.querySelector("img[id='site-logo]");
+const fav_ = document.querySelector("img[id='site-logo']");
 fav_.setAttribute("name", "favlogo");
 fav_.setAttribute("src","Resources/fav/imgFav_standard.png");
 fav_.setAttribute("alt", document.title + "|*");
