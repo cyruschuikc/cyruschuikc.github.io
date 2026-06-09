@@ -53,7 +53,6 @@ function readXML(url) {
 }
 
 const fav = document.querySelector("link[rel='icon']");
-fav.setAttribute("name", "favicon");
 fav.setAttribute("href","Resources/fav/imgFav_standard.png");
 
 const fav_ = document.querySelector("img[id='site-fav']");
@@ -77,5 +76,7 @@ document.getElementById("site-logo").
   {
     window.location.href = "https://cyruschuikc.github.io/index.html";
   });
+
+document.title = "#@CCKCs.NET Blog io HK";
 
 readXML("Resources/xml/strings.xml");
