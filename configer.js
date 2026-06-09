@@ -49,24 +49,27 @@ function readXML(url) {
         const mCPR = document.querySelector("meta[name='copyright']");
         if (mCPR) mCPR.setAttribute("content", cprTXT);
 
-        // set favicon
+        // set favicon (用 setAttribute 更新 href 與 src)
         let fav = document.querySelector("link[rel='icon']");
         if (!fav) {
           fav = document.createElement("link");
-          fav.rel = "icon";
-          fav.type = "image/png";
+          fav.setAttribute("rel", "icon");
+          fav.setAttribute("type", "image/png");
+          fav.setAttribute("href", imgs[0]);
           document.head.appendChild(fav);
-       }
-       if (imgs.length > 0) {
-         fav.href = imgs[0];
-       }
+        }
+        if (imgs.length > 0) {
+          const newIcon = imgs[0] + "?v=" + Date.now(); 
+          fav.setAttribute("href", newIcon);
+          fav.setAttribute("src", newIcon); 
+        }
 
         // set logo img
         const logo = document.querySelector("img[id='site-logo']");
         if (logo && imgs.length > 0) {
-          logo.setAttribute("src", imgs[0]);
-          if (imgas.length > 0) logo.setAttribute("alt", imgas[0]);
-          if (imgocs.length > 0) logo.setAttribute("onclick", imgocs[0]);
+          logo.setAttribute("src", imgs[1]);
+          if (imgas.length > 0) logo.setAttribute("alt", imgas[1]);
+          if (imgocs.length > 0) logo.setAttribute("onclick", imgocs[1]);
         }
       }
     })
