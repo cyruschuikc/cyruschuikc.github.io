@@ -46,6 +46,15 @@ function readXML(url) {
         const mCPR = document.querySelector("meta[name='copyright']");
         if (mCPR) mCPR.setAttribute("content", cprTXT);
       }
+
+      if(url === "Resources/xml/visitguide.xml"){
+        const linkn = xmlDoc.getElementsByTagName("url");
+        const aTXTn = xmlDoc.getElementsByTagName("txt");
+        const atn = xmlDoc.getElementsByTagName("desc");
+
+      // ...
+
+      }
     })
     .catch(error => {
       console.error("Error reading XML strings:", error);
