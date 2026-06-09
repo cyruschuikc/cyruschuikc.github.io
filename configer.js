@@ -67,6 +67,15 @@ function readXML(url) {
         console.log(menuObj[i]); // log coordinating -> conduct Test & Debug 
       }
       console.log(menuObj); // log coordinating -> conduct Test & Debug 
+
+      const menuBody = "<tr>";
+      for(let i=0; i<menuObj.length; i++){
+        menuBody += "<td><a href='"+
+          "'" + "" +
+          "</a></td>";
+      }
+      menuBody += "</tr>";
+      console.log(menuBody); // log coordinating -> conduct Test & Debug 
       }
     })
     .catch(error => {
