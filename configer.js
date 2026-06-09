@@ -78,5 +78,6 @@ document.getElementById("site-logo").
   });
 
 document.title = "#@CCKCs.NET Blog io HK";
+document.getElementById("web_name").innerHTML = document.title;
 
 readXML("Resources/xml/strings.xml");
