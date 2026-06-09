@@ -18,9 +18,6 @@ function readXML(url) {
         const cprn = xmlDoc.getElementsByTagName("copyright");
 
         const strs = Array.from(strn).map(el => el.textContent.trim());
-        const imgs = Array.from(imgn).map(el => el.textContent.trim());
-        const imgas = Array.from(imgan).map(el => el.textContent.trim());
-        const imgocs = Array.from(imgocn).map(el => el.textContent.trim());
 
         const author = atrn.length > 0 ? atrn[0].textContent.trim() : "";
         const cprTXT = cprn.length > 0 ? cprn[0].textContent.trim() : "";
@@ -57,16 +54,16 @@ function readXML(url) {
       const mat = new Array();
 
       for (let i=0; i < linkn.length; i++){
-        murl.push(linkn.[i].textContent.trim());
+        murl.push(linkn[i].textContent.trim());
         maTXT.push(aTXTn[i].textContent.trim());
-        mat.push(mat[i].textContent.trim());
+        mat.push(atn[i].textContent.trim());
       }
       const menuObj = new Array();
       for(let i=0; i<murl.length; i++){
         const moContext = 
           "{src:" + murl[i] + ", text:" + maTXT[i] + ", title:" + mat[i] + "}";
         console.log(moContext); // log coordinating -> conduct Test & Debug 
-        menuObj.push(moContext.textContent.trim());
+        menuObj.push(moContext);
         console.log(menuObj[i]); // log coordinating -> conduct Test & Debug 
       }
       console.log(menuObj); // log coordinating -> conduct Test & Debug 
