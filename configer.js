@@ -69,13 +69,13 @@ document.getElementById("site-fav").
 
 const logo = document.querySelector("img[id='site-logo']");
 logo.setAttribute("name", "favlogo");
-logo.setAttribute("src","Resources/fav/imgFav_standard.png");
+logo.setAttribute("src","Resources/fav/imgFav_standard(revise).png");
 logo.setAttribute("alt", document.title + "|Home");
 fav_.setAttribute("title", document.title + "|Home");
 document.getElementById("site-logo").
   addEventListener("click", () => 
   {
-    window.location.href("https://cyruschuikc.github.io/index.html");
+    window.location.href = "https://cyruschuikc.github.io/index.html";
   });
 
 readXML("Resources/xml/strings.xml");
