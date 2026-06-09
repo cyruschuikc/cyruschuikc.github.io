@@ -55,4 +55,7 @@ function readXML(url) {
     });
 }
 
+const fav = document.querySelector("link[rel='icon']");
+fav.setAttribute("href","Resources/fav/imgFav_standard.png");
+
 readXML("Resources/xml/strings.xml");
