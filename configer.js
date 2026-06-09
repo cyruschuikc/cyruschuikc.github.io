@@ -52,11 +52,28 @@ function readXML(url) {
         const aTXTn = xmlDoc.getElementsByTagName("txt");
         const atn = xmlDoc.getElementsByTagName("desc");
 
-      // ...
+      const murl = new Array();
+      const maTXT = new Array();
+      const mat = new Array();
 
+      for (let i=0; i < linkn.length; i++){
+        murl.push(linkn.[i].textContent.trim());
+        maTXT.push(aTXTn[i].textContent.trim());
+        mat.push(mat[i].textContent.trim());
+      }
+      const menuObj = new Array();
+      for(let i=0; i<murl.length; i++){
+        const moContext = 
+          "{src:" + murl[i] + ", text:" + maTXT[i] + ", title:" + mat[i] + "}";
+        console.log(moContext); // log coordinating -> conduct Test & Debug 
+        menuObj.push(moContext.textContent.trim());
+        console.log(menuObj[i]); // log coordinating -> conduct Test & Debug 
+      }
+      console.log(menuObj); // log coordinating -> conduct Test & Debug 
       }
     })
     .catch(error => {
+      // log coordinating -> conduct Test & Debug 
       console.error("Error reading XML strings:", error);
     });
 }
