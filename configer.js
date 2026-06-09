@@ -61,7 +61,7 @@ fav_.setAttribute("name", "favlogo");
 fav_.setAttribute("src","Resources/fav/imgFav_standard.png");
 fav_.setAttribute("alt", document.title + "|*");
 fav_.setAttribute("title", document.title + "|*");
-document.getElementById("site-logo").
+document.getElementById("site-fav").
   addEventListener("click", () => 
   {
     window.location.reload();
