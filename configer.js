@@ -16,9 +16,6 @@ function readXML(url) {
         const strn = xmlDoc.getElementsByTagName("string");
         const atrn = xmlDoc.getElementsByTagName("author");
         const cprn = xmlDoc.getElementsByTagName("copyright");
-        const imgn = xmlDoc.getElementsByTagName("image");
-        const imgan = xmlDoc.getElementsByTagName("image_alt");
-        const imgocn = xmlDoc.getElementsByTagName("image_onclick");
 
         const strs = Array.from(strn).map(el => el.textContent.trim());
         const imgs = Array.from(imgn).map(el => el.textContent.trim());
@@ -56,6 +53,18 @@ function readXML(url) {
 }
 
 const fav = document.querySelector("link[rel='icon']");
+fav.setAttribute("name", "favicon");
 fav.setAttribute("href","Resources/fav/imgFav_standard.png");
+
+const fav_ = document.querySelector("link[rel='icon']");
+fav_.setAttribute("name", "favlogo");
+fav_.setAttribute("href","Resources/fav/imgFav_standard(revise).png");
+fav_.setAttribute("alt", document.title + "|*");
+fav_.setAttribute("title", document.title + "|*");
+document.getElementById("site-logo").
+  addEventListener("click", () => 
+  {
+    window.location.reload();
+  });
 
 readXML("Resources/xml/strings.xml");
