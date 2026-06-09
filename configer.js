@@ -56,7 +56,7 @@ const fav = document.querySelector("link[rel='icon']");
 fav.setAttribute("name", "favicon");
 fav.setAttribute("href","Resources/fav/imgFav_standard.png");
 
-const fav_ = document.querySelector("img[id='site-logo']");
+const fav_ = document.querySelector("img[id='site-fav']");
 fav_.setAttribute("name", "favlogo");
 fav_.setAttribute("src","Resources/fav/imgFav_standard.png");
 fav_.setAttribute("alt", document.title + "|*");
@@ -65,6 +65,17 @@ document.getElementById("site-logo").
   addEventListener("click", () => 
   {
     window.location.reload();
+  });
+
+const logo = document.querySelector("img[id='site-logo']");
+logo.setAttribute("name", "favlogo");
+logo.setAttribute("src","Resources/fav/imgFav_standard.png");
+logo.setAttribute("alt", document.title + "|Home");
+fav_.setAttribute("title", document.title + "|Home");
+document.getElementById("site-logo").
+  addEventListener("click", () => 
+  {
+    window.location.href("https://cyruschuikc.github.io/index.html");
   });
 
 readXML("Resources/xml/strings.xml");
