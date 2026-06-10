@@ -61,7 +61,7 @@ function readXML(url) {
         document.getElementById("menu").innerHTML = menuBody;
       }
 
-      if(url.includes("abstract. xml")){
+      if(url.includes("abstract.xml")){
         const tvs = xmlDoc.getElementsByTagName("content");
         const tvP = new Array();
         for(let i=0; i<tvs.length; i++){
