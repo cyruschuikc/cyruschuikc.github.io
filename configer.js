@@ -63,9 +63,8 @@ function readXML(url) {
         const moContext = {
           src: murl[i],
           text: maTXT[i],
-          title:" + mat[i]
+          title: + mat[i]
         };
-        menuObj.push(moContext);
         console.log(moContext); // log coordinating -> conduct Test & Debug 
         menuObj.push(moContext);
         console.log(menuObj[i]); // log coordinating -> conduct Test & Debug 
