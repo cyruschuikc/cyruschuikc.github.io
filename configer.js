@@ -55,7 +55,7 @@ function readXML(url) {
 
         let menuBody = "<tr>";
         for (let i = 0; i < menuObj.length; i++) {
-          menuBody += `<td><a href="${menuObj[i].src}" title="${menuObj[i].title}">${menuObj[i].text}</a></td>`;
+          menuBody += `<td><h3><a href="${menuObj[i].src}" title="${menuObj[i].title}">${menuObj[i].text}</a></h3></td>`;
         }
         menuBody += "</tr>";
         document.getElementById("menu").innerHTML = menuBody;
