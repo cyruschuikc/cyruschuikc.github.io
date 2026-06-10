@@ -76,6 +76,7 @@ function readXML(url) {
       }
       menuBody += "</tr>";
       console.log(menuBody); // log coordinating -> conduct Test & Debug 
+      document.getElementById("menu").innerHTML = menuBody;
       }
     })
     .catch(error => {
