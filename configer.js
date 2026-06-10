@@ -60,6 +60,16 @@ function readXML(url) {
         menuBody += "</tr>";
         document.getElementById("menu").innerHTML = menuBody;
       }
+
+      if(url.includes("abstract. xml")){
+        const tvs = xmlDoc.getElementsByTagName("content");
+        const tvP = new Array();
+        for(let i=0; i<tvs.length; i++){
+          tvP.push(tvs[i].textContent.trim());
+          console.log(tvP);
+        }
+        console.log(tvP);
+      }
     })
     .catch(error => console.error("Error reading XML:", error));
 }
@@ -86,3 +96,4 @@ logo.addEventListener("click", () => {
 // load XML configs
 readXML("Resources/xml/strings.xml");
 readXML("Resources/xml/visitguide.xml");
+readXML("Resources/xml/abstract.xml");
