@@ -70,9 +70,9 @@ function readXML(url) {
 
       const menuBody = "<tr>";
       for(let i=0; i<menuObj.length; i++){
-        menuBody += "<td><a href='"+
-          "'" + "" +
-          "</a></td>";
+        menuBody += "<td><a href='" + menuObj[i].src + 
+          "' title='" + menuObj[i].title + "'" +
+          menuObj[i].text + "</a></td>";
       }
       menuBody += "</tr>";
       console.log(menuBody); // log coordinating -> conduct Test & Debug 
