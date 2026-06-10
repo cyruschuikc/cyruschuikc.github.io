@@ -60,8 +60,12 @@ function readXML(url) {
       }
       const menuObj = new Array();
       for(let i=0; i<murl.length; i++){
-        const moContext = 
-          "{src:" + murl[i] + ", text:" + maTXT[i] + ", title:" + mat[i] + "}";
+        const moContext = {
+          src: murl[i],
+          text: maTXT[i],
+          title:" + mat[i]
+        };
+        menuObj.push(moContext);
         console.log(moContext); // log coordinating -> conduct Test & Debug 
         menuObj.push(moContext);
         console.log(menuObj[i]); // log coordinating -> conduct Test & Debug 
@@ -71,7 +75,7 @@ function readXML(url) {
       const menuBody = "<tr>";
       for(let i=0; i<menuObj.length; i++){
         menuBody += "<td><a href='" + menuObj[i].src + 
-          "' title='" + menuObj[i].title + "'" +
+          "' title='" + menuObj[i].title + "'>" +
           menuObj[i].text + "</a></td>";
       }
       menuBody += "</tr>";
