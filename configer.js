@@ -12,108 +12,77 @@ function readXML(url) {
       const parser = new DOMParser();
       const xmlDoc = parser.parseFromString(xmlString, "application/xml");
 
-      if (url === "Resources/xml/strings.xml") {
+      // strings.xml
+      if (url.includes("strings.xml")) {
         const strn = xmlDoc.getElementsByTagName("string");
         const atrn = xmlDoc.getElementsByTagName("author");
         const cprn = xmlDoc.getElementsByTagName("copyright");
 
         const strs = Array.from(strn).map(el => el.textContent.trim());
-
         const author = atrn.length > 0 ? atrn[0].textContent.trim() : "";
         const cprTXT = cprn.length > 0 ? cprn[0].textContent.trim() : "";
 
-        // set web title and name
         if (strs.length > 0) {
           document.title = strs[0];
           const webName = document.getElementById("web_name");
           if (webName) webName.innerHTML = strs[0];
         }
 
-        // set meta description
         const mDesc = document.querySelector("meta[name='description']");
-        if (mDesc && strs.length > 1) {
-          mDesc.setAttribute("content", strs[1]);
-        }
+        if (mDesc && strs.length > 1) mDesc.setAttribute("content", strs[1]);
 
-        // set meta author
         const mAuthor = document.querySelector("meta[name='author']");
         if (mAuthor) mAuthor.setAttribute("content", author);
 
-        // set meta copyright
         const mCPR = document.querySelector("meta[name='copyright']");
         if (mCPR) mCPR.setAttribute("content", cprTXT);
       }
 
-      if(url === "Resources/xml/visitguide.xml"){
+      // visitguide.xml
+      if (url.includes("visitguide.xml")) {
         const linkn = xmlDoc.getElementsByTagName("url");
         const aTXTn = xmlDoc.getElementsByTagName("txt");
         const atn = xmlDoc.getElementsByTagName("desc");
 
-      const murl = new Array();
-      const maTXT = new Array();
-      const mat = new Array();
+        const menuObj = [];
+        for (let i = 0; i < linkn.length; i++) {
+          menuObj.push({
+            src: linkn[i].textContent.trim(),
+            text: aTXTn[i].textContent.trim(),
+            title: atn[i].textContent.trim()
+          });
+        }
 
-      for (let i=0; i < linkn.length; i++){
-        murl.push(linkn[i].textContent.trim());
-        maTXT.push(aTXTn[i].textContent.trim());
-        mat.push(atn[i].textContent.trim());
-      }
-      const menuObj = new Array();
-      for(let i=0; i<murl.length; i++){
-        const moContext = {
-          src: murl[i],
-          text: maTXT[i],
-          title: mat[i]
-        };
-        console.log(moContext); // log coordinating -> conduct Test & Debug 
-        menuObj.push(moContext);
-        console.log(menuObj[i]); // log coordinating -> conduct Test & Debug 
-      }
-      console.log(menuObj); // log coordinating -> conduct Test & Debug 
-
-      const menuBody = "<tr>";
-      for(let i=0; i<menuObj.length; i++){
-        menuBody += "<td><a href='" + menuObj[i].src + 
-          "' title='" + menuObj[i].title + "'>" +
-          menuObj[i].text + "</a></td>";
-      }
-      menuBody += "</tr>";
-      console.log(menuBody); // log coordinating -> conduct Test & Debug 
-      document.getElementById("menu").innerHTML = menuBody;
+        let menuBody = "<tr>";
+        for (let i = 0; i < menuObj.length; i++) {
+          menuBody += `<td><a href="${menuObj[i].src}" title="${menuObj[i].title}">${menuObj[i].text}</a></td>`;
+        }
+        menuBody += "</tr>";
+        document.getElementById("menu").innerHTML = menuBody;
       }
     })
-    .catch(error => {
-      // log coordinating -> conduct Test & Debug 
-      console.error("Error reading XML strings:", error);
-    });
+    .catch(error => console.error("Error reading XML:", error));
 }
 
+// favicon
 const fav = document.querySelector("link[rel='icon']");
 fav.setAttribute("href","Resources/fav/imgFav_standard.png");
 
-const fav_ = document.querySelector("img[id='site-fav']");
-fav_.setAttribute("name", "favlogo");
-fav_.setAttribute("src","Resources/fav/imgFav_standard.png");
-fav_.setAttribute("alt", document.title + "|*");
-fav_.setAttribute("title", document.title + "|*");
-document.getElementById("site-fav").
-  addEventListener("click", () => 
-  {
-    window.location.reload();
-  });
+const favImg = document.getElementById("site-fav");
+favImg.setAttribute("src","Resources/fav/imgFav_standard.png");
+favImg.setAttribute("alt", document.title + "|*");
+favImg.setAttribute("title", document.title + "|*");
+favImg.addEventListener("click", () => window.location.reload());
 
-const logo = document.querySelector("img[id='site-logo']");
-logo.setAttribute("name", "favlogo");
+// logo
+const logo = document.getElementById("site-logo");
 logo.setAttribute("src","Resources/fav/imgFav_standard(revise).png");
 logo.setAttribute("alt", document.title + "|Home");
-fav_.setAttribute("title", document.title + "|Home");
-document.getElementById("site-logo").
-  addEventListener("click", () => 
-  {
-    window.location.href = "https://cyruschuikc.github.io/index.html";
-  });
+logo.setAttribute("title", document.title + "|Home");
+logo.addEventListener("click", () => {
+  window.location.href = "https://cyruschuikc.github.io/index.html";
+});
 
-document.title = "#@CCKCs.NET Blog io HK";
-document.getElementById("web_name").innerHTML = document.title;
-
+// load XML configs
 readXML("Resources/xml/strings.xml");
+readXML("Resources/xml/visitguide.xml");
