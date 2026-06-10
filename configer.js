@@ -69,8 +69,8 @@ function readXML(url) {
           console.log(tvP);
         }
         console.log(tvP);
+        document.getElementById("absc").innerHTML = `${tvP[0]}<br><br>${tvP[1]}`;
       }
-      document.getElementById("absc").innerHTML = `${tvP[0]}<br><br>${tvP[1]}`;
     })
     .catch(error => console.error("Error reading XML:", error));
 }
