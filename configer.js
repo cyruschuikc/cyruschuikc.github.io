@@ -70,6 +70,7 @@ function readXML(url) {
         }
         console.log(tvP);
       }
+      document.getElementById("absc").innerHTML = `${tvP[0]}<br><br>${tvP[1]}`;
     })
     .catch(error => console.error("Error reading XML:", error));
 }
@@ -92,6 +93,9 @@ logo.setAttribute("title", document.title + "|Home");
 logo.addEventListener("click", () => {
   window.location.href = "https://cyruschuikc.github.io/index.html";
 });
+
+// abstract title config
+document.getElementById("abst").innerHTML = "The•Blog";
 
 // load XML configs
 readXML("Resources/xml/strings.xml");
