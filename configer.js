@@ -47,13 +47,14 @@ function readXML(url){
 // check figures loaded & alternated
 window.onload = () => 
   {
-    console.log("Website onload..."); 
-    const imgs = [icn, fav];
-    for(let i=0; i<imgs.length; i++)
-    {
-      imgs[i].onload() => 
+    console.log("Website onload..."); // forcing log cordination 
+    icn.onload = () => 
       {
-        console.log(imgs[i]); // forcing log cordination
-      }
-    }
+        console.log(icn); // forcing log cordination 
+      };
+    fav.onload = () => 
+      {
+        console.log(fav); // forcing log cordination 
+      };
+    };
   };
