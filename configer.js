@@ -90,4 +90,3 @@ document.getElementById("abst").innerHTML = "The•Blog";
 // load XML configs
 readXML("Resources/xml/strings.xml");
 readXML("Resources/xml/visitguide.xml");
-readXML("Resources/xml/abstract.xml");
