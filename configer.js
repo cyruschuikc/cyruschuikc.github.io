@@ -33,9 +33,10 @@ function readXML(url){
       console.log(strings); // forcing log cordination
       if(strings.length > 0)
       {
-        if(document.title) document.title = strings[0];
+        document.title = strings[0];
+        document.getElementById("web_name").innerHTML = document.title;
         const webDesc = document.querySelector("meta[name='description']");
-        if(webDesc) webDesc.setAttribute("content", strings[1]);
+        webDesc.setAttribute("content", strings[1]);
         document.getElementById("abst").innerHTML = "The.Blog";
         document.getElementById("absc").innerHTML = strings[2];
       }
