@@ -57,3 +57,4 @@ window.onload = () => {
   console.log("Website onloaded!!!");
   console.log(`Welcome to ${document.title} !!!`);
 };
+readXML("Resources/xml/strings.xml");
