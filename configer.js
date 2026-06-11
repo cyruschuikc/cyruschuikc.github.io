@@ -57,4 +57,3 @@ window.onload = () =>
         console.log(fav); // forcing log cordination 
       };
     };
-  };
