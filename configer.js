@@ -26,7 +26,7 @@ function readXML(url) {
           document.title = strs[0];
           const webName = document.getElementById("web_name");
           if (webName) webName.innerHTML = strs[0];
-          document.getElementById("abs").innerHTML = strs[2];
+          document.getElementById("absc").innerHTML = strs[2];
         }
 
         const mDesc = document.querySelector("meta[name='description']");
@@ -60,17 +60,6 @@ function readXML(url) {
         }
         menuBody += "</tr>";
         document.getElementById("menu").innerHTML = menuBody;
-      }
-
-      if(url.includes("abstract.xml")){
-        const tvs = xmlDoc.getElementsByTagName("content");
-        const tvP = new Array();
-        for(let i=0; i<tvs.length; i++){
-          tvP.push(tvs[i].textContent.trim());
-          console.log(tvP);
-        }
-        console.log(tvP);
-        document.getElementById("absc").innerHTML = `<p>${tvP[0]}</p><p>${tvP[1]}</p>`;
       }
     })
     .catch(error => console.error("Error reading XML:", error));
