@@ -2,9 +2,13 @@
 const icn = document.querySelector("link[rel='icon']");
 icn.setAttribute("href", "Resources/fav/imgFav_standard.png");
 
-// web logo configs
+// web fav configs
 const fav = document.querySelector("img[id='site-fav']");
-fav.setAttribute("src", "Resources/fav/imgFav_standard(revis).png");
+fav.setAttribute("src", "Resources/fav/imgFav_standard.png");
+
+// web logo configs
+const logo = document.querySelector("img[id='site-logo']");
+logo.setAttribute("src", "Resources/fav/imgFav_standard(revise).png");
 
 // function to read xml file(s)
 function readXML(url){
@@ -56,4 +60,10 @@ window.onload = () =>
       {
         console.log(fav); // forcing log cordination 
       };
+    logo.onload = () => 
+      {
+        console.log(logo); // forcing log cordination 
+      };
+    console.log("Website onloaded!!!"); // forcing log cordination 
+    console.log(`Welcome to ${document.title} !!!`);
     };
