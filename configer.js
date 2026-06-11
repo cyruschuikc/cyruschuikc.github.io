@@ -26,6 +26,7 @@ function readXML(url) {
           document.title = strs[0];
           const webName = document.getElementById("web_name");
           if (webName) webName.innerHTML = strs[0];
+          document.getElementById("abs").innerHTML = strs[2];
         }
 
         const mDesc = document.querySelector("meta[name='description']");
