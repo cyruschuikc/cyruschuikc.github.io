@@ -53,7 +53,7 @@ function readXML(url){
         }
       }
     })
-    .catch(error => console.error("Error reading XML:", error));
+    .catch(error => console.log("Error reading XML:", error));
 }
 
 // check figures loaded & alternated
