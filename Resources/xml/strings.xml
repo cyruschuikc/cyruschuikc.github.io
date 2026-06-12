@@ -9,11 +9,15 @@
     and contributing a long-term future plan also the dream of a person. The blog also offer a gateway to let the others can know more about how the person are and the skill, knowledge, dedication 
     also the wishes of the blogger have.
   </string>
-  <string name="WelcomeContextView1" id="cvWel1" lang="en">Welcome to visit '#@CCKCs.NET Blog io HK' !!! </string>
-  <string name="WelComeContextView2" id="cvWel2" lang="en">
-    '#@CCKCs.NET Blog io HK' which was a blog-LIKE HTML/CSS/JS + XML web site page created by Cyrus CHUI (FULL: CHUI KA CHUN) who a hongkonger and just aged 1X. 
-    In addition, he 
+  <string name="WelcomeTitle" id="tWel" lang="en">Welcome to visit '#@CCKCs.NET Blog io HK' !!! </string>
+  <string name="WelComeContextView1" id="cvWel1" lang="en">
+  '#@CCKCs.NET Blog io HK' which was a blog-LIKE HTML/CSS/JS + XML web site page created by Cyrus CHUI (FULL: CHUI KA CHUN) who a hongkonger and intrestd in programing of software & system, also web & API developing. 
+  Additionally, who just aged 1X, in HD-y1 study Sem-3 of Software Engeering (SE) at HKIIT@VTC and as a memeber in HK-Scout HKI-Region 82nd Scouts (Venture). Furthermore, who want to take part in IT industry to be a
+  vocational programmer, then be advanced programmer, then developer, then advanced developer, then engine, then advenced engine, then assoc-chief engine, then chief engine, then designer, then advanced designer, then 
+  climbing higer and higher ...
   </string>
+  <strings name="WelcomeContextView2" id="cvWel2">( -- to be continue ... -- )</strings>
+  <strings name="_ContextView_" id="cv__"></strings>
   <author name="director">cyruschuikc[cyruschuikc-kamisatokira@outlook.com]</author>
   <copyright lang="en">&copy;All copyrights belongs to cyruschuikc(kamisato.kira) 2026 ~ -</copyright>
 </resource>
