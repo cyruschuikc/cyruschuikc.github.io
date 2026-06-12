@@ -36,7 +36,7 @@ function readXML(url){
           if(webDesc && strings[1]) webDesc.setAttribute("content", strings[1]);
 
           document.getElementById("abst").innerHTML = "The.Blog";
-          if(strings[2]) document.getElementById("absc").innerHTML = strings[2];
+          document.getElementById("absc").innerHTML = `${strings[2]}`;
         }
 
         if(contributors.length > 0){
