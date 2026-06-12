@@ -10,6 +10,8 @@ fav.setAttribute("src", "Resources/fav/imgFav_standard.png");
 const logo = document.querySelector("img[id='site-logo']");
 logo.setAttribute("src", "Resources/fav/imgFav_standard(revise).png");
 
+const strings = [];
+
 // function to read xml file(s)
 function readXML(url){
   fetch(url)
@@ -22,7 +24,6 @@ function readXML(url){
         const sargs = xmlDoc.getElementsByTagName("string");
         const contributors = xmlDoc.getElementsByTagName("author");
 
-        const strings = [];
         for(let i=0; i<sargs.length; i++){
           strings.push(sargs[i].textContent.trim());
           console.log(strings[i]);  // log coordination
@@ -36,7 +37,7 @@ function readXML(url){
           if(webDesc && strings[1]) webDesc.setAttribute("content", strings[1]);
 
           document.getElementById("abst").innerHTML = "The.Blog";
-          document.getElementById("absc").innerHTML = `${strings[2]}`;
+          document.getElementById("absc").innerHTML = strings[2];
         }
 
         if(contributors.length > 0){
