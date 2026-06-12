@@ -35,14 +35,7 @@ function readXML(url){
 
           document.getElementById("abst").innerHTML = "The.Blog";
           document.getElementById("absc").innerHTML = strings[2];
-
-          const welContext = "";
-          for (let i=3; i<strings.length; i++)
-          {
-            if(i===strings.length) welContext += strings[i];
-            welContext += `${strings[i]}<br><br>`;
-          }
-          document.getElementById("welstate").innerHTML = welContext;
+          document.getElementById("welstate").innerHTML = `${strings[3]}<br><br>`;
         }
 
         if(contributors.length > 0){
