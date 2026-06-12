@@ -24,10 +24,7 @@ function readXML(url){
         const sargs = xmlDoc.getElementsByTagName("string");
         const contributors = xmlDoc.getElementsByTagName("author");
 
-        for(let i=0; i<sargs.length; i++){
-          strings.push(sargs[i].textContent.trim());
-          console.log(strings[i]);  // log coordination
-        }
+        for(let i=0; i<sargs.length; i++) strings.push(sargs[i].textContent.trim());
 
         if(strings.length > 0){
           document.title = strings[0];
@@ -44,7 +41,8 @@ function readXML(url){
           {
             if(i===strings.length) welContext += strings[i];
             welContext += `${strings[i]}<br><br>`;
-          } console.log(welContext);  // log coordination
+          }
+          document.getElementById("welstate").innerHTML = welContext;
         }
 
         if(contributors.length > 0){
