@@ -51,6 +51,14 @@ function readXML(url){
       {
         const aargs = document.getElementsByTagName("url");
         const atxts = document.getElementByTagName("txt");
+        const acs = document.getElementByTagName("desc");
+        for (let i=0; i<aargs.length; i++)
+        {
+          const sectArg = {"hyperlink": aargs[i], "hypertext": atxts[i], "desc":acs[i]};
+          sections.push(sectArg);
+          console.log(sections[i]);
+        }
+        console.log(sections);
       }
     })
     .catch(error => console.log("Error reading XML:", error));
