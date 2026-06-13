@@ -35,7 +35,7 @@ function readXML(url){
 
           document.getElementById("abst").innerHTML = "The.Blog";
           document.getElementById("absc").innerHTML = strings[2];
-          document.getElementById("welstate").innerHTML = `${strings[3]}<br><br>`;
+          document.getElementById("welstate").innerHTML = `${strings[3]}<br><br>${strings[4]}<br><br>`;
         }
 
         if(contributors.length > 0){
