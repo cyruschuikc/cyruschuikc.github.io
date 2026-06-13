@@ -16,8 +16,8 @@
     vocational programmer, then be advanced programmer, then developer, then advanced developer, then engine, then advenced engine, then assoc-chief engine, then chief engine, then designer, then advanced designer, then 
     climbing higer and higher ...
   </string>
-  <strings name="WelcomeContextView2" id="cvWel2">( -- to be continue ... -- )</strings>
-  <strings name="_ContextView_" id="cv__"></strings>
+  <string name="WelcomeContextView2" id="cvWel2">( -- to be continue ... -- )</string>
+  <string name="_ContextView_" id="cv__"></string>
   <author name="director">cyruschuikc[cyruschuikc-kamisatokira@outlook.com]</author>
   <copyright lang="en">&copy;All copyrights belongs to cyruschuikc(kamisato.kira) 2026 ~ -</copyright>
 </resource>
