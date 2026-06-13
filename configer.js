@@ -10,7 +10,8 @@ fav.setAttribute("src", "Resources/fav/imgFav_standard.png");
 const logo = document.querySelector("img[id='site-logo']");
 logo.setAttribute("src", "Resources/fav/imgFav_standard(revise).png");
 
-const strings = [];
+const strings = new Array();
+const sections = new Array();
 
 // function to read xml file(s)
 function readXML(url){
@@ -20,6 +21,7 @@ function readXML(url){
       const parser = new DOMParser();
       const xmlDoc = parser.parseFromString(xmlString, "application/xml");
 
+      // check if prarmeter parsed "Resources/xml/strings.xml"
       if(url === "Resources/xml/strings.xml"){
         const sargs = xmlDoc.getElementsByTagName("string");
         const contributors = xmlDoc.getElementsByTagName("author");
@@ -43,6 +45,13 @@ function readXML(url){
           if(authorMeta) authorMeta.setAttribute("content", contributors[0].textContent.trim());
         }
       }
+
+      // check if parameter parsed "Resources/xml/visiteguide.xml"
+      if(url === "Resources/xml/visiteguide.xml")
+      {
+        const aargs = document.getElementsByTagName("url");
+        const atxts = document.getElementByTagName("txt");
+      }
     })
     .catch(error => console.log("Error reading XML:", error));
 }
@@ -56,4 +65,5 @@ window.onload = () => {
   console.log("Website onloaded!!!");
   console.log(`Welcome to ${document.title} !!!`);
 };
-readXML("Resources/xml/strings.xml");
+
+readXML("Resources/xml/strings.xml");  // read strings.xml
