@@ -59,6 +59,11 @@ function readXML(url){
           console.log(sections[i]);
         }
         console.log(sections);
+        const menuContext = "";
+        for(let i=0; i<sections.length; i++)
+        {
+          menuContext += ``;
+        }
       }
     })
     .catch(error => console.log("Error reading XML:", error));
