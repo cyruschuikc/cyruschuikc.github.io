@@ -55,7 +55,7 @@ function readXML(url){
         for (let i=0; i<aargs.length; i++)
         {
           const sectArg = {hyperlink: aargs[i], hypertext: atxts[i], desc: acs[i]};
-          sections.push(sectArg);
+          sections.push(sectArg.textContent.trim());
           console.log(sections[i]);
         }
         console.log(sections);
