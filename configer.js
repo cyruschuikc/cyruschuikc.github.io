@@ -63,13 +63,13 @@ function readXML(url){
           console.log(sections[i]);
         }
         console.log(sections);
-        const menuContext = "";
+        const menuContext = "<tr>";
         for(let i=0; i<sections.length; i++)
         {
           menuContext += `<td><a href="${sections[i].hyperlink}" title="${sections[i].desc}">${sections[i].hypertext}</a></td>`;
-          console.log(menuContext);
         }
-        // write menu context to the menu body
+        menuContext += "</tr>"
+        document.getElementById("menu").innerHTML = menuContext;
       }
     })
     .catch(error => console.log("Error reading XML:", error));
