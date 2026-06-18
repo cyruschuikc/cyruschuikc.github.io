@@ -68,7 +68,7 @@ function readXML(url){
         {
           menuContext += `<td><a href="${sections[i].hyperlink}" title="${sections[i].desc}">${sections[i].hypertext}</a></td>`;
         }
-        menuContext += "</tr>"
+        menuContext += `</tr>`;
         document.getElementById("menu").innerHTML = menuContext;
       }
     })
