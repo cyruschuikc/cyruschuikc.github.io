@@ -68,7 +68,7 @@ function readXML(url){
         {
           menuContext += `<td><a href="${sections[i].hyperlink}" title="${sections[i].desc}">${sections[i].hypertext}</a></td>`;
         }
-        menuContext += `</tr>`;
+        menuContext += "</tr>";
         document.getElementById("menu").innerHTML = menuContext;
       }
     })
@@ -85,5 +85,5 @@ window.onload = () => {
   console.log(`Welcome to ${document.title} !!!`);
 };
 
-readXML("Resources/xml/strings.xml");  // read strings.xml
-readXML("Resources/xml/visitguide.xml");
+readXML("Resources/xml/strings.xml");  // read strings xml layout src
+readXML("Resources/xml/visitguide.xml"); // read menu xml layout src
