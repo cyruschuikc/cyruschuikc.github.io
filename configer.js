@@ -86,3 +86,4 @@ window.onload = () => {
 };
 
 readXML("Resources/xml/strings.xml");  // read strings.xml
+readXML("Resources/xml/visitguide.xml");
