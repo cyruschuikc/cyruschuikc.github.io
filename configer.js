@@ -47,7 +47,7 @@ function readXML(url){
       }
 
       // check if parameter parsed "Resources/xml/visiteguide.xml"
-      if(url === "Resources/xml/visiteguide.xml")
+      if(url === "Resources/xml/visitguide.xml")
       {
         const aargs = document.getElementsByTagName("url");
         const atxts = document.getElementByTagName("txt");
