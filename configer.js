@@ -1,17 +1,17 @@
 // web icon configs
 const icn = document.querySelector("link[rel='icon']");
-icn.setAttribute("href", "Resources/fav/imgFav_standard.png");
+if(icn) icn.setAttribute("href", "Resources/fav/imgFav_standard.png");
 
 // web fav configs
 const fav = document.querySelector("img[id='site-fav']");
-fav.setAttribute("src", "Resources/fav/imgFav_standard.png");
+if(fav) fav.setAttribute("src", "Resources/fav/imgFav_standard.png");
 
 // web logo configs
 const logo = document.querySelector("img[id='site-logo']");
-logo.setAttribute("src", "Resources/fav/imgFav_standard(revise).png");
+if(logo) logo.setAttribute("src", "Resources/fav/imgFav_standard(revise).png");
 
-const strings = new Array();
-const sections = new Array();
+const strings = [];
+const sections = [];
 
 // function to read xml file(s)
 function readXML(url){
@@ -21,7 +21,7 @@ function readXML(url){
       const parser = new DOMParser();
       const xmlDoc = parser.parseFromString(xmlString, "application/xml");
 
-      // check if prarmeter parsed "Resources/xml/strings.xml"
+      // check if parameter parsed "Resources/xml/strings.xml"
       if(url === "Resources/xml/strings.xml"){
         const sargs = xmlDoc.getElementsByTagName("string");
         const contributors = xmlDoc.getElementsByTagName("author");
@@ -30,14 +30,22 @@ function readXML(url){
 
         if(strings.length > 0){
           document.title = strings[0];
-          document.getElementById("web_name").innerHTML = document.title;
+          const webName = document.getElementById("web_name");
+          if(webName) webName.innerHTML = document.title;
 
           const webDesc = document.querySelector("meta[name='description']");
           if(webDesc && strings[1]) webDesc.setAttribute("content", strings[1]);
 
-          document.getElementById("abst").innerHTML = "The.Blog";
-          document.getElementById("absc").innerHTML = strings[2];
-          document.getElementById("welstate").innerHTML = `${strings[3]}<br><br>${strings[4]}<br><br>`;
+          const abst = document.getElementById("abst");
+          if(abst) abst.innerHTML = "The.Blog";
+
+          const absc = document.getElementById("absc");
+          if(absc && strings[2]) absc.innerHTML = strings[2];
+
+          const welstate = document.getElementById("welstate");
+          if(welstate && strings[3] && strings[4]) {
+            welstate.innerHTML = `${strings[3]}<br><br>${strings[4]}<br><br>`;
+          }
         }
 
         if(contributors.length > 0){
@@ -46,30 +54,31 @@ function readXML(url){
         }
       }
 
-      // check if parameter parsed "Resources/xml/visiteguide.xml"
-      if(url === "Resources/xml/visitguide.xml")
-      {
-        const aargs = document.getElementsByTagName("url");
-        const atxts = document.getElementByTagName("txt");
-        const acs = document.getElementByTagName("desc");
-        for (let i=0; i<aargs.length; i++)
-        {
+      // check if parameter parsed "Resources/xml/visitguide.xml"
+      if(url === "Resources/xml/visitguide.xml"){
+        const aargs = xmlDoc.getElementsByTagName("url");
+        const atxts = xmlDoc.getElementsByTagName("txt");
+        const acs = xmlDoc.getElementsByTagName("desc");
+
+        for (let i=0; i<aargs.length; i++){
           const sectArg = {
             hyperlink: aargs[i].textContent.trim(),
             hypertext: atxts[i].textContent.trim(),
             desc: acs[i].textContent.trim()
-        };
+          };
           sections.push(sectArg);
           console.log(sections[i]);
         }
         console.log(sections);
-        const menuContext = "<tr>";
-        for(let i=0; i<sections.length; i++)
-        {
+
+        let menuContext = "<tr>";
+        for(let i=0; i<sections.length; i++){
           menuContext += `<td><a href="${sections[i].hyperlink}" title="${sections[i].desc}">${sections[i].hypertext}</a></td>`;
         }
         menuContext += "</tr>";
-        document.getElementById("menu").innerHTML = menuContext;
+
+        const menu = document.getElementById("menu");
+        if(menu) menu.innerHTML = menuContext;
       }
     })
     .catch(error => console.log("Error reading XML:", error));
@@ -79,11 +88,11 @@ function readXML(url){
 window.onload = () => {
   console.log("Website onload...");
   console.log(icn);   // link element (no onload)
-  fav.onload = () => console.log("Fav loaded:", fav);
-  logo.onload = () => console.log("Logo loaded:", logo);
+  if(fav) fav.onload = () => console.log("Fav loaded:", fav);
+  if(logo) logo.onload = () => console.log("Logo loaded:", logo);
   console.log("Website onloaded!!!");
   console.log(`Welcome to ${document.title} !!!`);
 };
 
-readXML("Resources/xml/strings.xml");  // read strings xml layout src
+readXML("Resources/xml/strings.xml");   // read strings xml layout src
 readXML("Resources/xml/visitguide.xml"); // read menu xml layout src
