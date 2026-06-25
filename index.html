@@ -1,41 +1,65 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Default Author" />
-  <meta name="description" content="This is MyWebSitePage!!!" />
-  <meta name="copyright" content="All copyright belongs to Default Author (2026)" />
-  
-  <!-- standard initial favicon -->
-  <link rel="icon" type="image/png" href="Resources/stand_init.png" />
-  
+  <meta name="description" content="A personal blog about tech, ideas, and projects." />
+  <meta name="copyright" content="Default Author 2026" />
+
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="MyBlogWebSite" />
+  <meta property="og:description" content="A personal blog about tech, ideas, and projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/Resources/og-image.png" />
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="Resources/stand_init.png" sizes="32x32" />
+
   <!-- stylesheet -->
   <link rel="stylesheet" href="Theme/layout.css" />
-  
+
   <title>MyBlogWebSite</title>
 </head>
 <body>
-  <header>
-    <!-- standard initial logo,the configer would alternate it-->
-    <img id="site-fav" src="Resources/stand_init.png" alt="Site Fav" width="50" height="50"/>  <br>
-    <img id="site-logo" src="Resources/stand_init.png" alt="Site Logo" width="200" height="200"/>
-    <h1 id="web_name">MyBlogWebSite</h1>  <hr>
-  <table name="main_menu" id="menu" border="2">
-    <!--you can hardcode or use JS to built your main menu-->
-  </table>
-  </header>
-  <!--Welcome section-->
-  <section name="welcome" id="wel">
-    <h2 name="welcome_title" id="welt">Welcome To Visit<br>MyWebBlogSite</h2>  <hr />
-    <div name="welcomeStatement" id="welstate">Welcome to vist MyBlog !!!</div>
-  </section>
+  <header id="site-header" role="banner">
+    <a href="/" aria-label="Home">
+      <img id="site-fav" src="Resources/stand_init.png" alt="MyBlog favicon" width="50" height="50" />
+    </a>
 
-  <!--Abstract section-->
-  <section name="abstract" id="abs">
-    <h2 name="abstract_title" id="abst">MyWebSite Abstraction</h2>  <hr />
-    <div name="abstract_context" id="absc">This is my skeleton blog web site page!!!</div>
-  </section>
-  
+    <div id="branding">
+      <picture>
+        <source srcset="Resources/logo-400.png 400w, Resources/logo-800.png 800w" sizes="(max-width:600px) 200px, 400px" />
+        <img id="site-logo" src="Resources/logo-400.png" alt="MyBlogWebSite logo" width="200" height="200" />
+      </picture>
+      <h1 id="web_name">MyBlogWebSite</h1>
+    </div>
+
+    <nav id="main-nav" aria-label="Main menu">
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/posts">Posts</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content" role="main">
+    <section id="welcome">
+      <h2 id="welcome-title">Welcome to MyBlogWebSite</h2>
+      <p id="welcome-statement">Welcome to visit MyBlog. Here I share ideas, tutorials, and project updates.</p>
+    </section>
+
+    <section id="abstract">
+      <h2 id="abstract-title">Site Overview</h2>
+      <p id="abstract-context">This is the skeleton of my blog website. Content and navigation will be expanded over time.</p>
+    </section>
+  </main>
+
+  <footer id="site-footer" role="contentinfo">
+    <p>&copy; <span id="year">2026</span> Default Author. All rights reserved.</p>
+  </footer>
+
+  <script src="configer.js" defer></script>
 </body>
-<script src="configer.js"></script>
 </html>
