@@ -1,16 +1,34 @@
-<menu>
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Title: visitguide.xml
+Author: cyruschuikc
+Source: https://github.com/cyruschuikc/cyruschuikc.github.io
+License: CC BY-NC 4.0
+-->
+<menu lang="en">
   <spinner catalog="root">
-    <url>https://cyruschuikc.github.io</url>
-    <txt lang="en">*</txt>
-    <desc lang="en">#@CCKCs.NET Blog io HK*|https://cyruschuikc.github.io</desc>
-    <url>https://cyruschuikc.github.io/index.html</url>
-    <txt lang="en">Home</txt>
-    <desc lang="en">#@CCKCs.NET Blog io HK-Home|https://cyruschuikc.github.io/index.html</desc>
-    <url>https://cyruschuikc.github.io/index.html#abs</url>
-    <txt lang="en">The•Blog</txt>
-    <desc lang="en">#@CCKCs.NET Blog io HK-Abstract|https://cyruschuikc.github.io/index.html#avstract</desc>
-    <url>https://cyruschuikc.github.io/index.html#wel</url>
-    <txt lang="en">Welcome</txt>
-    <desc lang="en">#@CCKCs.NET Blog io HK-Welcome|https://cyruschuikc.github.io/index.html#welcome</desc>
+    <entry>
+      <url>https://cyruschuikc.github.io</url>
+      <txt lang="en"><![CDATA[*]]></txt>
+      <desc lang="en"><![CDATA[#@CCKCs.NET Blog io HK * | https://cyruschuikc.github.io]]></desc>
+    </entry>
+
+    <entry>
+      <url>https://cyruschuikc.github.io/index.html</url>
+      <txt lang="en"><![CDATA[Home]]></txt>
+      <desc lang="en"><![CDATA[#@CCKCs.NET Blog io HK - Home | https://cyruschuikc.github.io/index.html]]></desc>
+    </entry>
+
+    <entry>
+      <url>https://cyruschuikc.github.io/index.html#abs</url>
+      <txt lang="en"><![CDATA[The•Blog]]></txt>
+      <desc lang="en"><![CDATA[#@CCKCs.NET Blog io HK - Abstract | https://cyruschuikc.github.io/index.html#abs]]></desc>
+    </entry>
+
+    <entry>
+      <url>https://cyruschuikc.github.io/index.html#wel</url>
+      <txt lang="en"><![CDATA[Welcome]]></txt>
+      <desc lang="en"><![CDATA[#@CCKCs.NET Blog io HK - Welcome | https://cyruschuikc.github.io/index.html#wel]]></desc>
+    </entry>
   </spinner>
 </menu>
