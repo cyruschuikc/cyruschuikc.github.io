@@ -1,21 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
-Title:  abstract.xml
-Author:  cyruschuikc
-Source:  https://github.com/cyruschuikc/cyruschuikc.github.io/edit/main/Resources/xml/abstract.xml
-License:  CC BY-NC 4.0 — https://creativecommons.org/licenses/by-nc/4.0/
+Title: abstract.xml
+Author: cyruschuikc
+Source: https://github.com/cyruschuikc/cyruschuikc.github.io
+License: CC BY-NC 4.0 — https://creativecommons.org/licenses/by-nc/4.0/
 -->
+<abstract_catalog lang="en">
+  <entry id="p1" name="txtView1">
+    <content><![CDATA[
+#@CCKCs.NET Blog io HK launched in 2026 on GitHub. It is a personal HTML/CSS/JS blog that shares the blogger’s life and showcases long-term career plans and dreams. The blog provides a gateway for readers to learn about the blogger’s background, skills, knowledge, dedication, and aspirations.
+    ]]></content>
+  </entry>
 
-<abstract_catalog>
-
-  <name>txtView1</name>
-  <id lang="en">p1</id>
-  <content>
-    #@CCKCs.NET Blog io HK, which launched at 2026 in GitHub, is a individualise HTML/CSS/JS Blog web site page specializing in sharing a life and showcasing the future career of a person who are the bloger and contributing a long-term future plan also the dream of a person. The blog also offer a gateway to let the others can know more about how the person are and the skill, knowledge, dedication also the wishes of the blogger have.
-  </content>
-
-  <name>txtView2</name>
-  <id lang="en">p2</id>
-  <content>
-    (--to be continue--)
-  </content>
+  <entry id="p2" name="txtView2">
+    <content><![CDATA[
+-- to be continued --
+    ]]></content>
+  </entry>
 </abstract_catalog>
