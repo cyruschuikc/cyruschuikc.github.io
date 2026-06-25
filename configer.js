@@ -1,26 +1,26 @@
-// configer.js - revised by Cyrus helper
+// configer.js - integrated, production-ready
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Run configuration after DOM is ready
   initSiteConfig().catch(err => console.error('Initialization failed:', err));
 });
 
 async function initSiteConfig() {
-  // Update icons and images only after DOM is ready
   updateIcons();
 
-  // Load XML resources in parallel
+  // Load XML resources in parallel with timeouts
   await Promise.all([
     readXMLAndApply('Resources/xml/strings.xml'),
-    readXMLAndApply('Resources/xml/visitguide.xml')
+    readXMLAndApply('Resources/xml/visitguide.xml'),
+    readXMLAndApply('Resources/xml/abstract.xml').catch(() => {}) // optional
   ]);
 
-  // Log final state
   console.log(`Website initialized: ${document.title}`);
 }
 
-/* Update favicon and image placeholders */
+/* ---------------------------
+   Icon and image updates
+   --------------------------- */
 function updateIcons() {
   const icn = document.querySelector("link[rel='icon']");
   if (icn) icn.href = 'Resources/fav/imgFav_standard.png';
@@ -31,22 +31,35 @@ function updateIcons() {
   const logo = document.getElementById('site-logo');
   if (logo) logo.src = 'Resources/fav/imgFav_standard(revise).png';
 
-  // Optional: attach load/error handlers for debugging
-  if (fav) fav.addEventListener('load', () => console.log('Fav loaded', fav.src));
-  if (logo) logo.addEventListener('load', () => console.log('Logo loaded', logo.src));
+  if (fav) fav.addEventListener('load', () => console.debug('Fav loaded', fav.src));
+  if (logo) logo.addEventListener('load', () => console.debug('Logo loaded', logo.src));
 }
 
-/* Read an XML file and apply changes depending on its path */
+/* ---------------------------
+   Fetch helper with timeout
+   --------------------------- */
+async function fetchWithTimeout(url, timeout = 8000) {
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), timeout);
+  try {
+    const res = await fetch(url, { signal: controller.signal, cache: 'no-cache' });
+    clearTimeout(id);
+    if (!res.ok) throw new Error(`Fetch failed ${res.status} for ${url}`);
+    return await res.text();
+  } finally {
+    clearTimeout(id);
+  }
+}
+
+/* ---------------------------
+   Generic XML loader and dispatcher
+   --------------------------- */
 async function readXMLAndApply(url) {
   try {
-    const res = await fetch(url, { cache: 'no-cache' });
-    if (!res.ok) throw new Error(`Network response was not ok for ${url}: ${res.status}`);
-
-    const xmlText = await res.text();
+    const xmlText = await fetchWithTimeout(url, 8000);
     const parser = new DOMParser();
     const xmlDoc = parser.parseFromString(xmlText, 'application/xml');
 
-    // Detect parse errors
     if (xmlDoc.querySelector('parsererror')) {
       const errText = xmlDoc.querySelector('parsererror').textContent || 'Unknown XML parse error';
       throw new Error(`XML parse error in ${url}: ${errText}`);
@@ -56,6 +69,8 @@ async function readXMLAndApply(url) {
       applyStringsXml(xmlDoc);
     } else if (url.endsWith('visitguide.xml')) {
       applyVisitGuideXml(xmlDoc);
+    } else if (url.endsWith('abstract.xml')) {
+      applyAbstractXml(xmlDoc);
     } else {
       console.warn('Unhandled XML file:', url);
     }
@@ -64,127 +79,155 @@ async function readXMLAndApply(url) {
   }
 }
 
-/* Apply strings.xml content to the page */
+/* ---------------------------
+   Strings handling (keyed map)
+   --------------------------- */
+function buildStringsMap(xmlDoc, preferredLang = navigator.language || 'en') {
+  const map = {};
+  xmlDoc.querySelectorAll('string').forEach(node => {
+    const key = node.getAttribute('name');
+    const lang = (node.getAttribute('lang') || 'en').toLowerCase();
+    if (!key) return;
+    if (!map[key]) map[key] = { value: node.textContent.trim(), lang };
+    else {
+      // prefer exact language match
+      if (lang === preferredLang.toLowerCase()) map[key] = { value: node.textContent.trim(), lang };
+    }
+  });
+  // flatten to simple key -> value
+  const flat = {};
+  Object.keys(map).forEach(k => flat[k] = map[k].value);
+  return flat;
+}
+
 function applyStringsXml(xmlDoc) {
-  const stringNodes = Array.from(xmlDoc.getElementsByTagName('string'));
-  const authorNodes = Array.from(xmlDoc.getElementsByTagName('author'));
+  const preferredLang = (navigator.language || 'en').split('-')[0];
+  const s = buildStringsMap(xmlDoc, preferredLang);
 
-  if (stringNodes.length === 0) {
-    console.warn('No <string> nodes found in strings.xml');
-  }
-
-  // Map strings by index but guard against missing entries
-  const s = indexableText(stringNodes);
-
-  if (s[0]) {
-    document.title = s[0];
+  if (s.title) {
+    document.title = s.title;
     const webName = document.getElementById('web_name');
-    if (webName) webName.textContent = document.title;
+    if (webName) webName.textContent = s.title;
   }
 
-  if (s[1]) {
+  if (s.description) {
     const metaDesc = document.querySelector("meta[name='description']");
-    if (metaDesc) metaDesc.setAttribute('content', s[1]);
+    if (metaDesc) metaDesc.setAttribute('content', s.description);
   }
 
   const abst = document.getElementById('abst');
-  if (abst) abst.textContent = 'The.Blog';
+  if (abst) abst.textContent = s.abstract_title || 'The.Blog';
 
   const absc = document.getElementById('absc');
-  if (absc && s[2]) absc.textContent = s[2];
+  if (absc && (s.abstract || s.AbstractContextView1)) {
+    absc.textContent = s.abstract || s.AbstractContextView1;
+  }
 
   const welstate = document.getElementById('welstate');
-  if (welstate && (s[3] || s[4])) {
-    // Use textContent and explicit line breaks via nodes to avoid innerHTML
-    welstate.textContent = ''; // clear
-    if (s[3]) {
-      welstate.appendChild(document.createTextNode(s[3]));
-      if (s[4]) {
+  const wp1 = s.welcome_paragraph_1 || s.WelComeContextView1 || s.welcome_paragraph_1;
+  const wp2 = s.welcome_paragraph_2 || s.WelcomeContextView2 || s.welcome_paragraph_2;
+  if (welstate && (wp1 || wp2)) {
+    welstate.textContent = '';
+    if (wp1) {
+      welstate.appendChild(document.createTextNode(wp1));
+      if (wp2) {
         welstate.appendChild(document.createElement('br'));
         welstate.appendChild(document.createElement('br'));
-        welstate.appendChild(document.createTextNode(s[4]));
+        welstate.appendChild(document.createTextNode(wp2));
       }
     }
   }
 
-  if (authorNodes.length > 0) {
+  const authorNode = xmlDoc.querySelector('author');
+  if (authorNode) {
     const authorMeta = document.querySelector("meta[name='author']");
-    if (authorMeta) authorMeta.setAttribute('content', authorNodes[0].textContent.trim());
+    if (authorMeta) authorMeta.setAttribute('content', authorNode.textContent.trim());
   }
 }
 
-/* Apply visitguide.xml content to the page */
+/* ---------------------------
+   Visit guide (menu) handling
+   --------------------------- */
 function applyVisitGuideXml(xmlDoc) {
-  const urlNodes = Array.from(xmlDoc.getElementsByTagName('url'));
-  const txtNodes = Array.from(xmlDoc.getElementsByTagName('txt'));
-  const descNodes = Array.from(xmlDoc.getElementsByTagName('desc'));
+  // Prefer structured <entry> nodes if present
+  const entryNodes = Array.from(xmlDoc.querySelectorAll('spinner > entry'));
+  const items = [];
 
-  const count = Math.min(urlNodes.length, txtNodes.length, descNodes.length);
-  if (count === 0) {
-    console.warn('No complete menu entries found in visitguide.xml');
+  if (entryNodes.length > 0) {
+    entryNodes.forEach(e => {
+      const href = e.querySelector('url')?.textContent?.trim() || '';
+      const text = e.querySelector('txt')?.textContent?.trim() || '';
+      const desc = e.querySelector('desc')?.textContent?.trim() || '';
+      if (href && text) items.push({ href, text, desc });
+    });
+  } else {
+    // Fallback: collect sequential url/txt/desc nodes
+    const urlNodes = Array.from(xmlDoc.getElementsByTagName('url'));
+    const txtNodes = Array.from(xmlDoc.getElementsByTagName('txt'));
+    const descNodes = Array.from(xmlDoc.getElementsByTagName('desc'));
+    const count = Math.min(urlNodes.length, txtNodes.length, descNodes.length);
+    for (let i = 0; i < count; i++) {
+      const href = urlNodes[i].textContent.trim();
+      const text = txtNodes[i].textContent.trim();
+      const desc = descNodes[i].textContent.trim();
+      if (href && text) items.push({ href, text, desc });
+    }
+  }
+
+  if (items.length === 0) {
+    console.warn('No menu items found in visitguide.xml');
     return;
   }
 
-  const items = [];
-  for (let i = 0; i < count; i++) {
-    const href = urlNodes[i].textContent.trim();
-    const text = txtNodes[i].textContent.trim();
-    const desc = descNodes[i].textContent.trim();
-    if (!href || !text) continue;
-    items.push({ href, text, desc });
-  }
-
-  // Prefer semantic nav if present
   const nav = document.getElementById('main-nav') || document.querySelector('nav#main-nav');
   if (nav) {
     populateNav(nav, items);
     return;
   }
 
-  // Fallback to table with id="menu"
   const menuTable = document.getElementById('menu');
   if (menuTable && menuTable.tagName.toLowerCase() === 'table') {
     populateTableMenu(menuTable, items);
     return;
   }
 
-  // If neither exists, try to find any element with id menu and populate as inline links
   const genericMenu = document.getElementById('menu');
   if (genericMenu) {
     genericMenu.textContent = '';
-    items.forEach(it => {
+    items.forEach((it, idx) => {
       const a = document.createElement('a');
       a.href = it.href;
       a.title = it.desc || '';
       a.textContent = it.text;
       genericMenu.appendChild(a);
-      genericMenu.appendChild(document.createTextNode(' '));
+      if (idx < items.length - 1) genericMenu.appendChild(document.createTextNode(' | '));
     });
-  } else {
-    console.warn('No menu container found to populate visit guide');
+    return;
   }
+
+  console.warn('No menu container found to populate visit guide');
 }
 
-/* Build a semantic nav list */
 function populateNav(navElement, items) {
-  // Clear existing content
   navElement.textContent = '';
   const ul = document.createElement('ul');
+  ul.setAttribute('role', 'menubar');
   items.forEach(it => {
     const li = document.createElement('li');
+    li.setAttribute('role', 'none');
     const a = document.createElement('a');
     a.href = it.href;
     a.textContent = it.text;
     if (it.desc) a.setAttribute('title', it.desc);
+    // mark current page if matches
+    if (location.href === new URL(it.href, location.href).href) a.setAttribute('aria-current', 'page');
     li.appendChild(a);
     ul.appendChild(li);
   });
   navElement.appendChild(ul);
 }
 
-/* Build a single-row table menu */
 function populateTableMenu(tableElement, items) {
-  // Clear table body
   tableElement.textContent = '';
   const tr = document.createElement('tr');
   items.forEach(it => {
@@ -199,7 +242,33 @@ function populateTableMenu(tableElement, items) {
   tableElement.appendChild(tr);
 }
 
-/* Helper to convert NodeList to indexable trimmed text array */
+/* ---------------------------
+   Abstract XML handling (optional)
+   --------------------------- */
+function applyAbstractXml(xmlDoc) {
+  const entries = Array.from(xmlDoc.querySelectorAll('entry'));
+  if (entries.length === 0) {
+    // fallback to older structure
+    const p1 = xmlDoc.querySelector('content');
+    if (p1) {
+      const el = document.getElementById('p1');
+      if (el) el.textContent = p1.textContent.trim();
+    }
+    return;
+  }
+
+  entries.forEach(e => {
+    const id = e.getAttribute('id') || e.getAttribute('name');
+    const contentNode = e.querySelector('content');
+    if (!id || !contentNode) return;
+    const el = document.getElementById(id);
+    if (el) el.textContent = contentNode.textContent.trim();
+  });
+}
+
+/* ---------------------------
+   Utility helpers
+   --------------------------- */
 function indexableText(nodeList) {
   const arr = [];
   nodeList.forEach(n => arr.push(n.textContent.trim()));
