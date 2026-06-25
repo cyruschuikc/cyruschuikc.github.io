@@ -1,23 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resource>
-  <string name="title" lang="en">#@CCKCs.NET Blog io HK</string>
-  <string name="description">
-    #@CCKCs.NET Blog io HK, which launched in 2026, is a individualise blog directed to sharing the blogger’s life, skills, and dreams. It highlights individuality, dedication, and future career plans. 
-    Furthermore, it offering readers insight into the blogger’s journey and aspirations.
-  </string>
-  <string name="AbstractContextView1" id="cvAbstract1" lang="en">
-    #@CCKCs.NET Blog io HK, which launched at 2026 in GitHub, is a individualise HTML/CSS/JS Blog web site page specializing in sharing a life and showcasing the future career of a person who are the bloger
-    and contributing a long-term future plan also the dream of a person. The blog also offer a gateway to let the others can know more about how the person are and the skill, knowledge, dedication 
-    also the wishes of the blogger have.
-  </string>
-  <string name="WelcomeTitle" id="tWel" lang="en">Welcome to visit '#@CCKCs.NET Blog io HK' !!!</string>
-  <string name="WelComeContextView1" id="cvWel1" lang="en">
-    '#@CCKCs.NET Blog io HK' which was a blog-LIKE HTML/CSS/JS + XML web site page created by Cyrus CHUI (FULL: CHUI KA CHUN) who a hongkonger and intrestd in programing of software and system, also web and API developing. 
-    Additionally, who just aged 1X, in HD-y1 study Sem-3 of Software Engeering (SE) at HKIIT@VTC and as a memeber in HK-Scout HKI-Region 82nd Scouts (Venture). Furthermore, who want to take part in IT industry to be a
-    vocational programmer, then be advanced programmer, then developer, then advanced developer, then engine, then advenced engine, then assoc-chief engine, then chief engine, then designer, then advanced designer, then 
-    climbing higer and higher ...
-  </string>
-  <string name="WelcomeContextView2" id="cvWel2">( -- to be continue ... -- )</string>
-  <string name="_ContextView_" id="cv__"></string>
-  <author name="director">cyruschuikc[cyruschuikc-kamisatokira@outlook.com]</author>
-  <copyright lang="en">&copy;All copyrights belongs to cyruschuikc(kamisato.kira) 2026 ~ -</copyright>
+  <string name="title" lang="en"><![CDATA[#@CCKCs.NET Blog io HK]]></string>
+
+  <string name="description" lang="en"><![CDATA[
+#@CCKCs.NET Blog io HK launched in 2026. This personal blog shares the blogger’s life, skills, and aspirations. It highlights individuality, dedication, and future career plans while offering readers insight into the blogger’s journey.
+  ]]></string>
+
+  <string name="abstract" lang="en"><![CDATA[
+#@CCKCs.NET Blog io HK launched in 2026 on GitHub. It is a personal HTML/CSS/JS blog showcasing the blogger’s life, skills, and long-term career plans. The site provides a gateway for readers to learn about the blogger’s background, knowledge, dedication, and aspirations.
+  ]]></string>
+
+  <string name="welcome_title" lang="en"><![CDATA[Welcome to #@CCKCs.NET Blog io HK]]></string>
+
+  <string name="welcome_paragraph_1" lang="en"><![CDATA[
+#@CCKCs.NET Blog io HK is a blog-like HTML/CSS/JS site created by Cyrus CHUI (CHUI KA CHUN), a Hongkonger interested in software, systems, web, and API development. Cyrus is currently studying Software Engineering and is active in local scouting. This blog documents the path from vocational programmer to senior roles and beyond.
+  ]]></string>
+
+  <string name="welcome_paragraph_2" lang="en"><![CDATA[
+-- to be continued --
+  ]]></string>
+
+  <author name="director" lang="en"><![CDATA[cyruschuikc <cyruschuikc-kamisatokira@outlook.com>]]></author>
+
+  <copyright lang="en"><![CDATA[© All rights reserved. Cyrus Chuikc (kamisato.kira) 2026–]]></copyright>
 </resource>
