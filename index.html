@@ -45,21 +45,38 @@
   </header>
 
   <main id="content" role="main">
-    <section id="welcome">
+    <section id="welcome" aria-labelledby="welcome-title">
       <h2 id="welcome-title">Welcome to MyBlogWebSite</h2>
-      <p id="welcome-statement">Welcome to visit MyBlog. Here I share ideas, tutorials, and project updates.</p>
+      <p id="welstate">Welcome to visit MyBlog. Here I share ideas, tutorials, and project updates.</p>
     </section>
 
-    <section id="abstract">
-      <h2 id="abstract-title">Site Overview</h2>
-      <p id="abstract-context">This is the skeleton of my blog website. Content and navigation will be expanded over time.</p>
+    <section id="abstract" aria-labelledby="abstract-title">
+      <h2 id="abst">Site Overview</h2>
+      <p id="absc">This is the skeleton of my blog website. Content and navigation will be expanded over time.</p>
+
+      <!-- Optional abstract entries populated from abstract.xml -->
+      <article id="p1" class="abstract-entry" aria-hidden="true"></article>
+      <article id="p2" class="abstract-entry" aria-hidden="true"></article>
     </section>
   </main>
 
   <footer id="site-footer" role="contentinfo">
-    <p>&copy; <span id="year">2026</span> Default Author. All rights reserved.</p>
+    <p>&copy; <span id="year">2026</span> <span id="author-name">Default Author</span>. All rights reserved.</p>
   </footer>
 
+  <!-- Config loader -->
   <script src="configer.js" defer></script>
+
+  <!-- Small inline helpers -->
+  <script defer>
+    // Update copyright year automatically
+    (function () {
+      const yearEl = document.getElementById('year');
+      if (!yearEl) return;
+      const now = new Date();
+      const year = now.getFullYear();
+      yearEl.textContent = year;
+    })();
+  </script>
 </body>
 </html>
