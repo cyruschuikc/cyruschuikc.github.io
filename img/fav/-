@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CCKCs WebSiteBlog Logo</title>
+  <style>
+    body {
+      background-color: #fff;
+      text-align: center;
+      margin-top: 50px;
+      font-family: Arial, sans-serif;
+    }
+    canvas {
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <h2>Black & White Logo</h2>
+  <canvas id="logoCanvas" width="800" height="400"></canvas>
 
+  <script>
+    const canvas = document.getElementById("logoCanvas");
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#000";
+    ctx.font = "bold 36px Arial";
+    ctx.textAlign = "center";
+
+    // Main title
+    ctx.fillText("CCKCs WebSiteBlog", canvas.width / 2, 100);
+
+    // Subtext
+    ctx.font = "20px Arial";
+    ctx.fillText("(io HK) cyruschuikc.github.io", canvas.width / 2, 150);
+
+    // Globe icon (left)
+    ctx.beginPath();
+    ctx.arc(200, 100, 30, 0, Math.PI * 2);
+    ctx.stroke();
+
+    // Hong Kong flower (right)
+    ctx.beginPath();
+    for (let i = 0; i < 5; i++) {
+      const angle = (i * 2 * Math.PI) / 5;
+      const x = 600 + Math.cos(angle) * 20;
+      const y = 100 + Math.sin(angle) * 20;
+      ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.stroke();
+
+    // Paper airplane (far right)
+    ctx.beginPath();
+    ctx.moveTo(700, 120);
+    ctx.lineTo(740, 100);
+    ctx.lineTo(700, 80);
+    ctx.lineTo(710, 100);
+    ctx.closePath();
+    ctx.stroke();
+  </script>
+</body>
+</html>
