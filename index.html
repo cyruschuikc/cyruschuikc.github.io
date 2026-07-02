@@ -7,17 +7,30 @@
 <body>
     <!--stylesheet embedded hardcode-->
     <style>
+        body{
+            margin:0;
+            padding:0;
+            width: max-width;
+            height: max-height;
+        }
 
-
+        .visitguide{
+            border: 1px;
+            width: max-width;
+        }
     </style>
 
     <!--java embedded script hardcode-->
     <script>
-
+        document.title = "CCKCs WebSiteBlog io HK";
+        document.getElementById("web_title").innerHTML = document.title;
     </script>
 
     <header>
-        <section></section>
+        <h1 id="web_title"></h1>
+        <section name="GuideMenu_visitMAIN" class="visitguide" id="treemenu">
+        
+        </section>
     </header>
     <footer>
         <section></section>
