@@ -1,9 +1,17 @@
 {
 "page": "CCKC GHBlog io",
 "hyperlink": {
-    "hypertext": [],
-    "content": [],
-    "label": [],
-    "position": []
+    "hypertext": [
+    'https://cyruschuikc.github.io',
+    'https://cyruschuikc.github.io/'
+    ],
+    "label": [
+    'HOME',
+    'Wel-State'
+    ],
+    "position": [
+    'CCKC GitHub Blog io\',
+    'CCKC GitHub Blog io\index.html'
+    ]
 }
 }
