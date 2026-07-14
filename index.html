@@ -62,12 +62,21 @@
             dataType: "json"
             success: function(uri){
                 links = uri.hyperlink;
-                text = null; //links.hypertext
+                text = getHText(links);
                 tag = null; //links.label
                 uargs = null; // links.position
             }
         });
     });
+
+    async function getHText(assoc_args){
+        rs_args = [];
+        SText = prompt("Initial taps automatically...");
+        foreach(assoc_args as index){
+            rs_args[] = index.hypertext;
+            console.log(rs_args);
+        }
+    }
     </script>
 
 
