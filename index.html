@@ -54,9 +54,8 @@
         const web_fav_name = "CCKCs WebSiteBlog io HK"
         document.title = web_fav_name;
         document.getElementById("web_title").innerHTML = document.title;
-
-    $(document).ready(function(){
-        $.ajax({
+        document.ready(function(){
+        .ajax({
             type: "GET",
             url: "queries/JQuery/MMenu.json",
             dataType: "json",
