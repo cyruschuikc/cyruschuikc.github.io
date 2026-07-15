@@ -72,26 +72,29 @@
     async function getHText(assoc_args){
         rs_args = [];
         SText = prompt("Initial hyperlink resources automatically...");
-        forEach(assoc_args as index){
-            rs_args[] = index.hypertext;
-            console.log(rs_args);
-        }
+        assoc_args.forEach(index => {
+            rs_args.push(index.hypertext);
+        });
+        console.log(rs_args);
+        return rs_args;
     }
     async function getHTab(assoc_args){
         rs_args = [];
         STab = prompt("Initial taps automatically...");
-        forEach(assoc_args as tag){
-            rs_args[] = tag.label;
-            console.log(rs_args);
-        }
+        assoc_args.forEach(index => {
+            rs_args.push(index.label);
+        });
+        console.log(rs_args);
+        return rs_args;
     }
     async function getHPost(assoc_args){
         rs_args = [];
         SPost = prompt("Verifing hypertab resources automatically...");
-        forEach(assoc_args as arg){
-            rs_args[] = arg.position;
-            console.log(rs_args);
-        }
+        assoc_args.forEach(index => {
+            rs_args.push(index.position);
+        });
+        console.log(rs_args);
+        return rs_args;
     }
     </script>
 
