@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $.ajax({
     type: 'GET',
-    url: '/cyruschuikc.github.io/application/JQreader/getMainMenu.php',
+    url: 'https://cyruschuikc.infinityfree.io/application/JQreader/getMainMenu.php',
     dataType: 'json',
     success: function(menu){
       const hyperlink = menu.tab;
