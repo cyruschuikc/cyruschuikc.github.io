@@ -11,10 +11,11 @@ $(document).ready(function(){
       console.log(homepage);
 
       otherPages = [];
-      for (i=1, i<hyperlink.length+1; i++){
+      for (let i=1; i<hyperlink.length+1; i++;) {
         otherPages[] = hyperlink[i];
         console.log(otherPages[i-1]);
-      } console.log(otherPages);
+      }
+      console.log(otherPages);
 
       page = []; pageUri = [];
       for(i=0; i<hyperlink.length; i++){
