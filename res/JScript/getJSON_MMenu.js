@@ -6,8 +6,11 @@ $(document).ready(function(){
     success: function(menu){
       pageTitle = menu.page;
       hyperlink = menu.tab;
-      homepage = hyperlink[0].link + hyperlink[0].query;
+      homepage = hyperlink[0];
       otherPages = []; otherPageUri = [];
+      for (i=1, i<hyperlink.length+1; i++){
+        //……
+      }
     }
   });
 })
