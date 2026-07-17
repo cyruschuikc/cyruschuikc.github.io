@@ -20,7 +20,10 @@ $(document).ready(function(){
       for(i=0; i<hyperlink.length; i++){
         if(i==0){
           page[] = homepage.text;
-          pageUri[] = homepage;
+          pageUri[] = homepage.link + homepage.query;
+        } else{
+          page[] = otherPages[i].text;
+          pageUri[] = otherPages[i].link + otherPages[i].query;
         }
       }
     }
