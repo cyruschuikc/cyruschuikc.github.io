@@ -5,7 +5,8 @@ $(document).ready(function(){
     dataType: 'json',
     success: function(menu){
       pageTitle = menu.page;
-      hyperlink = menu.link;
+      hyperlink = menu.tab;
+      homepage = hyperlink[0];
     }
   });
 })
