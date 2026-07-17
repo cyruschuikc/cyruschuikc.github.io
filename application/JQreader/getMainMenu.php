@@ -1,6 +1,6 @@
 <?php
 // Handle CORS
-header("Access-Control-Allow-Origin: https://cyruschuikc.infinityfree.io");
+header("Access-Control-Allow-Origin: https://cyruschuikc.github.io");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Content-Type: application/json");
