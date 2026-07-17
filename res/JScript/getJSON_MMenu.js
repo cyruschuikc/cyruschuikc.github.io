@@ -15,6 +15,11 @@ $(document).ready(function(){
         otherPages[] = hyperlink[i];
         console.log(otherPages[i-1]);
       } console.log(otherPages);
+
+      page = []; pageUri = [];
+      for(i=0; i<hyperlink.length; i++){
+        /……
+      }
     }
   });
 })
