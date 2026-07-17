@@ -20,10 +20,14 @@ $(document).ready(function(){
       for(i=0; i<hyperlink.length; i++){
         if(i==0){
           page[] = homepage.text;
+          console.log(page[0]);
           pageUri[] = homepage.link + homepage.query;
+          console.log(pageUri[0]);
         } else{
           page[] = otherPages[i].text;
+          console.log(page[i]);
           pageUri[] = otherPages[i].link + otherPages[i].query;
+          console.log(pageUri[i]);
         }
       }
     }
