@@ -18,7 +18,7 @@ $(document).ready(function(){
 
       page = []; pageUri = [];
       for(i=0; i<hyperlink.length; i++){
-        /……
+        //……
       }
     }
   });
