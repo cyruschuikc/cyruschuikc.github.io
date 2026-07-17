@@ -1,0 +1,9 @@
+<!--
+{
+  "site": "CCKCs WebSiteBlog GHio",
+  "tab":{
+    ["hyperlink": "cyruschuikc.github.io", "text": "Home", "query": "/"],
+    ["hyperlink": "cyruschuikc.infinityfree.io", "text": "&#128271;", "query": "/?i=1"]
+  }
+}
+-->
