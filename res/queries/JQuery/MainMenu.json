@@ -1,6 +1,6 @@
 {
   "site": "CCKCs WebSiteBlog GHio",
   "tab":{
-    ["hyperlink": "cyruschuikc.github.io", "text": "Home", "query": hyperlink + "/"]
+    ["hyperlink": "cyruschuikc.github.io", "text": "Home", "query": hyperlink . "/"]
   }
 }
