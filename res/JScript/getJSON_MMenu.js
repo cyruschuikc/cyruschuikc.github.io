@@ -6,7 +6,7 @@ $(document).ready(function(){
     success: function(menu){
       const hyperlink = menu.tab;
       const page = hyperlink.map(h => h.text);
-      const pageUri = hyperlink.map(h => h.link + h.query);
+      const pageUri = hyperlink.map(h => "https://" + h.link + h.query);
 
       // for debug
       console.log(page);  console.log(pageUri);
