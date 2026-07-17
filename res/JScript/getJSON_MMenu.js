@@ -23,13 +23,15 @@ $(document).ready(function(){
           console.log(page[0]);
           pageUri[] = homepage.link + homepage.query;
           console.log(pageUri[0]);
-        } else{
+        } 
+        else{
           page[] = otherPages[i].text;
           console.log(page[i]);
           pageUri[] = otherPages[i].link + otherPages[i].query;
           console.log(pageUri[i]);
         }
       }
+      console.log(page);  console.log(pageUri);
     }
   });
 })
