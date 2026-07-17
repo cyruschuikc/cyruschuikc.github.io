@@ -18,7 +18,10 @@ $(document).ready(function(){
 
       page = []; pageUri = [];
       for(i=0; i<hyperlink.length; i++){
-        //……
+        if(i==0){
+          page[] = homepage.text;
+          pageUri[] = homepage;
+        }
       }
     }
   });
