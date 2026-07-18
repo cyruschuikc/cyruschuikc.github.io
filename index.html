@@ -12,32 +12,6 @@
     <section><footer></footer></section>
   </body>
  <script>
-  $(document).ready(function(){
-    $.ajax({
-      type: 'GET',
-      url: 'https://cyruschuikc.infinityfree.io/application/JQreader/getMainMenu.php',
-      dataType: 'json',
-      success: function(menu){
-        const hyperlink = menu.tab;
-        const page = hyperlink.map(h => h.text);
-        const pageUri = hyperlink.map(h => "https://" + h.link + h.query);
-  
-        let str = "<table width='100%'><tr>";
-        for(let index = 0; index < hyperlink.length; index++){
-          str += "<td><a href='" + pageUri[index] + "'>" + page[index] + "</a></td>";
-        }
-        str += "</tr></table>";
-  
-        // Inject into menu
-        $("#m").html(str);
-      }, 
-      error: function(){
-        $("#m").html("<div><i>⚠️ Menu could not be loaded. Please try again later.</i></div>");
-      }
-    });
-  });
-  
-  // Set site title
   document.getElementById("WEB_TITLE").innerHTML = document.title;
   document.getElementById("m").innerHTML = "<div><i>The menu of the site will appear soon❗❗❗</i></div>";
 </script>
