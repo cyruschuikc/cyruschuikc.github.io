@@ -12,12 +12,12 @@
     <section><footer></footer></section>
   </body>
   <script>
-    $(document).ready(function(){
+    $(document).ready(async function(){
       $.ajax({
         type: 'GET',
-        url: '/application/JQreader/getMainMenu.php',
+        url: 'https://cyruschuikc.infinityfree.io/application/JQreader/getMainMenu.php',
         dataType: 'json',
-        success: function(menu){
+        success: async function(menu){
           const hyperlink = menu.tab;
           const page = hyperlink.map(h => h.text);
           const pageUri = hyperlink.map(h => "https://" + h.link + h.query);
@@ -32,7 +32,9 @@
           $("#m").html(str);
         }
       });
-    });
+    },
+    error: async function(){$("#m").html("<div><i>⚠️ Menu could not be loaded. Please try again later.</i></div>");}
+    );
     
     // Set site title
     document.getElementById("WEB_TITLE").textContent = document.title;
