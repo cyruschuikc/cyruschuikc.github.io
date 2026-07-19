@@ -11,22 +11,22 @@
     <header>
       <h1 id="WEB_TITLE"></h1>
       <menu class="menu" id="m"><span><a href="cyruschuikc.github.io/">Home</a>&nbsp;<a href="https://cyruschuikc.infinityfree.io/">I.F.io</a>&nbsp;
-        <button name="▮" id="?">▯</button></span></menu><hr/>
+        <button name="▮" id="?">?</button></span></menu><hr/>
     </header>
     <section><footer></footer></section>
   </body>
   <script>
   document.getElementById("WEB_TITLE").innerHTML = document.title;
-  Swal.fire({
-    title: "Page Access Failure",
-    text: "more tab(s) will present and extend in the future ...\nPlease stay behind !!!",
-    confirmButtonTextL: 'OK!',
-    cancelButtonText: 'Close'
-  }).then(async (result) => {
-    console.log("alert message forwarded and recived");
-    result.isConfirmed ? console.log("Comitted!") : console.log("waiting response...");
+  document.getElementById("?").addEventListener("click", async () => {
+    const result = await Swal.fire({
+      title: "Page Access Failure",
+      text: "More tab(s) will present and extend in the future...\nPlease stay behind !!!",
+      showCancelButton: true,
+      confirmButtonText: "OK!",
+      cancelButtonText: "Close"
+    });
+    console.log("Alert message forwarded and received");
+    result.isConfirmed ? console.log("Committed!") : console.log("Waiting response...");
   });
-  // const unknown = document.getElementById("?");
-  // unknown.addEventListener("click", async () => {alert("more tab(s) will present and extend in the future ...\nPlease stay behind !!!"); console.log("alert message forwarded & recived");});
-</script>
+  </script>
 </html>
