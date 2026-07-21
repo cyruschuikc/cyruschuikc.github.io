@@ -11,19 +11,29 @@
   <body>
     <header>
       <h1 id="WEB_TITLE"></h1>
-      <menu class="menu" id="m"><span><a href="cyruschuikc.github.io/">Home</a>&nbsp;<a href="https://cyruschuikc.infinityfree.io/">I.F.io</a>&nbsp;
-        <button name="_" id="ucTab">Coming soon...</button></span></menu><hr/>
+      <menu class="menu" id="m"><span><a href="https://cyruschuikc.github.io/">Home</a>&nbsp;<a href="https://cyruschuikc.infinityfree.io/">I.F.io</a>&nbsp;
+        <button name="_" id="rsTab"><i>release soon</i></button></span></menu><hr/>
     <section class="header_content"><div id="hAbs">This site reflects my journey through ideas, design, and Information and Communication Technology exploration, crafted to share my future career and inspire creative, techniques, and skills growth.</div></section>
     </header>
     <section><footer></footer></section>
   </body>
   <script>
   document.getElementById("WEB_TITLE").innerHTML = document.title;
-
-    document.getElementById("ucTab").addEventListener("click", async () => {
+  document.getElementById("ucTab").addEventListener("click", async () => {
+      const result = await Swal.fire({
+        title: "Page Access Failure",
+        text: "The new tab is coming soon...\nPlease stay behind !!!",
+        showCancelButton: true,
+        confirmButtonText: "OK!",
+        cancelButtonText: "Close"
+      });
+      console.log("Alert message forwarded and received");
+      result.isConfirmed ? console.log("Committed!") : console.log("Waiting response...");
+    });
+    document.getElementById("rsTab").addEventListener("click", async () => {
     const result = await Swal.fire({
-      title: "Page Access Failure",
-      text: "The new tab is coming soon...\nPlease stay behind !!!",
+      title: "New Page Tab is about to release later!",
+      text: "The new tab is release soon...\nPlease stay behind !!!",
       showCancelButton: true,
       confirmButtonText: "OK!",
       cancelButtonText: "Close"
