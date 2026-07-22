@@ -13,7 +13,7 @@
       <h1 id="WEB_TITLE"></h1>
       <menu class="menu" id="m"><span><a href="https://cyruschuikc.github.io/">Home</a>&nbsp;<a href="https://cyruschuikc.github.io/#S1_HEADING">Welcome</a>&nbsp:<a href="https://cyruschuikc.github.io/#s1Abs">HELLO!</a>
         <a href="https://cyruschuikc.infinityfree.io/">I.F.io</a>&nbsp;
-        <button name="▯" id="ucTab">▮</button></span></menu><hr/>
+        <button name="#" id="ucTab">▯</button></span></menu><hr/>
     <section class="header_content"><div id="hAbs">This site reflects my journey through ideas, design, and Information and Communication Technology exploration, crafted to share my future career and inspire creative, techniques, and skills growth.</div></section>
     </header>
     <section class="welcome"><h2 id="S1_HEADING"></h2><div id="s1Abs"></div></section>
@@ -23,14 +23,16 @@
   document.getElementById("WEB_TITLE").innerHTML = document.title;
   document.getElementById("S1_HEADING").innerHTML = "Hello, Vistors!";
   document.getElementById("s1Abs").innerHTML = `Welcome to my blog — <b><i>${document.title}</i></b> — a personal space where creativity meets individuality.`;
-  document.getElementById("rsTab").addEventListener("click", async () => {
-    const result = await Swal.fire({
-      title: "New Page Tab is about to release later!",
-      text: "The new tab is release soon...\nPlease stay behind !!!",
-      showCancelButton: true,
-      confirmButtonText: "OK!",
-      cancelButtonText: "Close"
-    });
+    
+  // document.getElementById("rsTab").addEventListener("click", async () => {
+  //   const result = await Swal.fire({
+  //     title: "New Page Tab is about to release later!",
+  //     text: "The new tab is release soon...\nPlease stay behind !!!",
+  //     showCancelButton: true,
+  //     confirmButtonText: "OK!",
+  //     cancelButtonText: "Close"
+  //   });
+    
   document.getElementById("ucTab").addEventListener("click", async () => {
       const result = await Swal.fire({
         title: "Page Access Failure",
@@ -45,16 +47,18 @@
     console.log("Alert message forwarded and received");
     result.isConfirmed ? console.log("Committed!") : console.log("Waiting response...");
   });
- document.getElementById("?").addEventListener("click", async () => {
-    const result = await Swal.fire({
-      title: "Page Access Failure",
-      text: "More tab(s) will present and extend in the future...\nPlease stay behind !!!",
-      showCancelButton: true,
-      confirmButtonText: "OK!",
-      cancelButtonText: "Close"
-    });
-    console.log("Alert message forwarded and received");
-    result.isConfirmed ? console.log("Committed!") : console.log("Waiting response...");
-  });
+    
+ // document.getElementById("?").addEventListener("click", async () => {
+ //    const result = await Swal.fire({
+ //      title: "Page Access Failure",
+ //      text: "More tab(s) will present and extend in the future...\nPlease stay behind !!!",
+ //      showCancelButton: true,
+ //      confirmButtonText: "OK!",
+ //      cancelButtonText: "Close"
+ //    });
+ //    console.log("Alert message forwarded and received");
+ //    result.isConfirmed ? console.log("Committed!") : console.log("Waiting response...");
+ //  });
+    
   </script>
 </html>
