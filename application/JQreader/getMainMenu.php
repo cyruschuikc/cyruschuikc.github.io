@@ -13,10 +13,11 @@ header("Content-Type: application/json");
 
 // Build your menu structure
 $siteGuide = array(
-    "page" => "CCKCs WebSiteBlog GHio",
+    "page" => "CCKCs WebSiteBlog GHio｜I.F.io",
     "tab" => array(
-        array("link" => "cyruschuikc.github.io", "text" => "Home", "query" => "/"),
-        array("link" => "cyruschuikc.infinityfree.io", "text" => "🔒", "query" => "/?i=1")
+        array("link" => "cyruschuikc.github.io", "text" => "Back to standard", "query" => "/"),
+        array("link" => "cyruschuikc.infinityfree.io", "text" => "Welcome!", "query" => "/#S1_HEADING"),
+        array("link" => "cyruschuikc.infinityfree.io", "text" => "HELLO!", "query" => "/#s1Abs")
     )
 );
 
