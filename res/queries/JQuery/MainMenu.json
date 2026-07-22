@@ -2,7 +2,8 @@
   "site": "CCKCs WebSiteBlog GHio",
   "tab": [
     { "hyperlink": "cyruschuikc.github.io", "text": "Home", "query": "/" },
-    {"hyperlink": "cyruschuikc.github.io", "text": "Welcome!", "query": "/#sWel"},
+    {"hyperlink": "cyruschuikc.github.io", "text": "Welcome!", "query": "/#S1_HEADING"},
+    {"hyperlink": "cyruschuikc.github.io", "text": "HELLO!", "query": "/#s1Abs"},
     { "hyperlink": "cyruschuikc.infinityfree.io", "text": "I.F.io", "query": "/?i=1" }
   ]
 }
