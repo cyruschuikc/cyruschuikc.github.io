@@ -12,5 +12,5 @@ if ($conn->connect_error) {
     error_log("==!!!Connect Error!!!==\nAccess MyWebSite's InfinityFree MySQL Database Rejected.\n" . $conn->connect_error);
     die("Database connection failed.");
 }
-echo "Connect InfinityFree MySQL Database Successfully!";
+echo "Connect MyWebSite's InfinityFree MySQL Database Successfully!";
 ?>
