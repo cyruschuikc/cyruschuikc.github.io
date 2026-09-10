@@ -5,20 +5,13 @@ $user = "if0_12345678";
 $pass = "cckcCCKC1024";
 $charset = "utf8mb4";
 
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-$options = [
-    PDO::ATTR_ERRMODE => 
-      PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => 
-      PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES => 
-      false,
-];
+$conn = new mysqli($host, $user, $pass, $db);
+$conn->set_charset("utf8mb4");
 
-try {
-    $pdo = new PDO($dsn, $user, $pass, $options);
-    echo "Connect InfinityFree MySQL Database Successfull！";
-} catch (\PDOException $e) {
-    die("InfinityFree MySQL Database connect rejected: " . $e->getMessage());
+if ($conn->connect_error) {
+    error_log("==!!!Connect Error!!!==\nAccess MyWebSite's InfinityFree MySQL Database Rejected.\n" . $conn->connect_error);
+    die("Database connection failed.");
 }
+
+echo "Connect InfinityFree MySQL Database Successfully!";
 ?>
