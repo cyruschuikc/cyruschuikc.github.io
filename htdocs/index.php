@@ -3,7 +3,6 @@ $host = "sql302.infinityfree.com";
 $db = "if0_12345678_HSCKdb";
 $user = "if0_12345678";
 $pass = "cckcCCKC1024";
-$charset = "utf8mb4";
 
 $conn = new mysqli($host, $user, $pass, $db);
 $conn->set_charset("utf8mb4");
