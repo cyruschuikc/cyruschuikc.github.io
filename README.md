@@ -1,6 +1,4 @@
 # cyruschuikc.github.io
-|[**ℹ️MyORC🆔️**](https://orcid.org/0009-0002-5298-9183)|_`🔜🆕️MyCV`_|
-|-|-|
 
 ## License
 
