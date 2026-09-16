@@ -7,7 +7,7 @@ All the sorce codes, programes, and materials, unless had extra specified, both 
 > [!NOTE]
 > ```diff 
 > !applicable to src.-code, programes, materials
-> !extra specified exception```
+> !extra specified exception
 
 `### new section`\
 `## new chp.`
