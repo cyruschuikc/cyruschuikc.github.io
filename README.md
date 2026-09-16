@@ -6,8 +6,8 @@ All the sorce codes, programes, and materials, unless had extra specified, both 
 ### MIT License
 > [!NOTE]
 > ```diff 
-> !(applicable to src.-code, programes, materials)
-> !(extra specified exception)
+> !_applicable to src.-code, programes, materials_
+> !_extra specified exception_
 > ```
 
 `### new section`\
