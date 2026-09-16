@@ -9,8 +9,3 @@ All the sorce codes, programes, and materials, unless had extra specified, both 
 > !applicable to src.-code, programes, materials
 > !extra specified exception
 >```
-
-```diff
-# new section
-# new chp.
-```
