@@ -5,7 +5,9 @@ All the sorce codes, programes, and materials, unless had extra specified, both 
 
 ### MIT License
 > [!NOTE]
-> ```diff !(applicable to src.-code, programes, materials)```
+> ```diff 
+> !(applicable to src.-code, programes, materials)
+> ```
 
 `### new section`\
 `## new chp.`
