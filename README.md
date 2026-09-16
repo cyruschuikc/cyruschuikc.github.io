@@ -7,6 +7,16 @@
 # Gray or Blue text (Header style)
 ```
 
+> [!NOTE]
+> Useful information that users should know.
+
+> [!WARNING]
+> Critical content requiring immediate user attention.
+
+> [!CAUTION]
+> Potential negative consequences of an action.
+
+
 ## License
 All the sorce codes, programes, and materials, unless had extra specified, both are licensed under the MIT License.
 ### MIT License
