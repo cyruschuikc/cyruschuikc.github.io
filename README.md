@@ -11,3 +11,8 @@ A short and simple permissive license with conditions only requiring preservatio
 > !This license applicable to all src.-codes/programes/materials in this repository
 > !extra specified exception
 >```
+
+```diff
+#### New sub-section
+```
+
