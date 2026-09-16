@@ -1,11 +1,6 @@
 # cyruschuikc.github.io
-|[**ℹ️MyORC🆔️**](https://orcid.org/0009-0002-5298-9183)|_`🔜🆕️MyCV`_|
-|-|-|
 
-## License
-
-The source code in this repository is licensed under the MIT License.
-
-However, all website content, including but not limited to text, images, portfolio works, personal information, and branding elements, is © 2026 cyruschuikc. All Rights Reserved.
-
-The MIT License applies only to the source code and does not grant rights to use, copy, or redistribute the website content unless explicitly permitted.
+## ⚖️License
+All the sorce codes, programes, and materials, unless had extra specified, both are licensed under the MIT License.
+`### new section`\
+`## new chp.`
