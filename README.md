@@ -15,5 +15,8 @@ A short and simple permissive license with conditions only requiring preservatio
 #### Roles of MIT
 |Permission|Limitation|Condition|
 |-|-|-|
-||||
+|✅️Commercial Use|❌️Liability|ℹ️license note|
+|✅️Modification|❌️Warranty|ℹ️copyright notice|
+|✅️Distribution|||
+|✅️Private Use|||
 
