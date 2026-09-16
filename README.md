@@ -12,7 +12,7 @@ A short and simple permissive license with conditions only requiring preservatio
 > !extra specified exception
 >```
 
-```diff
-#### New sub-section
-```
+#### Roles of MIT
+|-|-|-|
+|-|-|-|
 
