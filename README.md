@@ -1,8 +1,8 @@
 # cyruschuikc.github.io
 ```diff
-## New Chp.
-### New Section
-### New Section
+## New Chp. is coming soon 
+### New Section is coming soon 
+### New Section is coming soon
 ```
 ## License
 All the sorce codes, programes, and materials, unless had extra specified, both are licensed under the MIT License.
