@@ -14,7 +14,5 @@ A short and simple permissive license with conditions only requiring preservatio
 
 ```diff
 #### New sub-section
-### New Section
-## New Chp.
 ```
 
