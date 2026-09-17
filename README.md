@@ -1,9 +1,26 @@
 # cyruschuikc.github.io
-
+```diff
+## New Chp. is coming soon 
+### New Section is coming soon 
+### New Section is coming soon
+```
 ## License
+All the sorce codes, programes, and materials, unless had extra specified, both are licensed under the MIT License.
 
-The source code in this repository is licensed under the MIT License.
+### MIT License
+A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
 
-However, all website content, including but not limited to text, images, portfolio works, personal information, and branding elements, is © 2026 cyruschuikc. All Rights Reserved.
+> [!NOTE]
+> ```diff 
+> !This license applicable to all src.-codes/programes/materials in this repository
+> !extra specified exception
+>```
 
-The MIT License applies only to the source code and does not grant rights to use, copy, or redistribute the website content unless explicitly permitted.
+#### Roles of MIT
+|Permission|Limitation|Condition|
+|-|-|-|
+|✅️Commercial Use|❌️Liability|ℹ️license＆copyright notice|
+|✅️Modification|❌️Warranty||
+|✅️Distribution|||
+|✅️Private Use|||
+
