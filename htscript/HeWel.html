@@ -6,23 +6,60 @@
     <meta name="description" content="freestyle hello script" />
     <title>HeWel</title>
     <style>
-     body, main {
-      margin: 0;
-      padding: 0;
-    }
-    canvas {
-      margin: 0;
-      padding: 0;
-      background-color: white;
-      width: 100%;
-      height: 500px;
-    }
+      html, body, main {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+      canvas {
+        display: block;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+      }
     </style>
   </head>
   <body>
     <main>
       <canvas id="welcome-hello"></canvas>
-      <script src="https://cyruschuikc.infinityfree.io/java/script/MyCanva.js"></script>
     </main>
+
+    <script>
+      const canvas = document.getElementById("welcome-hello");
+      const ctx = canvas.getContext("2d");
+
+      function resizeCanvas() {
+        // 讓畫布解析度與實際顯示大小一致，避免文字模糊
+        canvas.width = canvas.parentElement.clientWidth;
+        canvas.height = canvas.parentElement.clientHeight || 500;
+        draw();
+      }
+
+      function draw() {
+        const cp = [canvas.width / 2, canvas.height / 2];
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.font = 'bold 22px system-ui, Arial, sans-serif';
+        ctx.fillStyle = '#00bfff';
+        ctx.textAlign = 'center';
+
+        // Top Text
+        ctx.textBaseline = 'bottom';
+        ctx.fillText("HELLO!", cp[0], cp[1] - 30);
+
+        // Middle Horizontal Alignment
+        ctx.textBaseline = 'middle';
+        ctx.fillText("Hi!", cp[0] - 100, cp[1]);
+        ctx.fillText("WELCOME!", cp[0], cp[1]);
+        ctx.fillText("Hay!", cp[0] + 100, cp[1]);
+
+        // Bottom Text
+        ctx.textBaseline = 'top';
+        ctx.fillText("Yea!", cp[0], cp[1] + 30);
+      }
+
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+    </script>
   </body>
 </html>
