@@ -1,2 +1,2 @@
 const canvas = document.getElementById("");
-const ctx = 
+const ctx = canvas.getContext("2d");
