@@ -1,1 +1,2 @@
-const canvas = document.getElementById();
+const canvas = document.getElementById("");
+const ctx = 
