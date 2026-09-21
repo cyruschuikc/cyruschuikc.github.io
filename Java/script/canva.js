@@ -1,1 +1,0 @@
-const canvas = document.getElementById();
