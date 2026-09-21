@@ -5,4 +5,5 @@ const cp = [canvas.width / 2, canvas.height / 2];
 ctx.font = '20px Arial';
 ctx.fillStyle = '#1447ff';
 
-ctx.fillText();
+ctx.fillText("HELLO!", cp[0], 0);
+ctx.fillText("WELCOME!", cp[0], cp[1]);
