@@ -1,1 +1,150 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 10px;
+}
+
+.dropdown {
+  position: absolute !important;
+  top: 15px;
+  right: 20px;
+  z-index: 9999;
+}
+
+#webTitle-container table {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0 !important;
+}
+
+#webTitle-container tbody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#webTitle-container tr {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+#webTitle-container h1 {
+  font-size: 2rem !important;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 0 !important;
+}
+
+#webTitle-container h6 {
+  font-style: normal !important;
+  color: var(--accent-color);
+  opacity: 0.85;
+  margin-top: 4px !important;
+}
+
+#welcome-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 15px auto !important;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+#welcome-container p {
+  padding: 16px 24px !important;
+  font-size: 1.05rem;
+  border-radius: 12px;
+  line-height: 1.6;
+}
+
+#colbar {
+  border-radius: 4px;
+  margin: 8px 0 !important;
+  opacity: 0.9;
+}
+
+main {
+  max-width: 1000px;
+  margin: 20px auto !important;
+  padding: 0 20px;
+}
+
+main .headings {
+  font-size: 1.8rem;
+  margin-bottom: 10px !important;
+  letter-spacing: 1px;
+}
+
+main hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+  margin-bottom: 25px;
+}
+
+#welcome {
+  border: 1px solid var(--border-color) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--card-bg);
+}
+
+#welcome:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+.dropdown-content {
+  border-radius: 10px !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25) !important;
+  backdrop-filter: blur(10px);
+}
+
+.dropdown-content a {
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .dropdown {
+    top: 10px;
+    right: 10px;
+  }
+
+  .dropdown-btn {
+    padding: 0.5rem 0.9rem !important;
+    font-size: 0.85rem;
+  }
+
+  #webTitle-container h1 {
+    font-size: 1.5rem !important;
+  }
+
+  #globe-3rd {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  #welcome {
+    height: 380px !important;
+  }
+}
 
