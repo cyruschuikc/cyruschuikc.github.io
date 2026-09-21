@@ -8,7 +8,7 @@ ctx.textAlign = 'center';
 
 ctx.textBaseline = 'top';
 // top-side text
-ctx.fillText("HELLO!", cp[0], cp[1] - 35);
+ctx.fillText("HELLO!", cp[0], cp[1] - 30);
 // upper-middle-side text
 ctx.fillText("Hi!", cp[0] - 30, cp[1] + 30);
 ctx.fillText("Yea!", cp[0], cp[1] + 30);
