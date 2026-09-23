@@ -11,6 +11,7 @@ A short and simple permissive license with conditions only requiring preservatio
 <details>
 <summary>Roles of MIT</summary>
 
+|-|-|-|
 |🔰Permission|🚫Limitation|⭕️Conditions|
 |-|-|-|-|
 
