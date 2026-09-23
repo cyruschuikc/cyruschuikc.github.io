@@ -11,7 +11,10 @@ A short and simple permissive license with conditions only requiring preservatio
 
 ```diff
 🔰Permission
-+
+✔️Commercial
+✔️Private
+✔️Modification
+✔️Distribution
 ```
 </details>
 
