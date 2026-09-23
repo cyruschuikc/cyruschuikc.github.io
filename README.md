@@ -10,9 +10,6 @@ A short and simple permissive license with conditions only requiring preservatio
 <hr>
 <details>
 <summary>Roles of MIT</summary>
-<table>
-<th></th>
-</table>
 
 |-|-|-|
 |-|-|-|
