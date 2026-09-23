@@ -21,6 +21,11 @@ A short and simple permissive license with conditions only requiring preservatio
 ❌️Liability
 ❌️Warranty
 ```
+```diff
+⭕️Conditions
+⚖️📄License Notice
+©️📄Copyright Notice
+```
 
 </details>
 
