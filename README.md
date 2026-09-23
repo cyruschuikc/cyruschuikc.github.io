@@ -13,7 +13,7 @@ A short and simple permissive license with conditions only requiring preservatio
 
 |-|-|-|
 |🔰Permission|🚫Limitation|⭕️Conditions|
-||||
+|-|-|-|
 
 ```diff
 🔰Permission
