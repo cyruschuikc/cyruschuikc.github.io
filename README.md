@@ -9,6 +9,9 @@ All the sorce codes, programes, and materials, unless had extra specified, both 
 
 A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
 
+<details>
+<summary>Roles of MIT</summary>
+
 ```diff
 🔰Permission
 ✔️Commercial
@@ -26,7 +29,7 @@ A short and simple permissive license with conditions only requiring preservatio
 ⚖️📄License Notice
 ©️📄Copyright Notice
 ```
-
+</details>
 </details>
 
 > [!NOTE]
