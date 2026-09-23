@@ -16,6 +16,12 @@ A short and simple permissive license with conditions only requiring preservatio
 ✔️Modification
 ✔️Distribution
 ```
+```diff
+🚫Limitation
+❌️Liability
+❌️Warranty
+```
+
 </details>
 
 > [!NOTE]
