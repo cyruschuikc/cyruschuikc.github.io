@@ -33,8 +33,8 @@ A short and simple permissive license with conditions only requiring preservatio
 
 > [!NOTE]
 > ```diff 
-> !This license applicable to all branches of this repository
-> !extra specified exception
+> !Applicable to all branches of this repository
+> !Extra specified exception
 >```
 
 ## Websites
