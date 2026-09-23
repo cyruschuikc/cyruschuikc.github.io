@@ -1,9 +1,5 @@
 # cyruschuikc.github.io
-```diff
-## New Chp. is coming soon 
-### New Section is coming soon 
-### New Section is coming soon
-```
+
 ## License
 All the sorce codes, programes, and materials, unless had extra specified, both are licensed under the MIT License.
 
@@ -24,3 +20,9 @@ A short and simple permissive license with conditions only requiring preservatio
 |✅️Distribution|||
 |✅️Private Use|||
 
+## Websites
+
+```diff
+### 🔜HoSoCyrasKa.me㊙️
+### New Section is coming soon
+```
