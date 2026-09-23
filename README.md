@@ -3,10 +3,11 @@
 ## License
 All the sorce codes, programes, and materials, unless had extra specified, both are licensed under the MIT License.
 
+### MIT License
 <details>
-  <summary>MIT License</summary>
-
-  A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+<summary>learn more</summary>
+A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+</details>
 
 > [!NOTE]
 > ```diff 
