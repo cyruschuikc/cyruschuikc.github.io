@@ -37,14 +37,6 @@ A short and simple permissive license with conditions only requiring preservatio
 > !extra specified exception
 >```
 
-#### Roles of MIT
-|Permission|Limitation|Condition|
-|-|-|-|
-|✅️Commercial Use|❌️Liability|ℹ️license＆copyright notice|
-|✅️Modification|❌️Warranty||
-|✅️Distribution|||
-|✅️Private Use|||
-
 ## Websites
 
 ```diff
