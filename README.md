@@ -14,6 +14,9 @@ A short and simple permissive license with conditions only requiring preservatio
 <th></th>
 </table>
 
+|-|-|-|
+|-|-|-|
+
 ```diff
 🔰Permission
 ✔️Commercial
