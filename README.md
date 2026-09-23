@@ -5,7 +5,7 @@ All the sorce codes, programes, and materials, unless had extra specified, both 
 
 ### MIT License
 <details>
-<summary>learn more</summary>
+<summary>click here to learn more</summary>
 A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
 </details>
 
