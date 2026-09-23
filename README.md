@@ -13,6 +13,7 @@ A short and simple permissive license with conditions only requiring preservatio
 <table>
 <th></th>
 </table>
+
 ```diff
 🔰Permission
 ✔️Commercial
