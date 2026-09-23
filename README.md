@@ -33,7 +33,7 @@ A short and simple permissive license with conditions only requiring preservatio
 
 > [!NOTE]
 > ```diff 
-> !Applicable to all branches of this repository
+> !Applicable to all branches
 > !Extra specified exception
 >```
 
