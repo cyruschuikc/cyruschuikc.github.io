@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="cyruschuikc" />
+    <meta name="copyright" content="&copy;&nbsp;&nbsp;2026. cyruschuikc. all rights reserved." />
+    <meta name="description" content="Customized Javascript-base Animation with 3D Globe (version-label:'zero-mini-1.0')" />
+    <title>Globe3rd-zero-me</title>
+  </head>
+  <body>
+    <!-- Container element for the Three.js renderer canvas -->
+    <div id="globe-container" style="width: 100px; height: 100px;"></div>
+
+    <!-- Import Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script>
+      const container = document.getElementById('globe-container');
+      const globe3rdZERO = new THREE.Scene();
+      const visual_camera = new THREE.PerspectiveCamera(90, 1, 0.1, 100);
+
+      const globe3rdZero_WGLrenderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      globe3rdZero_WGLrenderer.setSize(100, 100);
+
+      // Append the automatically generated WebGL canvas into our container
+      container.appendChild(globe3rdZero_WGLrenderer.domElement);
+
+      const globe3rdZero_SG = new THREE.SphereGeometry(1, 10, 10);
+
+      // Fixed: Color value passed as hexadecimal or string
+      const globe3rdZero_MBM = new THREE.MeshBasicMaterial({ 
+        color: 0x000000, 
+        wireframe: true 
+      });
+
+      const globe3rdZero_model = new THREE.Mesh(globe3rdZero_SG, globe3rdZero_MBM);
+      globe3rdZERO.add(globe3rdZero_model);
+
+      // Position camera back so the sphere fits the viewport
+      visual_camera.position.set(0, 0, 2);
+
+      // Fixed: Reference correct function name in requestAnimationFrame
+      function globe3rdZero_animation() {
+        requestAnimationFrame(globe3rdZero_animation);
+        globe3rdZero_model.rotation.y += 0.001; // Spin effect
+        globe3rdZero_WGLrenderer.render(globe3rdZERO, visual_camera);
+      }
+
+      globe3rdZero_animation();
+    </script>
+  </body>
+</html>
