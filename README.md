@@ -43,5 +43,5 @@ A short and simple permissive license with conditions only requiring preservatio
 ## Websites
 
 ```diff
-### 🔜HoSoCyrasKa.me㊙️
+### 🔜🌐KiNaCyKa㊙️
 ```
