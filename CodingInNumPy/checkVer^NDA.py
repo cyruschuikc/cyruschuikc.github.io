@@ -23,7 +23,17 @@ ndarr3 = np.array([
 print("ndarray-3 as below:\n", ndarr3, "\nData Type:", ndarr3.dtype,"\nDimension of ndarray-3:", ndarr3.ndim)
 
 ndarr4 = np.array([1,2,3,4,5], ndmin=5)
-print(f"Dimension of ndarray-4{ndarr4}: {ndarr4.ndim}\n Data Type: {ndarr4.dtype}")
+print(f"Dimension of ndarray-4{ndarr4}: {ndarr4.ndim}\n Data Type: {ndarr4.dtype}\n")
+
+nums = np.array((0,1,2,3,4,5,6,7,8,9))
+_nums = nums.copy()
+nums_ = nums.view()
+print(f"Original: {nums}\nwith use copy(): {_nums}\nwith use view(): {nums_}\n")
+_tmp = nums[0]
+tmp_ = nums[len(nums)-1]
+nums[len(nums)-1] = _tmp
+nums[0] = tmp_
+print(f"After Change: {nums}\nwith use copy(): {_nums}\nwith use view(): {nums_}\n")
 
 # =======================================================================================================
 # expected output as below
@@ -44,7 +54,16 @@ print(f"Dimension of ndarray-4{ndarr4}: {ndarr4.ndim}\n Data Type: {ndarr4.dtype
 #
 # [['0' '0' '0']
 #  [' ' ' ' ' ']]] 
+# Data Type: <U21 
 # Dimension of ndarray-3: 3
 # Dimension of ndarray-4[[[[[1 2 3 4 5]]]]]: 5
+# Data Type: int64
+# Original: [0 1 2 3 4 5 6 7 8 9]
+# with use copy(): [0 1 2 3 4 5 6 7 8 9]
+# with use view(): [0 1 2 3 4 5 6 7 8 9]
+#
+# After Change: [9 1 2 3 4 5 6 7 8 0]
+# with use copy(): [0 1 2 3 4 5 6 7 8 9]
+# with use view(): [9 1 2 3 4 5 6 7 8 0]
 # -------------------------------------------------------------------------------------------------------
 # =======================================================================================================
