@@ -1,0 +1,9 @@
+Datatype, ShortTerm, CommonUse, DataClass
+"integer", "i", "foundation/popular", "numeric"
+"float", "f", "foundation/popular", "numeric"
+"complex float", "c", "base on scenario", "math"
+"boolean", "b", "foundation/popular", "boolean"
+"datetime", "M", "base on scenario", "date/time"
+"object", "O", "high", "object"
+"string", "S", "foundation/popular/high", "string(text)" 
+"void (fixed chunk of memory for other type)", "V", "advance/base on scenario"
