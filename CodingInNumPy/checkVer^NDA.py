@@ -20,10 +20,10 @@ ndarr3 = np.array([
     [[4,5,6],["JKL", "MNO", "PQR"]],
     [[7,8,9],["STU","VWX","YZ"]], [[0,00,000],[' ', ' ', ' ']]
 ])
-print("ndarray-3 as below:\n", ndarr3, "\nDimension of ndarray-3:", ndarr3.ndim)
+print("ndarray-3 as below:\n", ndarr3, "\nData Type:", ndarr3.dtype,"\nDimension of ndarray-3:", ndarr3.ndim)
 
 ndarr4 = np.array([1,2,3,4,5], ndmin=5)
-print(f"Dimension of ndarray-4{ndarr4}: {ndarr4.ndim}")
+print(f"Dimension of ndarray-4{ndarr4}: {ndarr4.ndim}\n Data Type: {ndarr4.dtype}")
 
 # =======================================================================================================
 # expected output as below
