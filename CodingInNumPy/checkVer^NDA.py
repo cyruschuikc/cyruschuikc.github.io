@@ -22,7 +22,7 @@ ndarr3 = np.array([
 ])
 print("ndarray-3 as below:\n", ndarr3, "\nDimension of ndarray-3:", ndarr3.ndim)
 
-ndarr4 = np.array([1,2,3,4,5], ndim=5)
+ndarr4 = np.array([1,2,3,4,5], ndmin=5)
 print(f"Dimension of ndarray-4{ndarr4}: {ndarr4.ndim}")
 
 # =======================================================================================================
