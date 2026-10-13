@@ -59,12 +59,21 @@ A short and simple permissive license with conditions only requiring preservatio
   <details>
     <summary><h6>▪︎Principle of High Transparency</h6></summary>
     <p>This repository is committed to maintaining the highest standards of information disclosure & compliance transparency.</p>
-    <p>• All 3rdParty tools, hosting services, data flows, and copyright ownership are fully & unreservedly disclosed in this agreement & related pages, leaving no ambiguity [See Personal Data (Privacy) Ordinance (Cap. 486 of the Laws of Hong Kong), Data Protection Principles].</p>
+    <p>• All 3rdParty tools, hosting services, data flows, and copyright ownership are fully & unreservedly disclosed in this agreement & related pages, leaving no ambiguity [See Personal Data (Privacy) Ordinance (Cap. 486 of the Laws of HK), Data Protection Principles].</p>
   </details>
 </details>
   
 ### Terms
 ### Policy
+#### ● Privacy Policy & Data Handling
+<details>
+  <summary><h5>■ Data Collection & Transparency</h5></summary>
+  <details>
+    <summary><h6>▪︎Scope of Personal Data Collection</h6></summary>
+    <p>This repository rarely collects personal privacy data proactively; data handling relies primarily on underlying hosting platforms.</p>
+    <p>•Any basic data collected automatically by browsers (i.e. IP addresses, browsing footprints, etc.) is bound by Hong Kong privacy regulations [See Personal Data (Privacy) Ordinance (Cap. 486 of the Laws of HK), Schedule 1 regarding the collection of personal data].</p>
+  </details>
+</details>
 
 ## Websites
 
