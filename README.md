@@ -42,6 +42,16 @@ A short and simple permissive license with conditions only requiring preservatio
 
 ## DOCs
 ### Legal
+#### Universal Platform & Legal Compliance Agreement
+<details>
+  <summary><h5>General Principles & Scope</h5></summary>
+  <details>
+    <summary><h6>Non-Official Statement</h6></summary>
+    <p>This repository is an independent, non-profit personal project and is not affiliated with any commercial entity, official organization, or corporate body.</p>
+    <p>1. All contents, technical architecture, and services are maintained independently by the owner and do not represent the official stance/opinions of any 3rdParty platforms (i.e. Google, InfinityFree, GitHub) [See Basic Law of the HKSAR, Art.27 regarding freedom of personal expression, and GitHub / Google Terms of Service regarding independent developer disclaimers].</p>
+  </details>
+</details>
+
 ### Privacy
 ### Terms
 ### Policy
