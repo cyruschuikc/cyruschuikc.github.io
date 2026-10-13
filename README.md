@@ -40,6 +40,12 @@ A short and simple permissive license with conditions only requiring preservatio
 > !Extra specified exception
 >```
 
+## DOCs
+### Legal
+### Privacy
+### Terms
+### Policy
+
 ## Websites
 
 ```diff
