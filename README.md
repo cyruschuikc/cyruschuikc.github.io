@@ -53,6 +53,15 @@ A short and simple permissive license with conditions only requiring preservatio
 </details>
 
 ### Privacy
+<details>
+  <summary><h5>■ General Principles & Scope</h5></summary>
+  <details>
+    <summary><h6>● Principle of High Transparency</h6></summary>
+    <p>This repository is committed to maintaining the highest standards of information disclosure & compliance transparency.</p>
+    <p>• All 3rdParty tools, hosting services, data flows, and copyright ownership are fully & unreservedly disclosed in this agreement & related pages, leaving no ambiguity [See Personal Data (Privacy) Ordinance (Cap. 486 of the Laws of Hong Kong), Data Protection Principles].</p>
+  </details>
+</details>
+  
 ### Terms
 ### Policy
 
