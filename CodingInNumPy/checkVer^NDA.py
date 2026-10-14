@@ -1,9 +1,5 @@
 import numpy as np
 
-ver = np.__version__
-s = f"my NumPy version: {ver}"
-print(s)
-
 ndarr1 = np.array(["Hi", "Hello"])  # ndarr ==> ndarray
 ndarr2 = np.array((1,2,3,4,5))  # ndarr ==> ndarray
 dt_arr = [type(ndarr1), type(ndarr2)] # dt ==> data type
@@ -38,7 +34,6 @@ print(f"After Change: {nums}\nwith use copy(): {_nums}\nwith use view(): {nums_}
 # =======================================================================================================
 # expected output as below
 # -------------------------------------------------------------------------------------------------------
-# my NumPy version: 2.3.2
 # The data type of Array['Hi' 'Hello'] created with NumPy is <class 'numpy.ndarray'>. 
 # The data type of another Array[1 2 3 4 5] created with NumPy also is <class 'numpy.ndarray'>.
 # Dimension of ndarry-1: 1 | Dimensions of ndarray-2: 1
