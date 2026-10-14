@@ -32,7 +32,7 @@ nums[0] = tmp_
 print(f"After Change: {nums}\nwith use copy(): {_nums}\nwith use view(): {nums_}\n")
 
 # =======================================================================================================
-# expected output as below
+# simple output as below
 # -------------------------------------------------------------------------------------------------------
 # The data type of Array['Hi' 'Hello'] created with NumPy is <class 'numpy.ndarray'>. 
 # The data type of another Array[1 2 3 4 5] created with NumPy also is <class 'numpy.ndarray'>.
