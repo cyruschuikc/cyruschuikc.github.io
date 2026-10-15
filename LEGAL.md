@@ -65,3 +65,27 @@
 (i). The owner makes no express/implied warranties regarding absolute stability/0⚠️/permanent uptime of repository/website, and bears no legal liability for losses caused by temporary interruptions/adjustments by third-party platforms (Google/InfinityFree/GitHub) [See standard Limitation of Liability clauses of respective third-party platforms].
 
 <hr><hr>
+
+> [!NOTE]
+> All terms & provisions are enacted and governed strictly in accordance with applicable laws, subject to statutory limitations, and fully protected under relevant regulatory frameworks.
+
+|RepoStamp|
+|-|
+|<img width="50" height="50" alt="1000048064" src="https://github.com/user-attachments/assets/8b4ef3c5-dad5-4cfa-95e8-46438c4cc155" />|
+
+|o-Unit Stamp|
+|-|
+|<img width="50" height="50" alt="1000047711" src="https://github.com/user-attachments/assets/7e25dc2b-ffd2-4c20-aef2-80fe7b2d7bec" />|
+
+|DateTime|
+|-|
+|2026-10-15 (UTC+08:00 HK) 12:06|
+
+|Signature|
+|-|
+|cyrus☆|
+
+```diff
+# RepoStamp: Repository Stamp
+# o-Unit Stamp: Subordinate Unit Stamp 
+```
