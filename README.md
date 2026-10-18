@@ -1,4 +1,8 @@
 # cyruschuikc.github.io
+<img width="250" height="200" alt="1000048064" src="https://github.com/user-attachments/assets/421094ee-5a76-401e-9e3f-98e6dcccedeb" />
+<br>
+<img width="200" height="150" alt="1000047712" src="https://github.com/user-attachments/assets/25245920-113e-45df-b794-5f38564a19ad" />
+
 
 ## License
 All the sorce codes, programes, and materials, unless had extra specified, both are licensed under the MIT License.
@@ -40,8 +44,16 @@ A short and simple permissive license with conditions only requiring preservatio
 > !Extra specified exception
 >```
 
-## Websites
+## 🆕️ DOCs
+### 🆕️ Legal Announ
+- [LEGAL Cat1. Universal Platform & Legal Compliance Agreement](https://github.com/cyruschuikc/cyruschuikc.github.io/blob/main/LEGAL.md)
 
+## Past Project Production
 ```diff
-### 🔜🌐KiNaCyKa㊙️
+### ❔️❔️❔️
 ```
+<br>
+
+|<img width="50" height="50" alt="1000048064" src="https://github.com/user-attachments/assets/421094ee-5a76-401e-9e3f-98e6dcccedeb" />|
+|-|
+|<img width="50" height="50" alt="1000047711" src="https://github.com/user-attachments/assets/98e635f3-8211-47b0-9c23-3e6a16fa8604" />
