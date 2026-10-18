@@ -48,7 +48,7 @@ A short and simple permissive license with conditions only requiring preservatio
 ### 🆕️ Legal Announ
 - [LEGAL Cat1. Universal Platform & Legal Compliance Agreement](https://github.com/cyruschuikc/cyruschuikc.github.io/blob/main/LEGAL.md)
 
-## KiNaCyKa
+## 🔜KiNaCyKa
 ```diff
 the quick vist guide would release soon
 ```
