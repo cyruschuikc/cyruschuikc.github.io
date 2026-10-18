@@ -49,10 +49,7 @@ A short and simple permissive license with conditions only requiring preservatio
 - [LEGAL Cat1. Universal Platform & Legal Compliance Agreement](https://github.com/cyruschuikc/cyruschuikc.github.io/blob/main/LEGAL.md)
 
 ## Websites
-```diff
-### 🔜🌐KiNaCyKa㊙️
-```
-<br>
+### 🆕️ [KiNaCyKa 旗納斯卡](https://cyruschuikc.infinityfree.io)
 
 |<img width="50" height="50" alt="1000048064" src="https://github.com/user-attachments/assets/421094ee-5a76-401e-9e3f-98e6dcccedeb" />|
 |-|
