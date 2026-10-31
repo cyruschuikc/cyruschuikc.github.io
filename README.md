@@ -2,8 +2,8 @@
 
 # cyruschuikc.github.io
 ```diff
-# # New catagory coming soon
-# ## New catalog coming soon
+# ## New catagory coming soon
+# ### New catalog coming soon
 ```
 <div class="CLN"> <!--CLN: Copyright and License Note-->
   <div id="copyright" style="text-align: center">
