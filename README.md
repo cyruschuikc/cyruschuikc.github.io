@@ -5,3 +5,8 @@
 # # New catagory coming soon
 # ## New catalog coming soon
 ```
+<div class="CLN"> <!--CLN: Copyright and License Note-->
+  <div id="copyright" style="text-align: center">
+    <p>All rights belongs to kizuna.nagisun (cyruschuikc) reserved. &copy 2026 Oct 31 ~ </p>
+  </div>
+</div>
