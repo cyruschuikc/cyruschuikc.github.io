@@ -2,10 +2,8 @@
 
 # cyruschuikc.github.io
 ## My wep.app
-### 🔜㊙️
-```diff
-# #### New branch coming soon
-```
+### kinacykaCCKC
+#### 🫟🫟🫟
 
 <div class="CLN"> <!--CLN: Copyright and License Note-->
   <div id="copyright" style="text-align: center">
