@@ -1,9 +1,12 @@
 <img width="200" height="200" alt="cyruschuikc.github.io" src="https://cyruschuikc.github.io/favs/github-io/My_GitHub-io_fav_v1.png" />
 
 # cyruschuikc.github.io
-## My wep.app
-### kinacykaCCKC
-#### 🫟🫟🫟
+## 🌐My Website
+### [kinacykaCCKC©️](https://github.com/cyruschuikc/kinacykaCCKC.github.io)
+#### [Click here to view Github io Page](https://cyruschuikc.github.io/kinacykaCCKC.github.io)
+```diff
+# #### New section will coming soon
+```
 
 <div class="CLN"> <!--CLN: Copyright and License Note-->
   <div id="copyright" style="text-align: center">
