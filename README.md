@@ -7,6 +7,8 @@
 ```diff
 # #### New section will coming soon
 ```
+## 🎖️🏆Achievements/Awards
+- [Click here to view Github io Page](https://cyruschuikc.github.io/Achievements_Awards_Profile.md)
 
 <div class="CLN"> <!--CLN: Copyright and License Note-->
   <div id="copyright" style="text-align: center">
