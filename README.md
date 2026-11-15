@@ -2,8 +2,7 @@
 
 # [cyruschuikc.github.io](https://cyruschuikc.github.io)
 ## 🌐My Website
-### [kinacykaCCKC©️](https://github.com/cyruschuikc/kinacykaCCKC.github.io)
-- [Click here to view Github io Page](https://cyruschuikc.github.io/kinacykaCCKC.github.io)
+### [KiNaCyKa CCKC©️](https://github.com/cyruschuikc/kinacykaCCKC.github.io)｜[kinacykaCCKC io](https://cyruschuikc.github.io/kinacykaCCKC.github.io)
 ```diff
 # #### New section will coming soon
 ```
